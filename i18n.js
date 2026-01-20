@@ -80,7 +80,7 @@ const translations = {
         'newsletter.note': 'No spam, easy unsubscribe.',
         
         // Footer
-        'footer.tagline': 'Vibecoding projects & AI innovations',
+        'footer.tagline': 'Vibecoding projects & IA innovations',
         'footer.nav': 'Navigation',
         'footer.portfolio': 'Portfolio',
         'footer.newsletter': 'Newsletter',
@@ -227,11 +227,11 @@ class I18n {
         const toggleBtn = document.getElementById('language-toggle');
         const langOptions = document.querySelectorAll('.lang-option');
 
-        // Mettre à jour le bouton principal
+        // Mettre à jour le bouton principal - juste drapeau sans texte
         if (this.currentLanguage === 'en') {
-            toggleBtn.innerHTML = '<span class="lang-flag">🇬🇧</span><span class="lang-text">EN</span><span class="lang-icon">▼</span>';
+            toggleBtn.innerHTML = '<span class="lang-flag">🇬🇧</span><span class="lang-icon">▼</span>';
         } else {
-            toggleBtn.innerHTML = '<span class="lang-flag">🇫🇷</span><span class="lang-text">FR</span><span class="lang-icon">▼</span>';
+            toggleBtn.innerHTML = '<span class="lang-flag">🇫🇷</span><span class="lang-icon">▼</span>';
         }
 
         // Mettre à jour les options
