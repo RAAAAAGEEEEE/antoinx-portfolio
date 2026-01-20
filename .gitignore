@@ -28,3 +28,7 @@ npm-debug.log*
 
 # Temp
 .vercel
+
+# Claude Code (local only)
+.claude/
+CONTEXT.md
