@@ -29,6 +29,5 @@ npm-debug.log*
 # Temp
 .vercel
 
-# Claude Code (local only)
+# Claude Code (local only - prompts, context, internal docs)
 .claude/
-CONTEXT.md
