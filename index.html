@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>antoinx - Projets vibecoding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">antoinx</div>
+            <ul class="nav-links">
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="mailto:contact@antoinx.com" class="contact-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="language-btn" id="language-toggle">
+                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-text">FR</span>
+                        <span class="lang-icon">▼</span>
+                    </button>
+                    <div class="language-dropdown" id="language-dropdown">
+                        <button class="lang-option" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span>
+                            <span>Français</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero.title">Projets vibecoding</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Apps mobiles, SaaS, automatisations & IA. En cours et à venir.</p>
+            <div class="hero-ctas">
+                <a href="#newsletter" class="cta-button primary" data-i18n="btn.newsletter">S'inscrire à la newsletter</a>
+                <a href="mailto:contact@antoinx.com" class="cta-button secondary" data-i18n="btn.contact">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="featured.title">Projets en vedette</h2>
+                <p class="section-subtitle" data-i18n="featured.subtitle">Découvrez mes projets phares</p>
+            </div>
+            <div class="featured-grid" id="featured-projects">
+                <!-- Dynamically filled -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="portfolio.title">Portfolio complet</h2>
+                <p class="section-subtitle" data-i18n="portfolio.subtitle">Tous mes projets en cours et à venir</p>
+            </div>
+            
+            <!-- Filtres -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Tous</button>
+                <button class="filter-btn" data-filter="in-progress" data-i18n="filter.in-progress">En cours</button>
+                <button class="filter-btn" data-filter="upcoming" data-i18n="filter.upcoming">À venir</button>
+            </div>
+
+            <!-- Grid des projets -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Dynamically filled -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 data-i18n="newsletter.title">Actualités IA & vibecoding</h2>
+                    <p data-i18n="newsletter.subtitle">Recevez des tutoriels, tips et news exclusives sur vibecoding et l'IA. En français.</p>
+                </div>
+
+                <form class="newsletter-form" id="newsletter-form">
+                    <input 
+                        type="email" 
+                        placeholder="Votre email"
+                        data-i18n-placeholder="newsletter.email"
+                        required
+                        class="email-input"
+                    >
+                    <button type="submit" class="submit-btn" data-i18n="newsletter.submit">S'inscrire</button>
+                    <p class="form-note" data-i18n="newsletter.note">Pas de spam, désinscription facile.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>antoinx</h3>
+                    <p data-i18n="footer.tagline">Vibecoding projects & IA innovations</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.nav">Navigation</h4>
+                    <ul>
+                        <li><a href="#portfolio" data-i18n="footer.portfolio">Portfolio</a></li>
+                        <li><a href="#newsletter" data-i18n="footer.newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <p><a href="mailto:contact@antoinx.com">contact@antoinx.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2026 antoinx. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
