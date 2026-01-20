@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+/* Performance optimization: contain for heavy animations */
+@supports (contain: layout) {
+    .project-card, .navbar, .hero {
+        contain: layout style paint;
+    }
+}
+
 :root {
     /* Light mode */
     --primary: #0a0a0a;
@@ -673,15 +680,17 @@ body {
     font-size: 0.9rem;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== ANIMATIONS (GPU-ACCELERATED) ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(40px);
+        will-change: transform, opacity;
     }
     to {
         opacity: 1;
         transform: translateY(0);
+        will-change: auto;
     }
 }
 
@@ -689,10 +698,12 @@ body {
     from {
         opacity: 0;
         transform: translateY(30px);
+        will-change: transform, opacity;
     }
     to {
         opacity: 1;
         transform: translateY(0);
+        will-change: auto;
     }
 }
 
@@ -700,16 +711,19 @@ body {
     from {
         opacity: 0;
         transform: translateY(-10px);
+        will-change: transform, opacity;
     }
     to {
         opacity: 1;
         transform: translateY(0);
+        will-change: auto;
     }
 }
 
 @keyframes float {
     0%, 100% {
         transform: translateY(0px);
+        will-change: transform;
     }
     50% {
         transform: translateY(20px);
