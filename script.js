@@ -1,3 +1,16 @@
+// ===== CONSTANTS =====
+const ANIMATION_DELAY = 100;
+const NEWSLETTER_SUCCESS_DELAY = 2000;
+const NEWSLETTER_RATE_LIMIT_MS = 5000;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const TRANSLATIONS_UNAVAILABLE = 'En cours';
+
+// Newsletter rate limiting
+const newsletterState = {
+    lastSubmission: 0,
+    isRateLimited: false
+};
+
 // Projets de démonstration
 const projects = [
     {
@@ -99,27 +112,36 @@ document.addEventListener('DOMContentLoaded', () => {
         setupFilterButtons();
         setupNewsletterForm();
         setupThemeToggle();
-    }, 100);
+    }, ANIMATION_DELAY);
 });
 
 // ===== THEME TOGGLE =====
 function initTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+    try {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+    } catch (error) {
+        console.warn('Theme initialization failed:', error);
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
 }
 
 function setupThemeToggle() {
     const toggleBtn = document.getElementById('theme-toggle');
     if (!toggleBtn) return;
-    
+
     toggleBtn.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
+        try {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        } catch (error) {
+            console.error('Theme toggle failed:', error);
+        }
     });
 }
 
@@ -140,7 +162,7 @@ function renderFeaturedProjects() {
     const featured = projects.slice(0, 3);
     const container = document.getElementById('featured-projects');
     if (!container) return;
-    
+
     container.innerHTML = featured.map(project => createProjectCard(project)).join('');
 }
 
@@ -148,45 +170,71 @@ function renderFeaturedProjects() {
 function renderAllProjects() {
     const container = document.getElementById('projects-grid');
     if (!container) return;
-    
+
     container.innerHTML = projects.map(project => createProjectCard(project)).join('');
 }
 
-// ===== CREATE PROJECT CARD =====
+// ===== CREATE PROJECT CARD (XSS-SAFE) =====
 function createProjectCard(project) {
     const lang = getCurrentLanguage();
     const title = project[`title_${lang}`] || project.title_fr;
     const description = project[`description_${lang}`] || project.description_fr;
     const type = project[`type_${lang}`] || project.type_fr;
-    
+
     const statusKey = project.status === 'in-progress' ? 'status.in-progress' : 'status.upcoming';
-    const statusText = window.i18n ? window.i18n.getTranslation(statusKey) : 
-                      (project.status === 'in-progress' ? 'En cours' : 'À venir');
+    const statusText = window.i18n ? window.i18n.getTranslation(statusKey) : TRANSLATIONS_UNAVAILABLE;
     const statusClass = project.status === 'in-progress' ? 'status-in-progress' : 'status-upcoming';
-    
-    return `
-        <div class="project-card" data-status="${project.status}">
-            <div class="project-header">
-                <h3 class="project-title">${title}</h3>
-                <span class="project-status ${statusClass}">${statusText}</span>
-            </div>
-            <span class="project-type">${type}</span>
-            <p class="project-description">${description}</p>
-            <a href="${project.link}" class="project-link">En savoir plus →</a>
-        </div>
-    `;
+
+    // Create card element safely
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.setAttribute('data-status', project.status);
+
+    const header = document.createElement('div');
+    header.className = 'project-header';
+
+    const titleEl = document.createElement('h3');
+    titleEl.className = 'project-title';
+    titleEl.textContent = title;
+
+    const statusEl = document.createElement('span');
+    statusEl.className = `project-status ${statusClass}`;
+    statusEl.textContent = statusText;
+
+    header.appendChild(titleEl);
+    header.appendChild(statusEl);
+
+    const typeEl = document.createElement('span');
+    typeEl.className = 'project-type';
+    typeEl.textContent = type;
+
+    const descEl = document.createElement('p');
+    descEl.className = 'project-description';
+    descEl.textContent = description;
+
+    const linkEl = document.createElement('a');
+    linkEl.href = project.link;
+    linkEl.className = 'project-link';
+    linkEl.textContent = 'En savoir plus →';
+
+    card.appendChild(header);
+    card.appendChild(typeEl);
+    card.appendChild(descEl);
+    card.appendChild(linkEl);
+
+    return card.outerHTML;
 }
 
 // ===== FILTER BUTTONS =====
 function setupFilterButtons() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    
+
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            
-            const filter = button.dataset.filter;
+
+            const filter = button.getAttribute('data-filter');
             filterProjects(filter);
         });
     });
@@ -194,59 +242,87 @@ function setupFilterButtons() {
 
 function filterProjects(filter) {
     const cards = document.querySelectorAll('#projects-grid .project-card');
-    
+
     cards.forEach(card => {
         if (filter === 'all') {
             card.classList.remove('hidden');
         } else {
-            const cardStatus = card.dataset.status;
+            const cardStatus = card.getAttribute('data-status');
             card.classList.toggle('hidden', cardStatus !== filter);
         }
     });
 }
 
-// ===== NEWSLETTER FORM =====
+// ===== NEWSLETTER FORM WITH RATE LIMITING =====
 function setupNewsletterForm() {
     const form = document.getElementById('newsletter-form');
     if (!form) return;
-    
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const emailInput = form.querySelector('.email-input');
-        const email = emailInput.value;
-        
-        if (email && isValidEmail(email)) {
-            const submitBtn = form.querySelector('.submit-btn');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = '✓ Inscrit !';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                emailInput.value = '';
-            }, 2000);
-        }
-    });
+
+    form.addEventListener('submit', handleNewsletterSubmit);
+}
+
+function handleNewsletterSubmit(e) {
+    e.preventDefault();
+
+    // Rate limiting check
+    const now = Date.now();
+    if (now - newsletterState.lastSubmission < NEWSLETTER_RATE_LIMIT_MS) {
+        console.warn('Newsletter submission rate limited');
+        return;
+    }
+
+    const emailInput = this.querySelector('.email-input');
+    if (!emailInput) return;
+
+    const email = emailInput.value.trim();
+
+    if (!email || !isValidEmail(email)) {
+        emailInput.setAttribute('aria-invalid', 'true');
+        return;
+    }
+
+    emailInput.setAttribute('aria-invalid', 'false');
+    submitNewsletter(this, emailInput, email);
+}
+
+function submitNewsletter(form, emailInput, email) {
+    const submitBtn = form.querySelector('.submit-btn');
+    if (!submitBtn) return;
+
+    try {
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = window.i18n ? window.i18n.getTranslation('newsletter.success') : '✓ Inscrit !';
+        submitBtn.disabled = true;
+
+        newsletterState.lastSubmission = Date.now();
+
+        // Here you would send email to backend API
+        console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
+
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            emailInput.value = '';
+        }, NEWSLETTER_SUCCESS_DELAY);
+    } catch (error) {
+        console.error('Newsletter submission error:', error);
+    }
 }
 
 function isValidEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
+    return EMAIL_REGEX.test(email);
 }
 
-// Observateur pour re-rendre les projets lors du changement de langue
-const originalSetLanguage = function() {
-    if (window.i18n) {
-        const oldSetLanguage = window.i18n.setLanguage.bind(window.i18n);
-        window.i18n.setLanguage = function(lang) {
-            oldSetLanguage(lang);
-            renderFeaturedProjects();
-            renderAllProjects();
-        };
-    }
-};
+// ===== LANGUAGE CHANGE OBSERVER =====
+function setupLanguageObserver() {
+    if (!window.i18n) return;
 
-document.addEventListener('DOMContentLoaded', originalSetLanguage);
+    const originalSetLanguage = window.i18n.setLanguage.bind(window.i18n);
+    window.i18n.setLanguage = function(lang) {
+        originalSetLanguage(lang);
+        renderFeaturedProjects();
+        renderAllProjects();
+    };
+}
+
+document.addEventListener('DOMContentLoaded', setupLanguageObserver);

@@ -18,6 +18,7 @@ const translations = {
         'newsletter.subtitle': 'Recevez des tutoriels, tips et news exclusives sur vibecoding et l\'IA. En français.',
         'newsletter.email': 'Votre email',
         'newsletter.submit': 'S\'inscrire',
+        'newsletter.success': '✓ Inscrit !',
         'newsletter.note': 'Pas de spam, désinscription facile.',
         'footer.tagline': 'Vibecoding projects & IA innovations',
         'footer.nav': 'Navigation',
@@ -47,6 +48,7 @@ const translations = {
         'newsletter.subtitle': 'Get exclusive tutorials, tips and news on vibecoding and AI. In French.',
         'newsletter.email': 'Your email',
         'newsletter.submit': 'Subscribe',
+        'newsletter.success': '✓ Subscribed!',
         'newsletter.note': 'No spam, easy unsubscribe.',
         'footer.tagline': 'Vibecoding projects & IA innovations',
         'footer.nav': 'Navigation',
@@ -89,7 +91,15 @@ class I18n {
     }
 
     getTranslation(key) {
-        return translations[this.currentLanguage][key] || translations['fr'][key] || key;
+        if (!key) {
+            console.warn('I18n: Empty translation key requested');
+            return '';
+        }
+        const translation = translations[this.currentLanguage]?.[key] || translations.fr?.[key];
+        if (!translation) {
+            console.warn(`I18n: Missing translation for key "${key}"`);
+        }
+        return translation || key;
     }
 
     updateAllText() {
