@@ -11,6 +11,82 @@ const newsletterState = {
     isRateLimited: false
 };
 
+// News/Breves placeholders (sera remplace par n8n automation)
+const newsItems = [
+    {
+        id: 1,
+        date: '2026-01-20',
+        source: 'OpenAI',
+        title_fr: 'GPT-5 annonce : un bond majeur vers l\'AGI',
+        title_en: 'GPT-5 announced: a major leap towards AGI',
+        summary_fr: 'OpenAI devoile GPT-5 avec des capacites de raisonnement avancees et une memoire contextuelle etendue. Les premiers tests montrent des performances impressionnantes en resolution de problemes complexes.',
+        summary_en: 'OpenAI unveils GPT-5 with advanced reasoning capabilities and extended contextual memory. Early tests show impressive performance in complex problem solving.',
+        link: 'https://openai.com/blog',
+        category: 'ai'
+    },
+    {
+        id: 2,
+        date: '2026-01-19',
+        source: 'Anthropic',
+        title_fr: 'Claude 4 Opus : le nouveau standard du vibecoding',
+        title_en: 'Claude 4 Opus: the new vibecoding standard',
+        summary_fr: 'Anthropic lance Claude 4 Opus avec des capacites de code ameliorees et une comprehension contextuelle sans precedent. Ideal pour le vibecoding avec des sessions de plus de 200k tokens.',
+        summary_en: 'Anthropic launches Claude 4 Opus with improved coding capabilities and unprecedented contextual understanding. Perfect for vibecoding with 200k+ token sessions.',
+        link: 'https://anthropic.com/news',
+        category: 'ai'
+    },
+    {
+        id: 3,
+        date: '2026-01-18',
+        source: 'TechCrunch',
+        title_fr: 'Cursor AI leve 100M$ pour revolutionner l\'IDE',
+        title_en: 'Cursor AI raises $100M to revolutionize the IDE',
+        summary_fr: 'La startup derriere l\'editeur de code IA Cursor annonce une levee de fonds Series B. L\'objectif : integrer des agents autonomes capables de refactorer des codebases entieres.',
+        summary_en: 'The startup behind AI code editor Cursor announces Series B funding. Goal: integrate autonomous agents capable of refactoring entire codebases.',
+        link: 'https://techcrunch.com',
+        category: 'vibecoding'
+    },
+    {
+        id: 4,
+        date: '2026-01-17',
+        source: 'GitHub',
+        title_fr: 'Copilot Workspace : l\'assistant qui planifie vos features',
+        title_en: 'Copilot Workspace: the assistant that plans your features',
+        summary_fr: 'GitHub lance Copilot Workspace, un environnement ou l\'IA analyse les issues et propose des plans d\'implementation complets avant d\'ecrire le moindre code.',
+        summary_en: 'GitHub launches Copilot Workspace, an environment where AI analyzes issues and proposes complete implementation plans before writing any code.',
+        link: 'https://github.blog',
+        category: 'vibecoding'
+    },
+    {
+        id: 5,
+        date: '2026-01-16',
+        source: 'The Verge',
+        title_fr: 'Apple Intelligence enfin disponible en France',
+        title_en: 'Apple Intelligence finally available in France',
+        summary_fr: 'Apres des mois d\'attente, Apple deploie ses fonctionnalites IA en Europe. Siri devient enfin capable de contexte conversationnel et d\'integration avec ChatGPT.',
+        summary_en: 'After months of waiting, Apple deploys its AI features in Europe. Siri finally becomes capable of conversational context and ChatGPT integration.',
+        link: 'https://theverge.com',
+        category: 'ai'
+    },
+    {
+        id: 6,
+        date: '2026-01-15',
+        source: 'Hacker News',
+        title_fr: 'Devin AI : premier agent developpeur autonome en production',
+        title_en: 'Devin AI: first autonomous developer agent in production',
+        summary_fr: 'Cognition Labs annonce que Devin a complete sa premiere mission client en totale autonomie. Une app mobile livree en 48h sans intervention humaine.',
+        summary_en: 'Cognition Labs announces Devin completed its first client mission in full autonomy. A mobile app delivered in 48h without human intervention.',
+        link: 'https://news.ycombinator.com',
+        category: 'vibecoding'
+    }
+];
+
+// News display state
+const newsState = {
+    visibleCount: 3,
+    increment: 3
+};
+
 // Projets de démonstration
 const projects = [
     {
@@ -108,10 +184,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     setTimeout(() => {
         renderFeaturedProjects();
+        renderNews();
         renderAllProjects();
         setupFilterButtons();
         setupNewsletterForm();
         setupThemeToggle();
+        setupSeeMoreNews();
     }, ANIMATION_DELAY);
 });
 
@@ -146,15 +224,107 @@ function setupThemeToggle() {
 }
 
 function updateThemeIcon(theme) {
-    const icon = document.querySelector('.theme-icon');
-    if (icon) {
-        icon.textContent = theme === 'light' ? '🌙' : '☀️';
-    }
+    // Icons are now handled via CSS with [data-theme] selectors
+    // No JavaScript manipulation needed
 }
 
 // ===== GET CURRENT LANGUAGE =====
 function getCurrentLanguage() {
     return window.i18n ? window.i18n.currentLanguage : 'fr';
+}
+
+// ===== NEWS TIMELINE =====
+function renderNews() {
+    const container = document.getElementById('news-timeline');
+    if (!container) return;
+
+    container.innerHTML = newsItems.map((item, index) => createNewsItem(item, index)).join('');
+    updateNewsVisibility();
+}
+
+function createNewsItem(item, index) {
+    const lang = getCurrentLanguage();
+    const title = item[`title_${lang}`] || item.title_fr;
+    const summary = item[`summary_${lang}`] || item.summary_fr;
+    const formattedDate = formatNewsDate(item.date, lang);
+    const readMoreText = lang === 'en' ? 'Read more' : 'Lire l\'article';
+
+    const newsItem = document.createElement('article');
+    newsItem.className = 'news-item';
+    newsItem.setAttribute('data-index', index);
+
+    const meta = document.createElement('div');
+    meta.className = 'news-meta';
+
+    const dateEl = document.createElement('span');
+    dateEl.className = 'news-date';
+    dateEl.textContent = formattedDate;
+
+    const sourceEl = document.createElement('span');
+    sourceEl.className = 'news-source';
+    sourceEl.textContent = item.source;
+
+    meta.appendChild(dateEl);
+    meta.appendChild(sourceEl);
+
+    const titleEl = document.createElement('h3');
+    titleEl.className = 'news-title';
+    titleEl.textContent = title;
+
+    const summaryEl = document.createElement('p');
+    summaryEl.className = 'news-summary';
+    summaryEl.textContent = summary;
+
+    const linkEl = document.createElement('a');
+    linkEl.className = 'news-link';
+    linkEl.href = item.link;
+    linkEl.target = '_blank';
+    linkEl.rel = 'noopener noreferrer';
+    linkEl.textContent = readMoreText;
+
+    newsItem.appendChild(meta);
+    newsItem.appendChild(titleEl);
+    newsItem.appendChild(summaryEl);
+    newsItem.appendChild(linkEl);
+
+    return newsItem.outerHTML;
+}
+
+function formatNewsDate(dateStr, lang) {
+    const date = new Date(dateStr);
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    return date.toLocaleDateString(lang === 'en' ? 'en-GB' : 'fr-FR', options);
+}
+
+function updateNewsVisibility() {
+    const items = document.querySelectorAll('.news-item');
+    const seeMoreBtn = document.getElementById('see-more-news');
+
+    items.forEach((item, index) => {
+        if (index < newsState.visibleCount) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+
+    if (seeMoreBtn) {
+        if (newsState.visibleCount >= newsItems.length) {
+            seeMoreBtn.style.display = 'none';
+        } else {
+            seeMoreBtn.style.display = 'inline-block';
+        }
+    }
+}
+
+function setupSeeMoreNews() {
+    const btn = document.getElementById('see-more-news');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+        newsState.visibleCount += newsState.increment;
+        updateNewsVisibility();
+    });
 }
 
 // ===== FEATURED PROJECTS =====
@@ -321,6 +491,7 @@ function setupLanguageObserver() {
     window.i18n.setLanguage = function(lang) {
         originalSetLanguage(lang);
         renderFeaturedProjects();
+        renderNews();
         renderAllProjects();
     };
 }

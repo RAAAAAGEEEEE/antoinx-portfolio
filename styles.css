@@ -239,15 +239,14 @@ body {
     background: none;
     border: 1px solid var(--border);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.2rem;
-    line-height: 1;
+    padding: 0;
 }
 
 .theme-toggle:hover {
@@ -255,13 +254,36 @@ body {
     background: rgba(0, 102, 255, 0.1);
 }
 
+.theme-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--text);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.theme-icon-sun {
+    display: none;
+}
+
+.theme-icon-moon {
+    display: block;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    display: block;
+}
+
+[data-theme="dark"] .theme-icon-moon {
+    display: none;
+}
+
 /* Social Links */
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     border: 1px solid var(--border);
     border-radius: 50%;
     color: var(--text);
@@ -276,8 +298,8 @@ body {
 }
 
 .social-link svg {
-    width: 32px;
-    height: 32px;
+    width: 18px;
+    height: 18px;
 }
 
 /* ===== HERO SECTION ===== */
@@ -418,6 +440,151 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: var(--spacing-md);
+}
+
+/* ===== NEWS SECTION ===== */
+.news-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background: var(--bg);
+}
+
+.news-timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+.news-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-glow));
+    border-radius: 2px;
+}
+
+.news-item {
+    position: relative;
+    padding: 1.25rem 0 1.5rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    animation: slideUp 0.5s ease;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 1.5rem;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 0 3px var(--accent);
+    transform: translateX(-50%);
+}
+
+.news-item:hover::before {
+    transform: translateX(-50%) scale(1.2);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.news-date {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.news-source {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    background: rgba(0, 102, 255, 0.1);
+    color: var(--accent);
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.news-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+.news-summary {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.news-link:hover {
+    color: var(--accent-glow);
+    transform: translateX(4px);
+}
+
+.news-link::after {
+    content: '\2192';
+    transition: transform 0.2s ease;
+}
+
+.news-link:hover::after {
+    transform: translateX(4px);
+}
+
+.news-footer {
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+.see-more-btn {
+    padding: 0.75rem 2rem;
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2);
+}
+
+.news-item.hidden {
+    display: none;
 }
 
 /* ===== PORTFOLIO SECTION ===== */
@@ -819,8 +986,19 @@ body {
     }
 
     .theme-toggle {
-        width: 36px;
-        height: 36px;
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    .social-link {
+        width: 28px;
+        height: 28px;
+    }
+
+    .social-link svg {
+        width: 14px;
+        height: 14px;
     }
 
     .hero-title {

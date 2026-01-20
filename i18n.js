@@ -1,6 +1,10 @@
 // Traductions multilingues
 const translations = {
     fr: {
+        'nav.news': 'Breves',
+        'nav.portfolio': 'Portfolio',
+        'nav.newsletter': 'Newsletter',
+        'nav.contact': 'Contact',
         'hero.title': 'Projets vibecoding',
         'hero.subtitle': 'Apps mobiles, SaaS, automatisations & IA. En cours et à venir.',
         'btn.newsletter': 'S\'inscrire à la newsletter',
@@ -12,6 +16,10 @@ const translations = {
         'filter.all': 'Tous',
         'filter.in-progress': 'En cours',
         'filter.upcoming': 'À venir',
+        'news.title': 'Breves IA & Vibecoding',
+        'news.subtitle': 'Les dernieres actus du monde de l\'IA et du vibecoding',
+        'news.see-more': 'Voir plus',
+        'news.read-more': 'Lire l\'article',
         'status.in-progress': 'En cours',
         'status.upcoming': 'À venir',
         'newsletter.title': 'Actualités IA & vibecoding',
@@ -31,6 +39,10 @@ const translations = {
         'type.automation': 'Automatisation',
     },
     en: {
+        'nav.news': 'News',
+        'nav.portfolio': 'Portfolio',
+        'nav.newsletter': 'Newsletter',
+        'nav.contact': 'Contact',
         'hero.title': 'Vibecoding Projects',
         'hero.subtitle': 'Mobile apps, SaaS, automations & AI. In progress and upcoming.',
         'btn.newsletter': 'Subscribe to newsletter',
@@ -42,6 +54,10 @@ const translations = {
         'filter.all': 'All',
         'filter.in-progress': 'In Progress',
         'filter.upcoming': 'Upcoming',
+        'news.title': 'AI & Vibecoding News',
+        'news.subtitle': 'Latest news from the AI and vibecoding world',
+        'news.see-more': 'See more',
+        'news.read-more': 'Read article',
         'status.in-progress': 'In Progress',
         'status.upcoming': 'Upcoming',
         'newsletter.title': 'AI & Vibecoding News',
