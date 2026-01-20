@@ -247,6 +247,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1.2rem;
+    line-height: 1;
 }
 
 .theme-toggle:hover {
@@ -275,8 +276,8 @@ body {
 }
 
 .social-link svg {
-    width: 18px;
-    height: 18px;
+    width: 32px;
+    height: 32px;
 }
 
 /* ===== HERO SECTION ===== */
