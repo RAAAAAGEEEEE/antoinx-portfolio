@@ -179,20 +179,6 @@ class I18n {
         const dropdown = document.getElementById('language-dropdown');
         const langOptions = document.querySelectorAll('.lang-option');
 
-        // Ajouter drapeaux aux options
-        langOptions.forEach(btn => {
-            const lang = btn.dataset.lang;
-            const flag = lang === 'en' ? '🇬🇧' : '🇫🇷';
-            
-            // Vérifier si le drapeau n'existe pas déjà
-            if (!btn.querySelector('.lang-flag')) {
-                const flagSpan = document.createElement('span');
-                flagSpan.className = 'lang-flag';
-                flagSpan.textContent = flag;
-                btn.insertBefore(flagSpan, btn.firstChild);
-            }
-        });
-
         // Toggle dropdown
         toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
