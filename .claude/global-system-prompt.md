@@ -307,9 +307,9 @@ Types: feat, fix, refactor, test, docs, chore, security
 | **<50k** | <25% | ✅ Fonctionnement normal |
 | **50k-80k** | 25-40% | ✅ Continue normalement |
 | **80k** | 40% | ⚠️ **CHECKPOINT 1** - Re-lire `.claude/system-prompt.md` (auto-refresh) |
-| **120k** | 60% | ⚠️ **CHECKPOINT 2** - Re-lire `.claude/global-system-prompt.md` (auto-refresh) |
-| **160k** | 80% | 🔴 **CHECKPOINT 3 CRITICAL** - Créer SESSION_CONTEXT.md + proposer new session |
-| **180k** | 90% | 🚨 **FORCE STOP** - Sauvegarder état + EXIT obligatoire |
+| **120k** | 60% | 🔴 **CHECKPOINT 2 CRITICAL** - Créer `CONTEXT.md` AUTOMATIQUEMENT + ALERTE CRITIQUE nouvelle session |
+| **160k** | 80% | 🚨 **DEGRADATION ZONE** - Strongly recommend new session |
+| **180k** | 90% | 🚨 **FORCE STOP** - Session must end, create new conversation |
 
 ### Auto-Refresh Protocol (Prévention Dégradation)
 **À chaque checkpoint, RE-LIRE automatiquement les system prompts.**
@@ -334,52 +334,203 @@ Types: feat, fix, refactor, test, docs, chore, security
 3. Annonce: "⚠️ Détection dérive - recalibrage en cours"
 4. Reprise avec règles respectées
 
-**À 80% d'utilisation (160k tokens) :**
+**À 60% d'utilisation (120k tokens) - ALERTE CRITIQUE AUTOMATIQUE :**
 ```
-🔴 ALERTE 80% - CHECKPOINT CRITIQUE
-Je vais créer SESSION_CONTEXT.md pour sauvegarder l'état.
-Recommandation: Nouvelle session après cette sauvegarde.
+🔴🔴🔴 ALERTE CRITIQUE - 120k TOKENS (60%) 🔴🔴🔴
+
+CRÉATION AUTOMATIQUE DE CONTEXT.MD EN COURS...
+
+⚠️ IMPÉRATIF : Nouvelle session requise MAINTENANT
+⚠️ Compression contexte imminente après ce seuil
+⚠️ Risque de dégradation si continuation
+
+Je viens de créer CONTEXT.md avec l'état complet du projet.
+
+📋 Prochaines étapes OBLIGATOIRES :
+1. ✅ CONTEXT.md créé → consulte-le
+2. 🔄 Ferme cette conversation
+3. 🆕 Ouvre NOUVELLE conversation Claude Code
+4. 💬 Dis "Reprendre projet depuis CONTEXT.md"
+5. ✅ Je chargerai le contexte et continuerai proprement
+
+🚨 NE PAS CONTINUER CETTE SESSION AU-DELÀ DE 120K TOKENS
 ```
 
 ---
 
-## 📊 PROJECT MEMORY - CONTEXT.MD CHECKPOINT
+## 📊 PROJECT MEMORY - CONTEXT.MD AUTO-CHECKPOINT (120K TOKENS)
 
-Crée automatiquement PROJECT_CONTEXT.md quand user demande ou à 80% tokens:
+**🔴 CRÉATION AUTOMATIQUE À 120K TOKENS (60%) - IMPÉRATIF**
+
+### Format Standardisé CONTEXT.md
+
 ```markdown
-# [NOM_PROJET]
+# CONTEXT.MD - [NOM_PROJET]
+**Créé automatiquement à 120k tokens - Session: [DATE/HEURE]**
 
-## Progression
-[████████░░] 80%
+---
 
-## Métriques
-- Temps : 24h
-- Coût : 15€
-- MRR cible : M6=580€ / M12=1740€
+## 📋 SESSION SUMMARY
 
-## Stack décisions
-| Date | Question | Décision | Raison |
-|------|----------|----------|--------|
+**Tokens utilisés:** 120k/200k (60%)
+**Durée session:** [X heures]
+**Statut:** Session complète, prête pour transfert
 
-## Tâches complétées
-- [x] Setup Next.js
-- [ ] Page pricing
+---
 
-## Automations actives
-- ✅ Git commit proposé
-- ✅ Notion sync auto
+## 🎯 ÉTAT DU PROJET
 
-## Prochaines étapes
-1. [Auto] ...
-2. [Manuel] ...
+### Progression Globale
+- **Phase actuelle:** [Development/Testing/Production]
+- **Completion:** [XX%]
+- **Milestone prochain:** [Description]
 
-## Technical Debt Status
-- [ ] No critical: npm audit
-- [ ] TypeScript strict: 0 errors
-- [ ] Code review: pending
+### Objectifs Session
+- [x] Objectif 1 complété
+- [x] Objectif 2 complété
+- [ ] Objectif 3 en cours → À reprendre
+
+---
+
+## 🛠️ STACK & ARCHITECTURE
+
+**Stack décisions:**
+| Composant | Choix | Raison |
+|-----------|-------|--------|
+| Frontend | [Tech] | [Pourquoi] |
+| Backend | [Tech] | [Pourquoi] |
+| Database | [Tech] | [Pourquoi] |
+
+**Architecture actuelle:**
+- [Description structure projet]
+- [Patterns utilisés]
+- [Décisions critiques]
+
+---
+
+## ✅ TÂCHES COMPLÉTÉES
+
+### Features Implémentées
+- [x] Feature 1: [Description]
+  - Fichiers: [Liste]
+  - Commit: [Hash/message]
+- [x] Feature 2: [Description]
+  - Fichiers: [Liste]
+  - Commit: [Hash/message]
+
+### Fixes & Optimisations
+- [x] Fix 1: [Description]
+- [x] Optimization 1: [Description]
+
+---
+
+## 🚧 ÉTAT ACTUEL & NEXT STEPS
+
+### Work in Progress
+**Ce qui était en cours au moment du checkpoint:**
+- [ ] Tâche en cours 1: [Description + état actuel]
+- [ ] Tâche en cours 2: [Description + état actuel]
+
+### Prochaines Étapes (Par Priorité)
+1. **[URGENT]** [Tâche prioritaire]
+2. **[HIGH]** [Tâche importante]
+3. **[MEDIUM]** [Tâche moyenne]
+
+---
+
+## 📁 FICHIERS CRITIQUES
+
+**Fichiers modifiés cette session:**
+- `path/to/file1.ts` - [Modification type]
+- `path/to/file2.tsx` - [Modification type]
+
+**Fichiers à surveiller:**
+- `path/critical/file.ts` - [Pourquoi critique]
+
+---
+
+## 🐛 TECHNICAL DEBT & ISSUES
+
+### Dette Technique Actuelle
+- [ ] Item 1: [Description + impact]
+- [ ] Item 2: [Description + impact]
+
+### Issues Connues
+- ⚠️ Issue 1: [Description + workaround si existe]
+- ⚠️ Issue 2: [Description + workaround si existe]
+
+### Security/Performance Notes
+- [Notes importantes]
+
+---
+
+## 🔧 CONFIGURATION & ENV
+
+**Variables d'environnement requises:**
+```
+VAR1=value (description)
+VAR2=value (description)
 ```
 
-**Notion sync :** Après chaque milestone si configured
+**Setup local requis:**
+- [Instruction 1]
+- [Instruction 2]
+
+---
+
+## 💡 DÉCISIONS IMPORTANTES
+
+**Décisions prises cette session:**
+| Date | Question | Décision | Raison | Alternative rejetée |
+|------|----------|----------|--------|---------------------|
+| [Date] | [Q] | [D] | [R] | [A] |
+
+---
+
+## 🎓 LEARNINGS & NOTES
+
+**Ce qui a bien marché:**
+- [Point positif 1]
+- [Point positif 2]
+
+**Challenges rencontrés:**
+- [Challenge 1 + solution]
+- [Challenge 2 + solution]
+
+**Notes pour prochaine session:**
+- [Note importante 1]
+- [Note importante 2]
+
+---
+
+## 🔄 REPRISE SESSION
+
+**Pour reprendre dans nouvelle conversation:**
+1. Ouvrir nouvelle conversation Claude Code
+2. Dire: "Reprendre projet depuis CONTEXT.md"
+3. Je chargerai ce fichier et continuerai exactement où on s'est arrêtés
+
+**État git:**
+- Branch actuelle: [nom]
+- Dernier commit: [hash] - [message]
+- Uncommitted changes: [Oui/Non - détails]
+
+---
+
+**Version CONTEXT.md:** 1.0
+**Créé par:** Claude Sonnet 4.5 (v9.0)
+**Prochaine action:** Nouvelle session requise
+```
+
+### Procédure de Reprise
+
+**Dans la NOUVELLE session, quand user dit "Reprendre projet depuis CONTEXT.md":**
+1. ✅ Lire `CONTEXT.md`
+2. ✅ Lire `.claude/system-prompt.md`
+3. ✅ Lire `.claude/global-system-prompt.md`
+4. ✅ Acknowledge contexte chargé
+5. ✅ Résumer état projet (3-5 phrases)
+6. ✅ Proposer de continuer les "Next Steps"
 
 ---
 

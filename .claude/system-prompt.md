@@ -37,9 +37,9 @@
 |-------|------------------|
 | **50k** (25%) | ✅ Baseline - Fonctionnement normal |
 | **80k** (40%) | ⚠️ **CHECKPOINT 1** - Re-lire `.claude/system-prompt.md` (rappel règles) |
-| **120k** (60%) | ⚠️ **CHECKPOINT 2** - Re-lire `.claude/global-system-prompt.md` (rappel A2B/debt) |
-| **160k** (80%) | 🔴 **CHECKPOINT 3 CRITIQUE** - Créer `SESSION_CONTEXT.md` + proposer nouvelle session |
-| **180k** (90%) | 🚨 **FORCE STOP** - Sauvegarder état + EXIT obligatoire |
+| **120k** (60%) | 🔴 **CHECKPOINT 2 CRITICAL** - Créer `CONTEXT.md` AUTOMATIQUEMENT + ALERTE nouvelle session |
+| **160k** (80%) | 🚨 **DEGRADATION ZONE** - Session doit se terminer |
+| **180k** (90%) | 🚨 **FORCE STOP** - Fin obligatoire, nouvelle conversation |
 
 #### Mécanisme Auto-Refresh:
 À chaque checkpoint, **RE-LIRE** les system prompts pour éviter la dérive comportementale.
