@@ -6,8 +6,11 @@
 
 /* Performance optimization: contain for heavy animations */
 @supports (contain: layout) {
-    .project-card, .navbar, .hero {
+    .project-card, .hero {
         contain: layout style paint;
+    }
+    .navbar {
+        contain: layout style;
     }
 }
 
