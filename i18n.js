@@ -94,6 +94,7 @@ class I18n {
     init() {
         document.documentElement.lang = this.currentLanguage;
         this.updateAllText();
+        this.updateLanguageFlag(); // Set correct flag on init
         this.setupLanguageButtons();
     }
 
@@ -103,6 +104,25 @@ class I18n {
             localStorage.setItem('language', lang);
             document.documentElement.lang = lang;
             this.updateAllText();
+            this.updateLanguageFlag(); // Update the flag in the navbar button
+        }
+    }
+
+    updateLanguageFlag() {
+        const toggleBtn = document.getElementById('language-toggle');
+        if (!toggleBtn) return;
+
+        const flagImg = toggleBtn.querySelector('.lang-flag-img');
+        if (!flagImg) return;
+
+        // Get the flag SVG from the selected language option
+        const selectedOption = document.querySelector(`.lang-option[data-lang="${this.currentLanguage}"]`);
+        if (selectedOption) {
+            const selectedFlag = selectedOption.querySelector('.lang-flag-img');
+            if (selectedFlag) {
+                flagImg.src = selectedFlag.src;
+                flagImg.alt = selectedFlag.alt;
+            }
         }
     }
 
