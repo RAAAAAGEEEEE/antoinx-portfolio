@@ -402,9 +402,10 @@ function createProjectCard(project) {
     descEl.textContent = description;
 
     const linkEl = document.createElement('a');
-    linkEl.href = project.link;
+    linkEl.href = `/projects/project-${project.id}.html`;
     linkEl.className = 'project-link';
-    linkEl.textContent = 'En savoir plus →';
+    const linkText = lang === 'en' ? 'Learn more →' : 'En savoir plus →';
+    linkEl.textContent = linkText;
 
     card.appendChild(header);
     card.appendChild(typeEl);
