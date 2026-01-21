@@ -7,7 +7,9 @@
       "Bash(git commit:*)",
       "Bash(powershell:*)",
       "Bash(git push:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(git rm:*)",
+      "Bash(ls:*)"
     ]
   }
 }

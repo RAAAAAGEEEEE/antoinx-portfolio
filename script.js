@@ -196,9 +196,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===== THEME TOGGLE =====
 function initTheme() {
     try {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme);
+        // Try to get saved theme from localStorage
+        let savedTheme = null;
+        try {
+            savedTheme = localStorage.getItem('theme');
+        } catch (e) {
+            console.warn('localStorage not accessible:', e);
+        }
+
+        const theme = savedTheme || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        updateThemeIcon(theme);
     } catch (error) {
         console.warn('Theme initialization failed:', error);
         document.documentElement.setAttribute('data-theme', 'light');
@@ -209,14 +217,25 @@ function setupThemeToggle() {
     const toggleBtn = document.getElementById('theme-toggle');
     if (!toggleBtn) return;
 
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
         try {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
+            // Always update DOM first (most critical)
             document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
+
+            // Then try to save to localStorage
+            try {
+                localStorage.setItem('theme', newTheme);
+            } catch (e) {
+                console.warn('Could not save theme to localStorage:', e);
+                // Theme will still work, just won't persist on reload
+            }
         } catch (error) {
             console.error('Theme toggle failed:', error);
         }
