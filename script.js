@@ -296,9 +296,7 @@ function createNewsItem(item, index) {
 
     const linkEl = document.createElement('a');
     linkEl.className = 'news-link';
-    linkEl.href = item.link;
-    linkEl.target = '_blank';
-    linkEl.rel = 'noopener noreferrer';
+    linkEl.href = `/news/article-${item.id}.html`;
     linkEl.textContent = readMoreText;
 
     newsItem.appendChild(meta);

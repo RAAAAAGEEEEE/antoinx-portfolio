@@ -1,0 +1,98 @@
+====================================
+PROJET 6 - À REMPLIR
+====================================
+
+TITRE FRANÇAIS:
+[Remplace ceci par ton titre]
+
+TITRE ANGLAIS:
+[Replace this with your title]
+
+----
+
+TYPE (choisis un):
+☐ App Mobile
+☐ SaaS
+☐ Automatisation
+
+STATUT (choisis un):
+☐ En cours
+☐ À venir
+
+----
+
+DESCRIPTION COURTE FRANÇAISE (1-2 phrases pour la page d'accueil):
+[Remplace ceci]
+
+DESCRIPTION COURTE ANGLAISE (1-2 sentences for homepage):
+[Replace this]
+
+----
+
+TITRE PAGE DÉTAIL FRANÇAIS:
+[Remplace ceci]
+
+TITRE PAGE DÉTAIL ANGLAIS:
+[Replace this]
+
+----
+
+SOUS-TITRE PAGE DÉTAIL FRANÇAIS:
+[Remplace ceci]
+
+SOUS-TITRE PAGE DÉTAIL ANGLAIS:
+[Replace this]
+
+----
+
+DESCRIPTION LONGUE FRANÇAISE (peut être long):
+[Remplace ceci]
+
+DESCRIPTION LONGUE ANGLAISE (can be long):
+[Replace this]
+
+----
+
+CARACTÉRISTIQUES FRANÇAISES (une par ligne):
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
+
+FEATURES IN ENGLISH (one per line):
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
+
+----
+
+TECHNOLOGIES UTILISÉES (séparées par des virgules):
+[Ex: React, Firebase, Python]
+
+----
+
+TIMELINE FRANÇAIS:
+[Ex: Lancement Q2 2026 OU Disponible maintenant]
+
+TIMELINE ENGLISH:
+[Ex: Launch Q2 2026 OR Available now]
+
+----
+
+BOUTON ACTION FRANÇAIS:
+[Ex: Me contacter, Essayer, S'inscrire]
+
+BOUTON ACTION ENGLISH:
+[Ex: Contact me, Try it, Subscribe]
+
+----
+
+LIEN IMAGE 1:
+[Colle l'URL complète: https://...]
+
+LIEN IMAGE 2:
+[Colle l'URL complète: https://...]
+
+LIEN IMAGE 3:
+[Colle l'URL complète: https://...]
+
+====================================

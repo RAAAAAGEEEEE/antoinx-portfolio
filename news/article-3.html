@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <script>
+        try {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Article - antoinx">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%230066ff'>A</text></svg>">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .article-header {
+            margin-top: 80px;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .article-source {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .article-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            list-style: disc;
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .share-btn {
+            padding: 0.6rem 1.2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--background-secondary);
+            color: var(--text-primary);
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .share-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .newsletter-cta {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 255, 0.1));
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+
+        .newsletter-cta h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .newsletter-cta p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="/#newsletter">Newsletter</a></li>
+                <li><a href="mailto:contact@antoinx.com">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="language-btn" id="language-toggle">
+                        <img class="lang-flag-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect fill='%23002395' width='300' height='600'/%3E%3Crect fill='%23FFF' x='300' width='300' height='600'/%3E%3Crect fill='%23ED2939' x='600' width='300' height='600'/%3E%3C/svg%3E" alt="FR">
+                        <span class="lang-icon">▼</span>
+                    </button>
+                    <div class="language-dropdown" id="language-dropdown">
+                        <button class="lang-option" data-lang="fr">
+                            <img class="lang-flag-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect fill='%23002395' width='300' height='600'/%3E%3Crect fill='%23FFF' x='300' width='300' height='600'/%3E%3Crect fill='%23ED2939' x='600' width='300' height='600'/%3E%3C/svg%3E" alt="FR">
+                            <span>Français</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <img class="lang-flag-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23012169'/%3E%3Cpath d='M0,15 h60 M30,0 v30' stroke='white' stroke-width='4'/%3E%3Cpath d='M0,15 h60 M30,0 v30' stroke='%23C8102E' stroke-width='2.4'/%3E%3Cpath d='M0,0 L30,15 L60,0' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3Cpath d='M60,0 L30,15 L0,0' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3Cpath d='M0,30 L30,15 L60,30' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3Cpath d='M60,30 L30,15 L0,30' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3C/svg%3E" alt="GB">
+                            <span>English</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container article-container">
+        <a href="/#news" class="back-link" id="back-link">← Retour aux actualités</a>
+
+        <article class="article-header">
+            <h1 class="article-title" id="article-title">Titre de l'article</h1>
+            <div class="article-meta">
+                <span id="article-date">Date</span>
+                <span class="article-source" id="article-source">Source</span>
+            </div>
+        </article>
+
+        <div class="article-content" id="article-content">
+            <!-- Contenu généré dynamiquement -->
+        </div>
+
+        <div class="share-buttons">
+            <a href="#" class="share-btn" id="share-twitter" target="_blank">Partager sur X</a>
+            <a href="#" class="share-btn" id="share-linkedin" target="_blank">Partager sur LinkedIn</a>
+        </div>
+
+        <div class="newsletter-cta">
+            <h3 id="newsletter-title">Reçois les actualités IA</h3>
+            <p id="newsletter-desc">Inscris-toi à la newsletter pour ne rater aucun article</p>
+            <a href="/#newsletter" class="cta-button primary">S'inscrire à la newsletter</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>antoinx</h3>
+                    <p>Vibecoding projects & IA innovations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/#portfolio">Portfolio</a></li>
+                        <li><a href="/#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:contact@antoinx.com">contact@antoinx.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 antoinx. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="../i18n.js"></script>
+    <script defer src="news-data.js"></script>
+    <script defer src="article-detail.js"></script>
+</body>
+</html>

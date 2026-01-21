@@ -20,11 +20,12 @@
     --secondary: #f8f9fa;
     --accent: #0066ff;
     --accent-glow: #00d4ff;
+    --accent-gold: #d4a574;
     --text: #1a1a1a;
     --text-light: #666;
     --border: #e0e0e0;
     --bg: #ffffff;
-    
+
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
@@ -36,6 +37,7 @@
     --secondary: #1a1a2e;
     --accent: #0080ff;
     --accent-glow: #00d4ff;
+    --accent-gold: #e8c87c;
     --text: #f5f5f5;
     --text-light: #b0b0b0;
     --border: #333;
@@ -809,7 +811,7 @@ body {
 
 .submit-btn {
     padding: 0.875rem 2rem;
-    background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+    background: linear-gradient(135deg, var(--accent-gold), #c9942e);
     color: white;
     border: none;
     border-radius: 8px;
@@ -821,7 +823,7 @@ body {
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 12px 32px rgba(212, 165, 116, 0.3);
 }
 
 .form-note {
