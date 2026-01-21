@@ -116,6 +116,16 @@ body {
     color: var(--accent);
 }
 
+/* Newsletter nav link - gold accent */
+.nav-links li:nth-child(3) a {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+.nav-links li:nth-child(3) a:hover {
+    color: #c9942e;
+}
+
 .contact-link {
     padding: 0.5rem 1rem;
     border: 1px solid var(--accent);
