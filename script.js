@@ -363,9 +363,10 @@ function handleContactSubmit(e) {
         return;
     }
 
-    const nameInput = this.querySelector('input[name="name"]');
-    const emailInput = this.querySelector('input[name="email"]');
-    const messageInput = this.querySelector('textarea[name="message"]');
+    const form = e.target;
+    const nameInput = form.querySelector('input[name="name"]');
+    const emailInput = form.querySelector('input[name="email"]');
+    const messageInput = form.querySelector('textarea[name="message"]');
     const statusEl = document.getElementById('form-status');
 
     if (!nameInput || !emailInput || !messageInput) return;
@@ -392,7 +393,7 @@ function handleContactSubmit(e) {
         return;
     }
 
-    submitContact(this, nameInput, emailInput, messageInput, statusEl, { name, email, message });
+    submitContact(form, nameInput, emailInput, messageInput, statusEl, { name, email, message });
 }
 
 function submitContact(form, nameInput, emailInput, messageInput, statusEl, data) {
