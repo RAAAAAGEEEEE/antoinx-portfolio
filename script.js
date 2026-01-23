@@ -405,9 +405,11 @@ function submitContact(form, nameInput, emailInput, messageInput, statusEl, data
         contactState.lastSubmission = Date.now();
 
         // Envoi via Formspree (gratuit, pas de backend nécessaire)
+        // Formspree accepte JSON directement - correction headers
         fetch(FORMSPREE_ENDPOINT, {
             method: 'POST',
             headers: {
+                'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
