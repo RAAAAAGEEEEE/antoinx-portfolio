@@ -52,8 +52,8 @@
             <ul class="nav-links">
                 <li><a href="#news" data-i18n="nav.news">Actualités</a></li>
                 <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 <li><a href="#newsletter" data-i18n="nav.newsletter">Newsletter</a></li>
-                <li><a href="mailto:contact@antoinx.com" class="contact-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="nav-controls">
                 <!-- Language Selector -->
@@ -109,24 +109,8 @@
             <h1 class="hero-title" data-i18n="hero.title">Projets vibecoding</h1>
             <p class="hero-subtitle" data-i18n="hero.subtitle">Actualités IA, astuces vibecoding & innovations. Découvrez mes apps mobiles, SaaS, automatisations & IA en cours et à venir.</p>
             <div class="hero-ctas">
-                <a href="#news" class="cta-button primary" data-i18n="btn.news">Voir les actualités</a>
-                <a href="#portfolio" class="cta-button secondary" data-i18n="btn.portfolio">Parcourir les projets</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="news-section" id="news">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="news.title">Actualités Vibecoding & IA</h2>
-                <p class="section-subtitle" data-i18n="news.subtitle">Tendances, astuces et innovations dans le monde de l'IA et du vibecoding</p>
-            </div>
-            <div class="news-timeline" id="news-timeline">
-                <!-- Dynamically filled -->
-            </div>
-            <div class="news-footer">
-                <button class="see-more-btn" id="see-more-news" data-i18n="news.see-more">Voir plus</button>
+                <a href="#portfolio" class="cta-button primary" data-i18n="btn.portfolio">Parcourir les projets</a>
+                <a href="#newsletter" class="cta-button secondary" data-i18n="btn.newsletter">S'inscrire à la newsletter</a>
             </div>
         </div>
     </section>
@@ -163,6 +147,54 @@
             <div class="projects-grid" id="projects-grid">
                 <!-- Dynamically filled -->
             </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contact.title">Parlons de vos projets</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Une question ? Une collaboration ? Contactez-moi directement.</p>
+            </div>
+            
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        name="name"
+                        placeholder="Votre nom"
+                        data-i18n-placeholder="contact.name"
+                        required
+                        class="form-input"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder="Votre email"
+                        data-i18n-placeholder="contact.email"
+                        required
+                        class="form-input"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <textarea 
+                        name="message"
+                        placeholder="Votre message"
+                        data-i18n-placeholder="contact.message"
+                        required
+                        class="form-textarea"
+                        rows="5"
+                    ></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn" data-i18n="contact.submit">Envoyer</button>
+                <p class="form-note form-status" id="form-status"></p>
+            </form>
         </div>
     </section>
 
@@ -213,10 +245,6 @@
                         <li><a href="/legal.html" style="text-decoration: none;">Mentions légales</a></li>
                         <li><a href="/cookies.html" style="text-decoration: none;">Cookies</a></li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 data-i18n="footer.contact">Contact</h4>
-                    <p><a href="mailto:contact@antoinx.com">contact@antoinx.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
