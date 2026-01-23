@@ -319,7 +319,7 @@ body {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    min-height: 80vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,36 +398,39 @@ body {
 
 .cta-button {
     display: inline-block;
-    padding: 0.875rem 2rem;
-    border-radius: 6px;
-    font-weight: 600;
+    padding: 1rem 2.25rem;
+    border-radius: 8px;
+    font-weight: 700;
     transition: all 0.3s ease;
     cursor: pointer;
     border: 2px solid transparent;
     font-size: 1rem;
     text-decoration: none;
+    letter-spacing: 0.3px;
 }
 
 .cta-button.primary {
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-glow));
     color: white;
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2);
 }
 
 .cta-button.primary:hover {
-    background: var(--accent);
-    box-shadow: 0 12px 32px rgba(0, 102, 255, 0.3);
-    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 102, 255, 0.35);
+    transform: translateY(-3px);
 }
 
 .cta-button.secondary {
     border: 2px solid var(--accent);
     color: var(--accent);
-    background: transparent;
+    background: rgba(0, 102, 255, 0.05);
 }
 
 .cta-button.secondary:hover {
     background: var(--accent);
     color: white;
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.25);
+    transform: translateY(-3px);
 }
 
 /* ===== FEATURED SECTION ===== */
