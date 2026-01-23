@@ -405,20 +405,20 @@ function submitContact(form, nameInput, emailInput, messageInput, statusEl, data
         contactState.lastSubmission = Date.now();
 
         // Envoi via Formspree (gratuit, pas de backend nécessaire)
-        // Formspree accepte JSON directement - correction headers
+        // Utiliser FormData pour meilleure compatibilité avec Formspree
+        const formData = new FormData();
+        formData.append('name', data.name);
+        formData.append('email', data.email);
+        formData.append('message', data.message);
+        formData.append('_subject', `Nouveau contact de ${data.name} via antoinx.com`);
+        formData.append('_replyto', data.email);
+
         fetch(FORMSPREE_ENDPOINT, {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                name: data.name,
-                email: data.email,
-                message: data.message,
-                _subject: `Nouveau contact de ${data.name} via antoinx.com`,
-                _replyto: data.email,
-            })
+            body: formData
         })
         .then(response => {
             if (response.ok) {
