@@ -1,0 +1,2 @@
+# Tweet history - one per line with timestamp
+# Format: YYYY-MM-DD HH:MM:SS | tweet_text
