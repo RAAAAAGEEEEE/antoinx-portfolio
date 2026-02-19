@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite - Antoinx">
+    <meta name="keywords" content="automatisation, IA, tweets, Z.ai, Python, cron">
+    <title>Comment j'ai automatisé mes réseaux sociaux - antoinx</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content pre {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color, #0066ff);
+        }
+        .article-content code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite</h1>
+            <div class="article-meta">
+                <span>17 février 2026</span>
+                <span>•</span>
+                <span>8 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">automatisation</span>
+            </div>
+        </div>
+        
+        <div class="article-content">
+            <p>Vous avez déjà regardé quelqu'un poster régulièrement sur Twitter/X, LinkedIn, Bluesky en semblant pas lever le petit doigt ? Moi aussi. Et pendant longtemps, j'ai cru que c'était de la magie ou du temps débile. Spoiler alert : c'était juste de l'automatisation.</p>
+
+            <p>Le truc, c'est que l'automatisation pour les réseaux sociaux semblait compliquée et chère. Des outils SaaS à 50 balles par mois, des APIs commerciales, des secrets à garder. Jusqu'au moment où j'ai compris qu'avec une IA gratuite et un peu de Python, je pouvais faire la même chose en une soirée.</p>
+
+            <h2>Le setup initial : délirant simple</h2>
+
+            <p>Mon objectif était bête : générer des tweets aléatoires tous les jours, sans que j'aie à y penser. Des tweets sur la tech, l'IA, l'automatisation, les outils dev — mes thèmes de base. Et oui, il fallait que ce soit gratuit.</p>
+
+            <p>J'ai trouvé Z.ai (GLM-4.7-Flash). Gratuit. Vraiment gratuit. Pas de piège à 30 jours. Pas de faux freemium. Juste une API accessible avec un token.</p>
+
+            <p>Ensuite, juste Python. Un script de 30 lignes. Un cron job. Boom.</p>
+
+            <h3>Le script (version minimaliste)</h3>
+
+            <pre><code class="language-python">import requests, subprocess, json, os, random
+from datetime import datetime
+
+# Charger la clé
+env_path = os.path.expanduser('~/.openclaw/workspace/.env')
+zai_key = None
+for line in open(env_path):
+    if line.startswith('ZAI_API_KEY='):
+        zai_key = line.strip().split('=',1)[1]
+
+# Piocher un thème aléatoire
+themes_path = os.path.expanduser('~/antoinx-site/tweet_themes.txt')
+themes = [line.strip() for line in open(themes_path) if line.strip()]
+theme = random.choice(themes)
+
+# Appeler Z.ai
+resp = requests.post(
+    'https://api.z.ai/api/paas/v4/chat/completions',
+    headers={'Authorization': f'Bearer {zai_key}'},
+    json={
+        'model': 'glm-4.7-flash',
+        'messages': [{'role': 'user', 'content': f'Tweet max 270 chars. Theme: {theme}. Pas de hashtags.'}],
+        'max_tokens': 2000
+    }
+)
+
+tweet_text = resp.json()['choices'][0]['message']['content'][:280]
+
+# Poster via mon script tweet.py
+subprocess.run(['python3', 'tweet.py', tweet_text])</code></pre>
+
+            <p>Pas compliqué, hein ? Le secret, c'est que GLM-4.7-Flash est assez bon pour générer du texte court et cohérent. Et assez rapide pour répondre en moins d'une seconde.</p>
+
+            <h2>Escalader intelligemment</h2>
+
+            <p>Une fois que j'ai eu le tweet brut qui marche, j'ai pensé : "Et si je lui donnais des thèmes variés pour que ce soit moins répétitif ?"</p>
+
+            <p>J'ai créé un fichier <code>tweet_themes.txt</code> avec 20 thèmes différents :
+            <ul style="margin: 15px 0; padding-left: 20px;">
+                <li>IA générative et LLMs</li>
+                <li>Automatisation avec Python</li>
+                <li>Vibecoding et développement</li>
+                <li>Productivité des développeurs</li>
+                <li>APIs IA gratuites</li>
+                <li>Outils dev sous-estimés</li>
+                <li>Humour tech et dev</li>
+                <li>DevOps et infrastructure</li>
+                <li>Freelancing en tech</li>
+                <li>Et 11 autres...</li>
+            </ul>
+            </p>
+
+            <p>À chaque exécution, le script en pioche un au hasard. Résultat ? Les tweets sont variés. Pas d'impression de bot qui recrache la même chose.</p>
+
+            <p>Puis j'ai dit : "Et si je trackais les tweets générés pour pas avoir de vrais doublons ?"</p>
+
+            <p>Une ligne de code qui log dans <code>tweet_history.txt</code> à chaque génération. Fini.</p>
+
+            <h2>Scheduling : cron, le meilleur ami du dev</h2>
+
+            <p>Maintenant, le hard part : <strong>faire tourner ce truc tous les jours sans y penser</strong>.</p>
+
+            <pre><code>0 9,14,19 * * * /usr/bin/python3 /root/.openclaw/workspace/auto_tweet.py</code></pre>
+
+            <p>Tous les jours à 9h, 14h et 19h. Trois tweets par jour. Zéro effort de ma part.</p>
+
+            <h2>Pourquoi ça marche</h2>
+
+            <p><strong>1. IA gratuite qui fait le job</strong> — GLM-4.7-Flash n'est pas un modèle minimaliste. Il génère du texte fluide et intelligent en moins d'une seconde.</p>
+
+            <p><strong>2. Pas de gestion d'état compliquée</strong> — Je poste juste les tweets générés. Pas de feedback loop. Pas de metrics à tracker. Pas de ML custom. Juste du brut.</p>
+
+            <p><strong>3. Variété par thème</strong> — En changeant le sujet, le modèle produit naturellement des résultats différents. Pas d'hallucinations bizarres. Juste du contenu solide.</p>
+
+            <p><strong>4. Logging pour la conformité mentale</strong> — Savoir que ça tourne et que je peux regarder l'historique me donne la confiance qu'il y a pas un bot qui poste n'importe quoi.</p>
+
+            <h2>Le secret des gens qui posten régulièrement</h2>
+
+            <p>C'est ça. C'est juste ça. Pas de travail manuel répétitif. Pas d'inspiration à trouver. Pas de "oh merde, j'ai oublié de poster aujourd'hui".</p>
+
+            <p>Juste un script de 40 lignes et un cron job.</p>
+
+            <p>Y a pas de magie. Y a de l'automatisation. Et c'est mieux.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

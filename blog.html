@@ -7,6 +7,76 @@
     <meta name="keywords" content="blog, IA, automatisation, développement, vibecoding">
     <title data-i18n="blog.title">Blog - antoinx</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-header {
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .blog-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-articles {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .article-card {
+            margin-bottom: 40px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .article-card:hover {
+            border-color: var(--accent-color, #0066ff);
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.1);
+        }
+        .article-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .category-tag {
+            background: var(--accent-color, #0066ff);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .article-excerpt {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .article-link {
+            color: var(--accent-color, #0066ff);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .article-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -14,28 +84,12 @@
         <div class="nav-container">
             <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
             <ul class="nav-links">
-                <li><a href="#news" data-i18n="nav.news">Actualités</a></li>
-                <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="/#news" data-i18n="nav.news">Actualités</a></li>
+                <li><a href="/#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
                 <li><a href="blog.html" style="color: #0066ff; font-weight: 500;">Blog</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
             <div class="nav-controls">
-                <div class="language-selector">
-                    <button class="language-btn" id="language-toggle">
-                        <img class="lang-flag-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect fill='%23002395' width='300' height='600'/%3E%3Crect fill='%23FFF' x='300' width='300' height='600'/%3E%3Crect fill='%23ED2939' x='600' width='300' height='600'/%3E%3C/svg%3E" alt="FR">
-                        <span class="lang-icon">▼</span>
-                    </button>
-                    <div class="language-dropdown" id="language-dropdown">
-                        <button class="lang-option" data-lang="fr">
-                            <img class="lang-flag-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Crect fill='%23002395' width='300' height='600'/%3E%3Crect fill='%23FFF' x='300' width='300' height='600'/%3E%3Crect fill='%23ED2939' x='600' width='300' height='600'/%3E%3C/svg%3E" alt="FR">
-                            <span>Français</span>
-                        </button>
-                        <button class="lang-option" data-lang="en">
-                            <img class="lang-flag-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3Crect width='60' height='30' fill='%23012169'/%3E%3Cpath d='M0,15 h60 M30,0 v30' stroke='white' stroke-width='4'/%3E%3Cpath d='M0,15 h60 M30,0 v30' stroke='%23C8102E' stroke-width='2.4'/%3E%3Cpath d='M0,0 L30,15 L60,0' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3Cpath d='M60,0 L30,15 L0,0' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3Cpath d='M0,30 L30,15 L60,30' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3Cpath d='M60,30 L30,15 L0,30' fill='none' stroke='%23C8102E' stroke-width='2'/%3E%3C/svg%3E" alt="GB">
-                            <span>English</span>
-                        </button>
-                    </div>
-                </div>
                 <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -62,16 +116,38 @@
     </nav>
 
     <!-- Blog Header -->
-    <section style="padding: 60px 20px; text-align: center; border-bottom: 1px solid var(--border-color);">
-        <h1 style="font-size: 3rem; margin-bottom: 10px; color: var(--text-primary);">Blog</h1>
-        <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-            Articles sur l'automatisation, l'IA et les APIs. Comment je fais les choses. Vibecoding.
-        </p>
-    </section>
+    <div class="blog-header">
+        <h1>Blog</h1>
+        <p>Articles sur l'automatisation, l'IA et les APIs. Comment je fais les choses. Vibecoding.</p>
+    </div>
 
     <!-- Blog Articles -->
-    <section style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
-        <div id="blog-articles-container"></div>
+    <section class="blog-articles">
+        <a href="blog/article-2.html" class="article-card">
+            <h2 class="article-title">5 APIs IA gratuites en 2026 que personne ne connaît</h2>
+            <div class="article-meta">
+                <span>17 février 2026</span>
+                <span>•</span>
+                <span>10 min</span>
+                <span>•</span>
+                <span class="category-tag">ia</span>
+            </div>
+            <p class="article-excerpt">Les meilleures APIs IA gratuites en 2026 : Z.ai, Groq, Cerebras, Together.ai, HuggingFace. Des pépites que tout le monde ignore.</p>
+            <span class="article-link">Lire l'article →</span>
+        </a>
+
+        <a href="blog/article-1.html" class="article-card">
+            <h2 class="article-title">Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite</h2>
+            <div class="article-meta">
+                <span>17 février 2026</span>
+                <span>•</span>
+                <span>8 min</span>
+                <span>•</span>
+                <span class="category-tag">automatisation</span>
+            </div>
+            <p class="article-excerpt">Un guide complet pour automatiser tes tweets avec une IA gratuite et un cron job. Zéro effort, résultats maximaux.</p>
+            <span class="article-link">Lire l'article →</span>
+        </a>
     </section>
 
     <!-- Footer -->
@@ -103,196 +179,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="i18n.js"></script>
-    <script src="blog-data.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Render blog articles
-        function renderBlogArticles() {
-            const container = document.getElementById('blog-articles-container');
-            const lang = document.documentElement.lang || 'fr';
-            
-            // Sort articles by date (newest first)
-            const articles = Object.values(blogArticles).sort((a, b) => 
-                new Date(b.date) - new Date(a.date)
-            );
-            
-            articles.forEach(article => {
-                const titleKey = `title_${lang}`;
-                const excerptKey = `excerpt_${lang}`;
-                const title = article[titleKey] || article.title_fr;
-                const excerpt = article[excerptKey] || article.excerpt_fr;
-                
-                const date = new Date(article.date).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-                
-                const articleHTML = `
-                    <article class="blog-article-card" style="margin-bottom: 40px; padding: 30px; border: 1px solid var(--border-color); border-radius: 8px; transition: all 0.3s ease;">
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
-                            <div>
-                                <h2 style="margin: 0 0 10px 0; color: var(--text-primary);">
-                                    <a href="#" onclick="viewArticle('${article.slug}'); return false;" style="color: var(--text-primary); text-decoration: none; cursor: pointer;">
-                                        ${title}
-                                    </a>
-                                </h2>
-                                <div style="display: flex; gap: 15px; color: var(--text-secondary); font-size: 0.9rem;">
-                                    <span>${date}</span>
-                                    <span>•</span>
-                                    <span>${article.readTime}</span>
-                                    <span>•</span>
-                                    <span class="category-tag" style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">${article.category}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p style="color: var(--text-secondary); line-height: 1.6; margin: 15px 0; font-size: 1rem;">${excerpt}</p>
-                        <a href="#" onclick="viewArticle('${article.slug}'); return false;" style="color: var(--accent-color, #0066ff); text-decoration: none; font-weight: 500; cursor: pointer;">
-                            Lire l'article →
-                        </a>
-                    </article>
-                `;
-                
-                container.innerHTML += articleHTML;
-            });
-        }
-        
-        function viewArticle(slug) {
-            const article = Object.values(blogArticles).find(a => a.slug === slug);
-            if (!article) return;
-            
-            const lang = document.documentElement.lang || 'fr';
-            const contentKey = `content_${lang}`;
-            const titleKey = `title_${lang}`;
-            const title = article[titleKey] || article.title_fr;
-            const content = article[contentKey] || article.content_fr;
-            
-            const date = new Date(article.date).toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            
-            // Create a modal or redirect to a detail page
-            const html = `
-                <!DOCTYPE html>
-                <html lang="${lang}" data-theme="light">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>${title} - antoinx</title>
-                    <link rel="stylesheet" href="styles.css">
-                    <style>
-                        .article-container {
-                            max-width: 800px;
-                            margin: 0 auto;
-                            padding: 60px 20px;
-                            color: var(--text-primary);
-                        }
-                        .article-header {
-                            margin-bottom: 40px;
-                        }
-                        .article-header h1 {
-                            font-size: 2.5rem;
-                            margin-bottom: 20px;
-                            line-height: 1.2;
-                        }
-                        .article-meta {
-                            display: flex;
-                            gap: 20px;
-                            color: var(--text-secondary);
-                            font-size: 0.95rem;
-                        }
-                        .article-content {
-                            line-height: 1.8;
-                            font-size: 1.05rem;
-                        }
-                        .article-content h2 {
-                            font-size: 2rem;
-                            margin-top: 40px;
-                            margin-bottom: 20px;
-                        }
-                        .article-content h3 {
-                            font-size: 1.5rem;
-                            margin-top: 30px;
-                            margin-bottom: 15px;
-                        }
-                        .article-content h4 {
-                            font-size: 1.2rem;
-                            margin-top: 20px;
-                            margin-bottom: 10px;
-                        }
-                        .article-content p {
-                            margin-bottom: 15px;
-                        }
-                        .article-content pre {
-                            background: var(--bg-secondary);
-                            padding: 15px;
-                            border-radius: 8px;
-                            overflow-x: auto;
-                            margin: 20px 0;
-                        }
-                        .article-content code {
-                            font-family: 'Courier New', monospace;
-                            font-size: 0.9rem;
-                        }
-                        .article-content strong {
-                            font-weight: 600;
-                        }
-                        .back-link {
-                            display: inline-block;
-                            margin-bottom: 30px;
-                            color: var(--accent-color, #0066ff);
-                            text-decoration: none;
-                            font-weight: 500;
-                        }
-                        .back-link:hover {
-                            text-decoration: underline;
-                        }
-                    </style>
-                </head>
-                <body>
-                    <nav class="navbar">
-                        <div class="nav-container">
-                            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
-                            <ul class="nav-links">
-                                <li><a href="/" style="text-decoration: none;">← Retour</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    
-                    <div class="article-container">
-                        <a href="blog.html" class="back-link">← Retour au blog</a>
-                        
-                        <div class="article-header">
-                            <h1>${title}</h1>
-                            <div class="article-meta">
-                                <span>${date}</span>
-                                <span>•</span>
-                                <span>${article.readTime}</span>
-                            </div>
-                        </div>
-                        
-                        <div class="article-content">
-                            ${content}
-                        </div>
-                    </div>
-                    
-                    <script src="script.js"></script>
-                </body>
-                </html>
-            `;
-            
-            // Write to a temporary file or use localStorage to store and redirect
-            const blob = new Blob([html], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            window.location.href = url;
-        }
-        
-        // Initialize
-        document.addEventListener('DOMContentLoaded', renderBlogArticles);
-    </script>
 </body>
 </html>
