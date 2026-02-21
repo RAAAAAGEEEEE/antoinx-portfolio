@@ -1,50 +1,32 @@
-# antoinx - Portfolio Vibecoding
+# antoinx-portfolio
 
-Portfolio moderne et minimaliste pour présenter mes projets vibecoding: apps mobiles, SaaS, automatisations et innovations IA.
-
-## Features
-
-- 🌐 **Bilingue** - Français / English avec sélecteur de langue
-- 🌓 **Mode sombre/clair** - Toggle theme dans la navbar
-- 📱 **Responsive** - Mobile-first design, fonctionne partout
-- ⚡ **Ultra-rapide** - HTML/CSS/JS vanilla, zéro dépendances
-- 🎨 **Design moderne** - Gradients, animations, glassmorphism
-- 🔍 **Portfolio filtrable** - Tous / En cours / À venir
-- 📧 **Newsletter** - Form prêt pour Mailchimp/Brevo
-
-## Structure
-
-```
-C:\Users\magic\Desktop\CC website\
-├── index.html              # Structure HTML
-├── styles.css              # Styles & animations
-├── script.js               # Logique projets & newsletter
-├── i18n.js                 # Système de traduction
-├── .gitignore              # Git ignore rules
-├── README.md               # Ce fichier
-└── DEPLOYMENT_GUIDE.md     # Guide de déploiement
-```
+Personal developer portfolio website for Antoine. Showcases projects, blog posts, and technical skills. Built with static HTML/CSS/JS.
 
 ## Tech Stack
 
-- **HTML5** - Structure sémantique
-- **CSS3** - Gradients, animations, dark mode
-- **JavaScript vanilla** - Pas de frameworks
-- **i18n** - Traduction multilingue custom
+JavaScript / TypeScript
 
-## Déploiement
+## Setup
 
-Déployé sur **Vercel** avec domaine **antoinx.com** (OVH DNS).
+```bash
+# Clone the repository
+git clone https://github.com/RAAAAAGEEEEE/antoinx-portfolio.git
+cd antoinx-portfolio
 
-Voir `DEPLOYMENT_GUIDE.md` pour les instructions complètes.
+# Install dependencies
+# See project files for setup instructions
 
-## TODO
+# Copy environment variables
+cp .env.example .env
+# Edit .env with your actual values
+```
 
-- [ ] Intégrer Mailchimp pour newsletter
-- [ ] Ajouter contact form avec backend
-- [ ] Analytics Vercel
-- [ ] Email redirection contact@antoinx.com
+## Usage
+
+```bash
+# See project files for run instructions
+```
 
 ## License
 
-© 2026 antoinx. Tous droits réservés.
+All rights reserved © 2026 Antoine. This project is proprietary and confidential.
