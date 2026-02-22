@@ -321,8 +321,25 @@ function submitNewsletter(form, emailInput, email) {
 
         newsletterState.lastSubmission = Date.now();
 
-        // Here you would send email to backend API
-        console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
+        // Send to Buttondown API
+        fetch('https://api.buttondown.com/v1/subscribers', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Token e52f7ab1-eea5-458d-b885-dd131e0a0f7f',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Newsletter subscription successful:', { email, timestamp: new Date().toISOString() });
+            } else {
+                console.warn('Newsletter API error:', response.status);
+            }
+        })
+        .catch(error => {
+            console.error('Newsletter submission error:', error);
+        });
 
         setTimeout(() => {
             submitBtn.textContent = originalText;
