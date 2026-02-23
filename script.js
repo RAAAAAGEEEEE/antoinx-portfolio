@@ -279,11 +279,74 @@ function filterProjects(filter) {
 }
 
 // ===== NEWSLETTER FORM WITH BUTTONDOWN EMBED =====
-// NOTE: Newsletter now uses Buttondown embed form (no API key exposed client-side)
 function setupNewsletterForm() {
-    // Buttondown embed form is handled natively via HTML iframe
-    // No JavaScript manipulation needed - form is in HTML
-    console.log('Newsletter form initialized (Buttondown embed)');
+    const form = document.getElementById('newsletter-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const now = Date.now();
+        if (now - newsletterState.lastSubmission < NEWSLETTER_RATE_LIMIT_MS) {
+            console.warn('Newsletter submission rate limited');
+            return;
+        }
+
+        const emailInput = form.querySelector('.email-input');
+        const submitBtn = form.querySelector('.submit-btn');
+        const noteEl = form.querySelector('.form-note');
+
+        if (!emailInput || !submitBtn) return;
+
+        const email = emailInput.value.trim();
+
+        if (!isValidEmail(email)) {
+            if (noteEl) {
+                noteEl.textContent = window.i18n ? window.i18n.getTranslation('newsletter.error') || '❌ Email invalide' : '❌ Email invalide';
+                noteEl.style.color = '#ff4444';
+            }
+            return;
+        }
+
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = '...';
+        newsletterState.lastSubmission = now;
+
+        fetch('https://buttondown.com/api/emails/embed-subscribe/excelantoine', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                email: email,
+                tag: 'antoinx.com'
+            }).toString()
+        })
+        .then(response => {
+            if (noteEl) {
+                noteEl.textContent = window.i18n ? window.i18n.getTranslation('newsletter.success') || '✓ Inscription réussie !' : '✓ Inscription réussie !';
+                noteEl.style.color = '#00cc00';
+            }
+            emailInput.value = '';
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                if (noteEl) {
+                    noteEl.textContent = window.i18n ? window.i18n.getTranslation('newsletter.note') || 'Pas de spam, désinscription facile.' : 'Pas de spam, désinscription facile.';
+                    noteEl.style.color = '';
+                }
+            }, 2000);
+        })
+        .catch(error => {
+            console.error('Newsletter error:', error);
+            if (noteEl) {
+                noteEl.textContent = '❌ Erreur, réessayez';
+                noteEl.style.color = '#ff4444';
+            }
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+    });
 }
 
 function isValidEmail(email) {
