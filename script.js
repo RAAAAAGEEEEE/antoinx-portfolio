@@ -312,7 +312,7 @@ function setupNewsletterForm() {
         submitBtn.textContent = '...';
         newsletterState.lastSubmission = now;
 
-        fetch('https://buttondown.com/api/emails/embed-subscribe/excelantoine', {
+        fetch('https://buttondown.com/api/emails/embed-subscribe/Antoinx', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
