@@ -278,77 +278,12 @@ function filterProjects(filter) {
     });
 }
 
-// ===== NEWSLETTER FORM WITH RATE LIMITING =====
+// ===== NEWSLETTER FORM WITH BUTTONDOWN EMBED =====
+// NOTE: Newsletter now uses Buttondown embed form (no API key exposed client-side)
 function setupNewsletterForm() {
-    const form = document.getElementById('newsletter-form');
-    if (!form) return;
-
-    form.addEventListener('submit', handleNewsletterSubmit);
-}
-
-function handleNewsletterSubmit(e) {
-    e.preventDefault();
-
-    // Rate limiting check
-    const now = Date.now();
-    if (now - newsletterState.lastSubmission < NEWSLETTER_RATE_LIMIT_MS) {
-        console.warn('Newsletter submission rate limited');
-        return;
-    }
-
-    const emailInput = this.querySelector('.email-input');
-    if (!emailInput) return;
-
-    const email = emailInput.value.trim();
-
-    if (!email || !isValidEmail(email)) {
-        emailInput.setAttribute('aria-invalid', 'true');
-        return;
-    }
-
-    emailInput.setAttribute('aria-invalid', 'false');
-    submitNewsletter(this, emailInput, email);
-}
-
-function submitNewsletter(form, emailInput, email) {
-    const submitBtn = form.querySelector('.submit-btn');
-    if (!submitBtn) return;
-
-    try {
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = window.i18n ? window.i18n.getTranslation('newsletter.success') : '✓ Inscrit !';
-        submitBtn.disabled = true;
-
-        newsletterState.lastSubmission = Date.now();
-
-        // Send to Buttondown API
-        fetch('https://api.buttondown.com/v1/subscribers', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Token e52f7ab1-eea5-458d-b885-dd131e0a0f7f',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: email })
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Newsletter subscription successful:', { email, timestamp: new Date().toISOString() });
-            } else {
-                console.warn('Newsletter API error:', response.status);
-            }
-        })
-        .catch(error => {
-            console.error('Newsletter submission error:', error);
-        });
-
-        setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-            emailInput.value = '';
-        }, NEWSLETTER_SUCCESS_DELAY);
-    } catch (error) {
-        console.error('Newsletter submission error:', error);
-    }
+    // Buttondown embed form is handled natively via HTML iframe
+    // No JavaScript manipulation needed - form is in HTML
+    console.log('Newsletter form initialized (Buttondown embed)');
 }
 
 function isValidEmail(email) {
