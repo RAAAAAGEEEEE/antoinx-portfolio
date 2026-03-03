@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="J'ai hacké le cerveau de Cursor pour voir ce qu'il cache derrière son interface">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <title>J'ai hacké le cerveau de Cursor pour voir ce qu'il cache derrière son interface - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/j-ai-hacke-le-cerveau-de-cursor-pour-voir-ce-qu-il-cache-derriere-son-interface.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>J'ai hacké le cerveau de Cursor pour voir ce qu'il cache derrière son interface</h1>
+            <div class="article-meta">
+                <span>3 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+        <div class="article-content">
+            <p>T'as déjà eu l'impression que Cursor était un peu télépathe ? Tu tapes un truc, et il sait exactement quels fichiers ouvrir et quel bug corriger. J'ai passé une semaine à fouiller dans les entrailles de l'outil pour comprendre comment il bosse en douce quand tu ne regardes pas.</p>
+<p><h2>La boucle infernale : ce qui se passe vraiment</h2></p>
+<p>Tu crois juste envoyer un prompt, mais c'est bien plus sale que ça. Avant que ton message n'atteigne le modèle, Cursor fait tout un boulot de "nettoyage" en injectant silencieusement une tonne d'infos : tes fichiers ouverts, le statut de ton dépôt Git, tes règles personnalisées, et tout le bazar.</p>
+<p>En gros, l'IA reçoit un énorme paquet cadeau que tu ne vois jamais. C'est une boucle : tu tapes, il injecte du contexte, le modèle réfléchit, il appelle des outils (Shell, Read, Write), il reçoit les résultats, il re-réfléchit, et seulement là, il daigne t'afficher une réponse. C'est ce cycle de raisonnement qui fait toute la puissance du truc.</p>
+<p><h2>Pourquoi c'est le paradis (ou l'enfer) du vibecoding</h2></p>
+<p>Le truc de ouf, c'est que l'IA a accès à une "ardoise magique" de taille limitée. Elle doit jongler avec ton contexte pour ne pas perdre le fil. Là, c'est chaud, parce que si ton projet devient un monstre, Cursor doit prioriser ce qu'il garde en mémoire. </p>
+<p>Si tu comprends que Cursor n'est qu'un chef d'orchestre qui manipule des outils et du contexte, tu arrêtes de le traiter comme une boîte noire magique. Tu commences à lui parler en sachant ce qu'il voit. Tu apprends à mieux structurer tes projets pour que l'IA ne s'emmêle pas les pinceaux dans les fichiers inutiles. C'est ça, le vrai vibecoding : savoir ce que l'IA "ressent" quand tu lui parles.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li>  <strong>L'IA ne lit pas dans tes pensées :</strong> Elle lit tes fichiers, ton état Git et tes règles. Apprends à les gérer si tu veux des résultats propres.</li>
+<li>  <strong>Le prompt fantôme :</strong> Cursor te cache le "system prompt" et l'injection de contexte. Ne sous-estime jamais le poids de ce que tu lui laisses accès.</li>
+<li>  <strong>C'est une boucle itérative :</strong> L'agent ne se contente pas de prédire du texte, il exécute des commandes Shell et manipule tes fichiers en boucle jusqu'à ce que ça marche.</li>
+<li>  <strong>Ménage ton contexte :</strong> Comme la fenêtre de travail est limitée, évite de surcharger l'IA avec dix mille fichiers ouverts si tu ne veux pas qu'elle s'éparpille.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
