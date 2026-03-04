@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PageBolt et MCP : Le combo ultime pour donner des yeux à ton IA">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkczf1k6mpgpzh0brfed0.png">
+    <title>PageBolt et MCP : Le combo ultime pour donner des yeux à ton IA - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/pagebolt-et-mcp-le-combo-ultime-pour-donner-des-yeux-a-ton-ia.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>PageBolt et MCP : Le combo ultime pour donner des yeux à ton IA</h1>
+            <div class="article-meta">
+                <span>4 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-hero" style="margin-bottom: 30px; border-radius: 8px; overflow: hidden;">
+            <img src="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkczf1k6mpgpzh0brfed0.png" alt="PageBolt et MCP : Le combo ultime pour donner des yeux à ton IA" style="width: 100%; height: auto; display: block; border-radius: 8px;" onerror="this.parentElement.style.display='none'">
+        </div>
+
+        <div class="article-content">
+            <p>Gros, c’est fou. On passe notre temps à demander à nos LLM de coder des trucs, mais dès qu’on veut qu’ils aillent checker un site web, c’est la galère. Lancer un Chromium localement, c’est le meilleur moyen de faire exploser ta RAM et de transformer ton PC en chauffage d’appoint.</p>
+<p><h2>Fini le Chromium qui fait ramer ta bécane</h2></p>
+<p>Le truc de ouf, c’est l’arrivée du protocole MCP (Model Context Protocol). Pour faire simple, c’est un standard qui permet à ton IA d’appeler des outils externes comme si elle les avait dans le sang, sans aucune installation locale lourde. PageBolt utilise ce protocole pour offrir deux super-pouvoirs à ton agent : prendre des captures d’écran propres et enregistrer des workflows en vidéo avec une narration générée par IA. </p>
+<p>Plus besoin de gérer une infrastructure de malade. Tu choppes ta clé API sur pagebolt.dev, tu l'ajoutes dans ton fichier de config `mcp-servers.json` et c’est plié. Tu demandes à Claude : « Prends une capture d’écran de ce site et dis-moi ce qui ne va pas sur le design », et l'IA s'exécute direct. C’est fluide, c’est rapide, et surtout, ça ne fait pas crash ton IDE.</p>
+<p><h2>Pourquoi c'est le paradis du vibecoding</h2></p>
+<p>Si tu es comme moi à enchaîner les projets en mode vibecoding, tu sais que la vitesse, c’est tout. Là, c’est chaud ce qu’on peut faire. Tu peux automatiser des tests visuels ou demander à ton assistant de déboguer une interface en temps réel juste en lui montrant le rendu. </p>
+<p>On n'est plus dans le théorique où l'IA hallucine sur le rendu CSS d'une page. Là, elle voit le pixel, elle voit le layout, et elle peut te dire précisément pourquoi ton bouton ne s'aligne pas. C’est le genre d’outil qui change radicalement la donne pour le développement frontend. On arrête de coder à l'aveugle et on laisse l'IA inspecter le résultat final comme un vrai intégrateur.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li>  Le protocole MCP, c'est la révolution pour connecter tes outils sans faire ramer ta machine avec des instances Chromium locales.</li>
+<li>  PageBolt te permet d'avoir nativement des captures d'écran et des vidéos de workflow directement dans Claude Desktop, Cursor ou Windsurf.</li>
+<li>  Tu gagnes un temps fou sur le débuggage visuel et l'analyse de sites web tiers.</li>
+<li>  La configuration est ultra-simple : une ligne dans ton fichier JSON, ta clé API, et tu es opérationnel.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
