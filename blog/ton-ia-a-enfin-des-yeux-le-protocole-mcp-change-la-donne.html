@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ton IA a enfin des yeux : le protocole MCP change la donne">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkczf1k6mpgpzh0brfed0.png">
+    <title>Ton IA a enfin des yeux : le protocole MCP change la donne - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/ton-ia-a-enfin-des-yeux-le-protocole-mcp-change-la-donne.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Ton IA a enfin des yeux : le protocole MCP change la donne</h1>
+            <div class="article-meta">
+                <span>4 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>On est d'accord, faire naviguer une IA sur le web, c'est souvent la galère. Entre les instances Chromium qui bouffent toute ta RAM et les temps de chargement interminables, tu finis plus souvent à attendre qu'à coder. PageBolt vient de sortir son serveur MCP, et ça simplifie tout le processus.</p>
+<p><h2>Le web scraping sans l'usine à gaz</h2></p>
+<p>Le Model Context Protocol (MCP) est en train de devenir le standard pour connecter tes agents IA à des outils externes sans te prendre la tête. Au lieu d'installer des navigateurs lourds en local, PageBolt te donne accès à deux fonctionnalités monstrueuses directement dans ton éditeur : la capture d'écran et l'enregistrement vidéo de workflows avec narration IA.</p>
+<p>Tu configures ton fichier `mcp-servers.json` dans Claude Desktop, tu colles ta clé API, et bam : Claude peut maintenant "voir" ce qu'il y a sur une page web. Tu lui balances une URL, il prend le screenshot, il analyse, il te sort le topo. Zéro infra, zéro configuration serveur, juste une API qui bosse pour toi.</p>
+<p><h2>Pourquoi c'est le futur du vibecoding</h2></p>
+<p>En tant que vibecoder, tu veux que les choses marchent tout de suite, sans configurer des environnements Docker complexes. Cette approche change radicalement la façon dont tu construis tes apps. Tu peux demander à ton assistant de tester l'UI d'un site en direct, de vérifier le rendu d'un composant, ou même d'enregistrer une démo vidéo pour tes utilisateurs sans rien toucher.</p>
+<p>C'est là que réside la vraie puissance : l'IA ne se contente plus de lire du texte. Elle devient capable d'interpréter visuellement le résultat de son propre code. Ça réduit ton temps de feedback au strict minimum. Si tu utilises Cursor ou Windsurf, c'est un ajout qui rend ton workflow encore plus fluide, presque organique.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li><strong>Fini le local :</strong> Tu n'as plus besoin de gérer des instances Chromium gourmandes en ressources.</li>
+<li><strong>Intégration native :</strong> Le protocole MCP permet à Claude Desktop (et tes IDEs préférés) de dialoguer directement avec des outils externes.</li>
+<li><strong>Super-pouvoirs visuels :</strong> Ton IA peut désormais capturer des écrans ou enregistrer des flux vidéo d'un simple prompt.</li>
+<li><strong>Rapidité maximale :</strong> Tu gagnes un temps fou sur la validation visuelle et le débogage de tes interfaces.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vibe Coding vs Spécifications : Le duel dont on a tous besoin">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwka6pyfwrn65vhfal471.png">
+    <title>Vibe Coding vs Spécifications : Le duel dont on a tous besoin - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/vibe-coding-vs-specifications-le-duel-dont-on-a-tous-besoin.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Vibe Coding vs Spécifications : Le duel dont on a tous besoin</h1>
+            <div class="article-meta">
+                <span>4 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>Tu as sûrement déjà testé le <em>vibe coding</em> : tu balances un prompt, l'IA crache du code, tu testes, ça bug, tu modifies le prompt. C’est grisant, ça va vite, mais dès que le projet dépasse la taille d'une calculatrice, ça devient vite le chaos total.</p>
+<p><h2>Le piège du "tout ou rien"</h2></p>
+<p>D'un côté, t'as le développement par spécifications : tu écris des pages de docs, tu définis tes interfaces, tu prépares le terrain pour que l'IA ne dévie pas d'un iota. C'est propre, c'est robuste, mais c'est lourd. On dirait presque du travail administratif. De l'autre, le <em>vibe coding</em> sauvage, où tu avances à l'aveugle en espérant que le modèle ne va pas halluciner un truc inutile à 3h du matin.</p>
+<p>Le souci, c'est quand tu commences un projet et que tu n'as aucune idée de sa complexité finale. Si tu fais trop rigide, tu perds en agilité. Si tu fais trop "vibe", tu finis avec un plat de spaghettis illisible. Il nous faut un juste milieu. Imagine ça comme un squelette minimaliste que tu renforces au fur et à mesure que l'architecture devient complexe.</p>
+<p><h2>Pourquoi tu dois trouver ta zone de confort</h2></p>
+<p>L'intérêt, c'est de ne pas te brider. Si tu construis une arcade de jeux rétro, comme dans l'exemple de cette source, tu ne peux pas tout spécifier dès le début. Tu ne sais pas encore quels problèmes de collision ou de performance vont surgir.</p>
+<p>Le secret, c'est l'approche adaptative. Commence par le <em>vibe coding</em> pour poser les fondations, teste le résultat, et dès que tu sens que le projet devient un monstre, tu injectes un peu de structure. Tu définis les règles du jeu, les types, et les dépendances critiques. C'est du "vibe codage" avec un filet de sécurité. Tu gardes la vitesse, tu gagnes en sérénité.</p>
+<p><h2>À retenir</h2></p>
+<p><em>   Le </em>vibe coding* pur est génial pour le prototypage rapide, mais il explose sur les projets longs.
+<ul><li>  Le développement par spécifications est indispensable pour la maintenance, mais il tue la créativité au démarrage.</li>
+<li>  Commence avec de l'intuition, mais dès que le code commence à s'entremêler, impose une structure claire à ton IA.</li>
+<li>  L'IA n'est qu'un outil : plus tu es précis sur les règles du jeu au bon moment, moins tu passeras de temps à corriger des bugs absurdes.</li>
+<li>  Apprends à switcher entre le mode "exploration" et le mode "architecture" selon l'état d'avancement de ton projet.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

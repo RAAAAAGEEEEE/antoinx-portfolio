@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pourquoi ton fichier .cursorrules est probablement une catastrophe">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvaootrd0inmrpvx96qw3.png">
+    <title>Pourquoi ton fichier .cursorrules est probablement une catastrophe - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/pourquoi-ton-fichier-cursorrules-est-probablement-une-catastrophe.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Pourquoi ton fichier .cursorrules est probablement une catastrophe</h1>
+            <div class="article-meta">
+                <span>4 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>Tu passes tes journées à peaufiner ton fichier `.cursorrules` en pensant que tu programmes comme un dieu, mais la réalité est brutale : tu es probablement en train de saboter ton propre workflow. Une étude sur 50 projets réels montre que la majorité des configurations reçoivent une note de "C", prouvant que moins, c'est souvent beaucoup mieux.</p>
+<p><h2>Le syndrome du pavé indigeste</h2></p>
+<p>Le problème numéro un ? La boulimie textuelle. Tu as sûrement tendance à balancer un roman de 3 000 caractères dans tes règles, espérant que l'IA va tout assimiler. Spoiler : elle sature. Plus ton fichier est long, plus ton contexte s'évapore. </p>
+<p>C'est comme donner une liste de courses de dix pages à un stagiaire qui n'a pas dormi depuis deux jours. Au bout d'un moment, il oublie la moitié des instructions et commence à inventer des trucs. Si tu mets des règles de codage archaïques, des consignes de style redondantes et des commentaires inutiles, tu pollues la fenêtre de contexte et tu forces l'IA à trier tes déchets plutôt qu'à coder.</p>
+<p><h2>Pourquoi ça tue ton vibecoding</h2></p>
+<p>Quand ton `cursor-doctor` hurle à la mort, c'est ton efficacité qui prend un coup. Un mauvais set de règles, c'est une IA qui se déconcentre, qui ignore tes directives et qui finit par générer du code générique parce qu'elle est perdue dans ton fatras de consignes contradictoires. </p>
+<p>Le vibecoding, c'est garder un flow fluide et rapide. Si tu dois corriger chaque snippet parce que tes règles "trop intelligentes" brouillent le signal, tu perds tout l'intérêt de l'outil. Moins tu en mets, plus l'IA garde de la place pour comprendre ton architecture réelle et les besoins spécifiques de ton projet actuel.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li><strong>La règle des 2 000 caractères :</strong> Si ton fichier dépasse ce seuil, tu es dans le rouge. Coupe, simplifie, épure.</li>
+<li><strong>Qualité > Quantité :</strong> Une instruction claire et précise vaut mieux que dix paragraphes vagues qui noient le modèle.</li>
+<li><strong>Le test du docteur :</strong> Utilise `npx cursor-doctor scan`. C'est gratuit, ça prend dix secondes et ça te montrera à quel point ton setup est propre (ou pas).</li>
+<li><strong>Nettoyage radical :</strong> Supprime tout ce qui n'est pas strictement nécessaire pour la cohérence de ton code. Si tu ne l'utilises pas chaque jour, ça n'a rien à faire dans tes règles.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
