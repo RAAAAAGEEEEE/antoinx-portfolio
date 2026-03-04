@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jour 5 du Vibe Coding : J'ai créé un générateur de polices en un claquement de doigts">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1000,height=500,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2nxznfv3idgar448c5ct.png">
+    <title>Jour 5 du Vibe Coding : J'ai créé un générateur de polices en un claquement de doigts - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/jour-5-du-vibe-coding-j-ai-cree-un-generateur-de-polices-en-un-claquement-de-doigts.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Jour 5 du Vibe Coding : J'ai créé un générateur de polices en un claquement de doigts</h1>
+            <div class="article-meta">
+                <span>4 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>J’ai lancé mon défi de "vibe coding" il y a cinq jours et, honnêtement, c’est devenu une drogue. Aujourd'hui, je te sors un générateur de polices personnalisées qui te permet de copier le style typographique de n'importe quel film ou jeu vidéo que tu kiffes.</p>
+<p><h2>C’est quoi le délire avec ce générateur ?</h2></p>
+<p>Le principe est simple : tu définis un style, et l’outil te pond la police qui va avec. C’est le genre de projet qui, si tu te prends trop la tête, peut te bouffer des semaines. Là, en mode vibe coding, je l'ai torché en un temps record. Au lieu de passer des plombes à peaufiner chaque pixel, je me suis concentré sur le résultat immédiat. Tu veux la typo de <em>Matrix</em> ou celle d'un RPG obscur ? Tu rentres ton style, et c'est plié. C'est ce côté "création brute" qui me fait vibrer en ce moment.</p>
+<p><h2>Pourquoi c'est une claque pour ton workflow</h2></p>
+<p>Le truc de ouf, c'est que ce défi m'a forcé à arrêter de regarder dans le rétroviseur. Avant, je passais des heures à analyser mes anciens codes, à les critiquer, à douter. Là, je n'ai littéralement pas le temps. Je code, je publie, et je passe au suivant. C'est violent, c'est fatiguant (dors pas assez, je me lève à 7h après des nuits blanches à 3h), mais c'est incroyablement gratifiant. Travailler vite, c'est pas bâcler, c'est arrêter de procrastiner derrière une pseudo "perfection". Si tu es dev, tu sais de quoi je parle : le polish, c'est souvent là que l'envie meurt. Ici, on maintient la flamme en enchaînant les produits.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li><strong>La vitesse est une arme :</strong> Le perfectionnisme est souvent une excuse pour ne rien sortir. Apprends à ship tes projets rapidement.</li>
+<li><strong>Le rythme prime sur la finition :</strong> Enchaîner les projets chaque jour t'apprend à ne pas t'attacher inutilement à ton code.</li>
+<li><strong>Le manque de sommeil est réel :</strong> C'est chaud pour la productivité, mais le rush de la création compense largement.</li>
+<li><strong>Vibe coding, c'est l'état d'esprit :</strong> Ne réfléchis pas trop, crée, itère et passe à la suite sans te retourner.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
