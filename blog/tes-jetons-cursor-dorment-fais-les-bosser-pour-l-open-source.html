@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tes jetons Cursor dorment ? Fais-les bosser pour l'open source">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq0pdezgj9u9yufejnzp7.png">
+    <title>Tes jetons Cursor dorment ? Fais-les bosser pour l'open source - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/tes-jetons-cursor-dorment-fais-les-bosser-pour-l-open-source.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Tes jetons Cursor dorment ? Fais-les bosser pour l'open source</h1>
+            <div class="article-meta">
+                <span>21 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>Tu payes ton abonnement Cursor tous les mois sans utiliser la moitié de tes jetons Composer ? C'est du gâchis pur et simple. Un dev a enfin trouvé le moyen de transformer ce surplus en contributions réelles pour la communauté.</p>
+<p><h2>Le concept : Ton agent bosse pendant que tu dors</h2></p>
+<p>L'idée est géniale dans sa simplicité. Amit Wagner a créé un bot nommé Iynx. Au lieu de laisser tes jetons Composer expirer à la fin du mois sans rien faire, ce petit programme prend le relais. Il scanne GitHub à la recherche de dépôts en tendance, repère les problèmes ouverts qu'il est capable de résoudre, écrit le code, lance les tests dans un conteneur Docker isolé, et propose une requête de fusion (PR) automatique.</p>
+<p>En gros, tu transformes ton surplus d'abonnement en code concret pour des projets open source. Pas besoin de passer trois heures à debugger le projet d'un inconnu : ton IA le fait pour toi. C'est le niveau supérieur du vibecoding.</p>
+<p><h2>Pourquoi c'est le futur du dev</h2></p>
+<p>On veut tous contribuer davantage, mais le temps nous manque cruellement. Entre le boulot et les projets persos, fouiller dans la documentation d'un projet tiers est souvent la dernière chose qu'on veut faire. Iynx change la donne : il utilise tes ressources inutilisées pour muscler l'écosystème open source sans que tu aies besoin de lever le petit doigt. </p>
+<p>C'est ça, la vraie magie de l'IA : déléguer les tâches rébarbatives pour se concentrer sur l'impact. En plus, comme le projet est sous licence MIT, tu peux voir exactement comment ça tourne sous le capot et l'adapter à tes besoins. </p>
+<p><h2>À retenir</h2></p>
+<p><ul><li><strong>Ne gaspille plus :</strong> Tes jetons Composer payés sont une ressource, ne les laisse pas s'évaporer.</li>
+<li><strong>Automatise l'altruisme :</strong> Utilise des agents pour scanner et corriger les problèmes dans les dépôts GitHub.</li>
+<li><strong>Le test d'abord :</strong> Grâce à Docker, l'IA vérifie son propre code avant de proposer quoi que ce soit, ce qui limite les risques d'erreurs.</li>
+<li><strong>Contribution passive :</strong> Tu soutiens l'écosystème open source sans sacrifier ton temps de cerveau disponible.</li></ul></p>
+<p>C’est sur GitHub, c'est open source, installe-le et fais briller tes jetons.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

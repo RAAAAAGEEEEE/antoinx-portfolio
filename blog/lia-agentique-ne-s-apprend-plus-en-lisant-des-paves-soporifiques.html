@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L’IA agentique ne s'apprend plus en lisant des pavés soporifiques">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fepck525cjlfw2fxii4nm.png">
+    <title>L’IA agentique ne s'apprend plus en lisant des pavés soporifiques - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/lia-agentique-ne-s-apprend-plus-en-lisant-des-paves-soporifiques.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>L’IA agentique ne s'apprend plus en lisant des pavés soporifiques</h1>
+            <div class="article-meta">
+                <span>21 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>Tu veux passer au niveau supérieur en IA, mais t'as la flemme de te taper des documentations de 300 pages ? Swati Goyal a pondu une série de quiz sur l'IA agentique qui change la donne : on apprend en faisant, point barre.</p>
+<p><h2>L'IA agentique, c'est quoi ce délire ?</h2></p>
+<p>Oublie les chatbots qui se contentent de répondre à tes questions. L'IA agentique, c'est une IA qui prend des initiatives. Imagine un assistant qui ne se contente pas de rédiger un mail, mais qui va chercher tes infos dans ton CRM, rédige le message, le valide, et l'envoie tout seul. C'est le passage du "perroquet savant" à l'outil qui bosse à ta place. Le format quiz de Swati te force à mettre les mains dans le cambouis pour comprendre la logique derrière les agents : planification, accès aux outils et mémoire.</p>
+<p><h2>Pourquoi c'est vital pour ton futur de dev</h2></p>
+<p>Si tu es un vibecoder, tu sais que la vitesse d'exécution est ton super-pouvoir. Avec l'IA agentique, tu ne codes plus juste des features, tu construis des systèmes capables de s'auto-corriger et de s'adapter. Si tu ne maîtrises pas comment ces agents interagissent avec des API ou comment ils gèrent leur propre flux de travail, tu vas vite devenir obsolète. Apprendre via ces petits exercices quotidiens permet d'ancrer les concepts techniques dans ton cerveau sans que tu t'en rendes compte. C'est du micro-apprentissage, efficace et sans prise de tête.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li>  <strong>Le passage à l'action :</strong> L'IA ne doit plus être passive, elle doit devenir un agent qui exécute des tâches complexes de A à Z.</li>
+<li>  <strong>Apprendre en s'amusant :</strong> Les quiz interactifs battent à plate couture les tutoriels théoriques pour retenir les bases de l'IA agentique.</li>
+<li>  <strong>Maîtrise le flux :</strong> Comprendre la planification et l'utilisation d'outils externes par une IA est la compétence indispensable pour tout développeur moderne.</li>
+<li>  <strong>Vitesse d'exécution :</strong> Consacre 5 minutes par jour à ces quiz pour rester à la pointe sans sacrifier ton temps de dev.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
