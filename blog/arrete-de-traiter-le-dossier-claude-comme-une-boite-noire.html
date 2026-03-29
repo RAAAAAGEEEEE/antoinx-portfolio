@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arrête de traiter le dossier .claude comme une boîte noire">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://substackcdn.com/image/fetch/$s_!ITpM!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3b81cc25-df87-4ea8-a11b-9a719d5836b1_1166x1176.png">
+    <title>Arrête de traiter le dossier .claude comme une boîte noire - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/arrete-de-traiter-le-dossier-claude-comme-une-boite-noire.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Arrête de traiter le dossier .claude comme une boîte noire</h1>
+            <div class="article-meta">
+                <span>29 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>Tu utilises Claude Code depuis des semaines mais tu n'as jamais mis le nez dans le dossier `.claude` ? Avoue, tu le considères comme un truc magique qui gère tes accès tout seul. C'est dommage, parce que c'est là que tout se joue pour arrêter de te battre avec ton IA et commencer à vraiment coder en mode pilote automatique.</p>
+<p><h2>Le cockpit de ton projet</h2></p>
+<p>Le dossier `.claude` n'est pas un simple tas de fichiers temporaires. C'est le centre de contrôle de ton instance. C'est ici que tu définis les règles du jeu : comment Claude doit structurer tes réponses, quelles commandes personnalisées tu veux lui donner pour tes tâches répétitives, et surtout, quels fichiers il a le droit de toucher.</p>
+<p>Imagine que tu puisses lui dire : "À chaque fois que je lance une tâche, vérifie toujours mon fichier de configuration de tests avant d'écrire une ligne de code." En configurant correctement le fichier `CLAUDE.md`, tu forces l'IA à adopter ta méthodologie plutôt que de te sortir du code générique qui cassera tout dès que tu feras un déploiement. C'est toi le chef d'orchestre, pas lui.</p>
+<p><h2>Pourquoi ça change tout pour ton flow</h2></p>
+<p>La plupart des développeurs utilisent l'IA comme un simple chat. Les "vibecoders" sérieux, eux, configurent leur environnement. Si tu ne maîtrises pas les permissions et les instructions stockées dans ce dossier, tu perds un temps fou à réexpliquer tes contraintes à chaque nouvelle session.</p>
+<p>En configurant ton espace, tu passes d'une IA qui "essaye de deviner" à une IA qui connaît ton projet mieux que toi. C'est ça, le vrai gain de productivité. Tu ne cherches plus à savoir si l'outil te fait gagner du temps, tu t'assures qu'il est parfaitement aligné sur ton architecture. Moins de frictions, moins de débogage inutile, et surtout, beaucoup plus de temps pour construire des trucs qui comptent.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li>  Ouvre ce dossier `.claude` dès aujourd'hui : ce n'est pas un réglage système, c'est ta documentation active.</li>
+<li>  Utilise `CLAUDE.md` pour fixer tes règles de codage : impose ton style, tes bibliothèques préférées et tes interdits.</li>
+<li>  Automatise tes commandes répétitives via les fichiers de configuration pour éviter de taper les mêmes instructions en boucle.</li>
+<li>  Le contrôle des permissions est ta sécurité : empêche l'IA de modifier des fichiers critiques par erreur en verrouillant les accès dans ta config.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
