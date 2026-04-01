@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu veux créer une app mais tu ne sais pas coder ? On compare Cursor et Bolt.new pour savoir lequel est fait pour ton projet. Guide simple, sans jargon. - antoinx">
+    <meta name="keywords" content="vibecoding, vibecoding, IA, développement">
+    <title>Cursor ou Bolt.new : lequel choisir pour sortir ton projet du garage ? - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/cursor-ou-boltnew-lequel-choisir-pour-sortir-ton-projet-du-g.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content pre {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color, #0066ff);
+        }
+        .article-content code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Cursor ou Bolt.new : lequel choisir pour sortir ton projet du garage ?</h1>
+            <div class="article-meta">
+                <span>5 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">vibecoding</span>
+            </div>
+        </div>
+        
+        <div class="article-content">
+<p>Salut ! Aujourd'hui, on va parler d'un truc qui revient tout le temps dans mes messages : "Antoinx, j'ai une idée d'app, mais je prends quoi pour la construire ? Cursor ou Bolt.new ?".</p>
+
+<p>Si tu débarques, le <em>vibecoding</em>, c'est cette manière de créer des applications juste en parlant à une IA, sans jamais taper une ligne de code manuellement. C'est magique, mais c'est vrai qu'on est vite perdu avec tous les outils qui sortent.</p>
+
+<p>Pour faire simple, on va oublier le charabia technique. Je vais te dire concrètement ce que tu peux faire avec l'un et avec l'autre, selon ton profil.</p>
+
+<h3>C'est quoi ce délire ?</h3>
+
+<p>Imagine que tu veux construire une cabane. <strong>Bolt.new</strong>, c'est comme si tu commandais une maison en kit sur internet. Tu décris la maison, l'IA rassemble tous les morceaux, les vis, les planches et te livre le résultat fini dans ton navigateur. Tout se passe dans une page web, sans rien installer.</p>
+
+<p><strong>Cursor</strong>, c'est différent. C'est comme si tu louais un atelier professionnel avec tous les outils haut de gamme. C'est un logiciel que tu installes sur ton ordi. C'est beaucoup plus puissant, ça peut gérer des projets énormes, mais il y a un petit temps d'adaptation.</p>
+
+<h3>Bolt.new : Le roi de la vitesse pour les débutants</h3>
+
+<p>Si tu veux créer un petit outil, un site vitrine, ou un prototype rapide pour tester une idée, Bolt.new, c'est le top. </p>
+
+<p>Concrètement, tu ouvres ton navigateur, tu vas sur le site, et tu tapes ta demande : "Fais-moi une application qui liste mes dépenses mensuelles et qui affiche un graphique". En quelques secondes, l'IA crée tout le dossier, les fichiers nécessaires (les documents qui font tourner ton app) et t'affiche le résultat à droite.</p>
+
+<p><strong>Les points forts :</strong></p>
+<ul>
+    <li>Zéro installation : tu ouvres ton navigateur et c'est parti.</li>
+    <li>Visualisation immédiate : tu vois ton app évoluer en temps réel à côté de la zone de chat.</li>
+    <li>Idéal pour les projets "one-shot" ou les petits outils de productivité personnels.</li>
+</ul>
+
+<p><strong>Le bémol :</strong> Dès que tu veux faire un truc très complexe, qui doit se connecter à plein d'autres services ou qui nécessite une gestion de données très poussée, Bolt.new peut commencer à s'emmêler les pinceaux. C'est un peu comme essayer de construire un gratte-ciel avec un kit de montage rapide : ça finit par bouger.</p>
+
+<h3>Cursor : La machine de guerre pour tes projets sérieux</h3>
+
+<p>Cursor, c'est pour quand tu passes au niveau supérieur. Si tu as en tête de créer un service en ligne que tu veux vraiment lancer, avec des utilisateurs, des inscriptions, et des fonctionnalités qui s'ajoutent au fil des mois, c'est vers lui qu'il faut aller.</p>
+
+<p>Cursor est un "éditeur de texte intelligent". En gros, c'est un logiciel où l'IA a accès à tout ton projet en permanence. Contrairement à Bolt.new, il ne fait pas juste "une page", il gère tout ton dossier. Si tu demandes un changement sur une page, il sait qu'il doit aussi modifier les autres fichiers qui sont liés.</p>
+
+<p><strong>Pourquoi tu vas l'aimer :</strong></p>
+<ul>
+    <li>Il ne se perd jamais : comme il lit tout ton dossier, il comprend mieux les liens entre chaque partie de ton projet.</li>
+    <li>Tu peux le connecter à ton propre compte pour stocker tes fichiers en sécurité.</li>
+    <li>C'est ultra puissant : tu peux lui demander des choses complexes, comme "Ajoute un bouton de connexion par email" et il va le faire proprement sur toutes les pages nécessaires.</li>
+</ul>
+
+<p><strong>Le bémol :</strong> Il faut installer le logiciel. Au début, l'interface fait un peu peur parce qu'il y a plein de boutons. Mais franchement, en 15 minutes de manipulations, tu as compris l'essentiel.</p>
+
+<h3>Le match : Comment choisir ?</h3>
+
+<p>Pour t'aider à trancher, pose-toi ces trois questions :</p>
+
+<p><strong>1. Est-ce que mon projet tient sur une page ?</strong><br>
+Si c'est un outil pour classer tes recettes, un tableau de bord pour tes finances, ou une page pour tes contacts : <strong>Bolt.new</strong> est ton meilleur allié. C'est rapide, propre et efficace.</p>
+
+<p><strong>2. Est-ce que je veux lancer une vraie plateforme ?</strong><br>
+Si tu veux créer le prochain "Airbnb pour les propriétaires de chiens" ou un outil SaaS (un logiciel vendu sur abonnement) avec des dizaines de fonctionnalités : <strong>Cursor</strong> est indispensable. Tu ne pourras pas gérer la complexité sur le long terme avec Bolt.</p>
+
+<p><strong>3. Est-ce que je veux apprendre ou juste avoir le résultat ?</strong><br>
+Si tu veux juste un outil pour t'aider dans ton quotidien sans te prendre la tête, Bolt est moins intimidant. Si tu as l'ambition de devenir un "vibecoder" qui maîtrise ses projets de A à Z, installe Cursor tout de suite. Tu gagneras un temps fou sur le long terme.</p>
+
+<h3>Le conseil de pote</h3>
+
+<p>Franchement, beaucoup commencent par Bolt.new pour se faire la main. C'est très gratifiant de voir son idée prendre vie en trois minutes. Une fois que tu sens que l'outil commence à "limiter" ton imagination, là, tu bascules sur Cursor. C'est une transition assez naturelle.</p>
+
+<p>Sache aussi que la plupart de ces outils ont des versions gratuites. Pour Bolt.new, c'est généreux sur les essais quotidiens. Pour Cursor, c'est une application que tu peux utiliser gratuitement avec certaines limites sur la puissance de l'IA.</p>
+
+<p>Ne te mets pas trop la pression avec le choix. Le plus important, c'est de commencer. Que tu choisisses l'un ou l'autre, la barrière entre "j'ai une idée" et "j'ai un produit" n'a jamais été aussi fine qu'aujourd'hui.</p>
+
+<p>Prends une après-midi, lance Bolt.new, essaie de créer ton premier petit outil, et vois si ça te plaît. Si tu sens que tu as besoin de plus de contrôle, installe Cursor et refais le même test. C'est en faisant qu'on comprend le mieux.</p>
+
+<p>Tu veux réagir ? Écris-moi sur X (@Antoinx_x) ou réponds à la newsletter.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+<h2>À lire aussi</h2>
+<ul>
+  <li><a href="/blog/2026-annee-vibecoding.html">2026, l'année où tout le monde peut coder (même toi)</a></li>
+  <li><a href="/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co.html">Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2025 ?</a></li>
+</ul>
+</body>
+</html>

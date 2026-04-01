@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu veux créer une app mais tu ne sais pas coder ? Découvre comment utiliser Cursor et Bolt, les deux outils qui font tout le travail pour toi. - antoinx">
+    <meta name="keywords" content="vibecoding, vibecoding, IA, développement">
+    <title>Cursor + Bolt : le duo de choc pour créer ton appli sans toucher à une ligne de code - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/cursor-bolt-le-duo-de-choc-pour-creer-ton-appli-sans-toucher.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content pre {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color, #0066ff);
+        }
+        .article-content code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Cursor + Bolt : le duo de choc pour créer ton appli sans toucher à une ligne de code</h1>
+            <div class="article-meta">
+                <span>9 mars 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">vibecoding</span>
+            </div>
+        </div>
+        
+        <div class="article-content">
+<html>
+<p>Salut à toi, futur créateur. Si tu es là, c'est que t'as probablement une idée d'appli qui traîne dans ta tête depuis des mois. Mais comme t'es pas développeur, tu te dis que c'est mort, ou qu'il faut lâcher 5000 balles à une agence. Spoiler : on est en 2026, tout ça, c'est fini.</p>
+
+<p>Aujourd'hui, je te parle de vibecoding. C'est l'art de construire des logiciels en expliquant simplement ce que tu veux à une intelligence artificielle. Pas besoin d'apprendre des langages compliqués, juste besoin d'avoir une vision et de savoir parler à ton ordi.</p>
+
+<h3>Le binôme gagnant : Cursor et Bolt</h3>
+
+<p>Pour faire simple, il te faut deux outils pour couvrir tout ton projet. Imagine Cursor comme ton assistant personnel de chantier qui travaille dans ton ordinateur, et Bolt comme ton architecte ultra rapide qui dessine et construit les plans sur internet.</p>
+
+<p><strong>Cursor</strong>, c'est ce qu'on appelle un éditeur de code. En gros, c'est l'endroit où ton application vit. Mais attention, ce n'est pas un logiciel classique. C'est un outil qui "voit" tout ce que tu écris. Tu lui demandes : "Ajoute un bouton de connexion", et il va fouiller dans les fichiers pour écrire le code à ta place. C'est idéal pour modifier ton projet sur le long terme.</p>
+
+<p><strong>Bolt.new</strong>, c'est un outil qui tourne directement dans ton navigateur internet (comme Chrome ou Safari). Tu n'as rien à installer. Tu arrives sur le site, tu décris ton projet dans une zone de texte, et Bolt génère l'application complète, l'affiche, et te permet de l'utiliser tout de suite. C'est magique pour démarrer un prototype en 5 minutes chrono.</p>
+
+<h3>Comment démarrer concrètement avec Bolt ?</h3>
+
+<p>Si t'as jamais touché à ça, commence par Bolt. Va sur leur site, et dans la barre de discussion, sois le plus précis possible. Ne dis pas juste "je veux un site". Dis plutôt : "Je veux une application pour un prof de sport qui permet à ses élèves de réserver une séance, avec un calendrier et un petit formulaire pour leur nom".</p>
+
+<p>Bolt va réfléchir quelques secondes, puis il va créer les fichiers, installer les outils nécessaires en arrière-plan et t'afficher l'interface. Tu verras l'appli sur la droite de ton écran. Si quelque chose ne te plaît pas, tu écris dans la conversation : "Change la couleur des boutons en bleu" ou "Ajoute un champ pour le téléphone". Il modifie tout en temps réel.</p>
+
+<h3>Quand est-ce qu'on passe sur Cursor ?</h3>
+
+<p>Bolt est génial pour tester une idée, mais quand ton projet commence à prendre du volume, tu vas vouloir plus de contrôle. C'est là que Cursor entre en scène.</p>
+
+<p>Tu peux récupérer le travail que Bolt a fait et le mettre dans Cursor. Cursor est plus puissant parce qu'il comprend mieux l'organisation globale de tes fichiers. Si tu as un projet qui contient 20 pages différentes, Cursor est capable de naviguer entre elles pour faire des changements cohérents partout. C'est l'outil des pros, mais rendu accessible pour toi grâce à l'intelligence artificielle qui rédige tout à ta place.</p>
+
+<h3>Le workflow idéal pour débuter</h3>
+
+<p>Perso, je fonctionne comme ça :</p>
+<ol>
+    <li><strong>Phase de brouillon :</strong> Je pose mon idée dans Bolt. Je itère dessus jusqu'à ce que j'aie une version qui me plaît visuellement et qui fait ce que je veux.</li>
+    <li><strong>Phase de transfert :</strong> Je copie les fichiers sur mon ordi et je les ouvre avec Cursor.</li>
+    <li><strong>Phase d'affinage :</strong> J'utilise les fonctionnalités de "chat" de Cursor pour corriger les petits détails, ajouter des fonctions spécifiques ou relier l'appli à une base de données (l'endroit où les infos sont stockées).</li>
+</ol>
+
+<p>Honnêtement, le plus dur, c'est pas de "coder", c'est d'être clair dans tes instructions. L'IA est comme un stagiaire très efficace : si tu lui donnes une consigne floue, elle fera un travail flou. Sois détaillé.</p>
+
+<h3>Les erreurs de débutant à éviter</h3>
+
+<p>Ne demande pas tout d'un coup. Si tu dis "Fais-moi un réseau social comme Instagram", l'IA va paniquer et sortir un truc qui ne marche pas. Procède par étapes. Commence par : "Fais-moi juste la page de profil". Une fois que c'est bon, dis : "Maintenant, ajoute la page pour poster une photo". C'est comme ça qu'on construit des trucs solides.</p>
+
+<p>Aussi, ne t'affole pas si tu vois des messages d'erreur en rouge. Dans le vibecoding, c'est normal. Tu copies simplement le message d'erreur, tu le colles dans la zone de chat de Cursor ou Bolt, et tu demandes : "Pourquoi ça ne marche pas ? Corrige-moi ça". 9 fois sur 10, l'IA corrige le bug toute seule.</p>
+
+<h3>Est-ce que c'est vraiment gratuit ?</h3>
+
+<p>Oui et non. Bolt propose une version gratuite qui te permet de faire pas mal de tests quotidiens. Cursor a aussi une version gratuite très généreuse. Pour un étudiant ou quelqu'un qui veut lancer un side-project (un petit projet à côté du boulot), tu n'as pas besoin de payer pendant tes premiers mois. C'est largement suffisant pour apprendre les bases et sortir ta première version.</p>
+
+<p>Si tu veux passer à la vitesse supérieure, il y a des abonnements payants, mais ne fais pas ça tant que ton projet n'est pas utilisé par d'autres personnes. Reste sur le gratuit le plus longtemps possible.</p>
+
+<h3>On récapitule ?</h3>
+
+<p>Le vibecoding, c'est une compétence qui va devenir indispensable. Pas besoin d'être un génie des maths. Il suffit d'être curieux, de tester, et de savoir expliquer ses besoins. Aujourd'hui, avec Bolt pour l'idée rapide et Cursor pour la finition, tu as autant de pouvoir qu'une petite équipe de développeurs il y a 5 ans.</p>
+
+<p>Lance-toi. Prends une heure ce week-end, ouvre Bolt, et essaie de créer un truc inutile juste pour voir comment ça réagit. C'est en pratiquant que ça devient simple.</p>
+
+<p>Tu veux réagir ? Écris-moi sur X (@Antoinx_x) ou réponds à la newsletter. Dis-moi quel projet tu as en tête, on regardera ensemble par quel bout commencer.</p>
+</html>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+<h2>À lire aussi</h2>
+<ul>
+  <li><a href="/blog/cursor-ou-boltnew-lequel-choisir-pour-sortir-ton-projet-du-g.html">Cursor ou Bolt.new : lequel choisir pour sortir ton projet du garage ?</a></li>
+  <li><a href="/blog/2026-annee-vibecoding.html">2026, l'année où tout le monde peut coder (même toi)</a></li>
+</ul>
+</body>
+</html>
