@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vibecoding : la claque à 200 balles">
+    <meta name="keywords" content="vibecoding, IA, programmation">
+    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fdwt5tb9i76807ryv54ry.png">
+    <title>Vibecoding : la claque à 200 balles - antoinx</title>
+    <link rel="canonical" href="https://antoinx.com/blog/vibecoding-la-claque-a-200-balles.html">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: var(--text-primary);
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-content {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .article-content h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .article-content h4 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .article-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-color, #0066ff);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
+            <ul class="nav-links">
+                <li><a href="/#news">Actualités</a></li>
+                <li><a href="/#portfolio">Portfolio</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <a href="../blog.html" class="back-link">← Retour au blog</a>
+        
+        <div class="article-header">
+            <h1>Vibecoding : la claque à 200 balles</h1>
+            <div class="article-meta">
+                <span>12 avril 2026</span>
+                <span>•</span>
+                <span>5 min</span>
+                <span>•</span>
+                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+            </div>
+        </div>
+        
+
+        <div class="article-content">
+            <p>Tu connais le délire : tu ouvres Claude, tu balances ton prompt, le code défile et l’appli est prête en deux heures. C’est jouissif, c’est grisant, c’est le futur. Jusqu’au moment où tu reçois la facture de ton fournisseur d’API.</p>
+<p><h2>L'illusion de la magie gratuite</h2></p>
+<p>Le principe du vibecoding, c’est de déléguer la réflexion technique à une machine. Henry Godnick, un développeur comme toi et moi, a voulu créer une application macOS. Il a laissé l’IA gérer les milliers de lignes de Swift. Résultat : une application fonctionnelle en un temps record, mais une facture de 200 euros à la fin du mois.</p>
+<p>Le piège est invisible. Quand tu codes à la main, tu sais exactement ce que tu produis. Avec l'IA, tu fais de l'itération compulsive. Tu testes une approche, tu changes d'avis, tu refactorises dix fois le même module parce que "le vibe n'est pas bon". Chaque prompt te coûte quelques centimes, mais multiplié par des centaines de messages, ton compte en banque saigne. Tu génères 2 000 lignes de code pour n'en garder que 500. C’est du gaspillage de tokens pur et simple.</p>
+<p><h2>Pourquoi ça va te faire mal</h2></p>
+<p>Le problème, c’est que le vibecoding déconnecte ton cerveau du coût de la ressource. Tu ne codes plus, tu "promptes". Et comme la machine est rapide, tu perds toute notion de modération. </p>
+<p>Dans un développement classique, tu réfléchis avant d'écrire. Ici, tu laisses l'IA déblatérer des propositions jusqu'à ce qu'une colle. Tu traites ton accès API comme un abonnement Netflix illimité, sauf que c’est du paiement à l’usage. Si tu ne fais pas gaffe à la taille du contexte que tu renvoies (tes fichiers entiers copiés-collés en boucle), tu vas transformer ton side project en gouffre financier.</p>
+<p><h2>À retenir</h2></p>
+<p><ul><li><strong>La quantité n'est pas la qualité :</strong> Ne balance pas tout ton code source à chaque prompt, utilise des fichiers de contexte ciblés.</li>
+<li><strong>Le cerveau avant l'IA :</strong> Réfléchis à l'architecture sur papier avant de laisser l'IA générer des milliers de lignes inutiles.</li>
+<li><strong>Surveille ta conso :</strong> Regarde ton dashboard d'API chaque soir. Si tu ne le fais pas, tu fonces dans le mur.</li>
+<li><strong>L'itération a un prix :</strong> Apprends à formuler des prompts précis du premier coup plutôt que de "discuter" avec le modèle pendant deux heures.</li></ul></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>antoinx</h3>
+                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens</h3>
+                <ul>
+                    <li><a href="/#portfolio">Portfolio</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 antoinx. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
