@@ -41,6 +41,28 @@ const projects = [
         type_en: "SaaS",
         status: "in-progress",
         link: "https://siteservi.com"
+    },
+    {
+        id: 3,
+        title_fr: "MysteryMoji",
+        title_en: "MysteryMoji",
+        description_fr: "App iOS pour ados : codez et décodez vos messages secrets en les transformant en séries d'emojis. Déchiffrez les messages uniquement dans l'app.",
+        description_en: "iOS app for teens: encode and decode secret messages by turning them into emoji sequences. Messages can only be deciphered inside the app.",
+        type_fr: "App Mobile",
+        type_en: "Mobile App",
+        status: "in-progress",
+        link: "https://mysterymoji.com"
+    },
+    {
+        id: 4,
+        title_fr: "WoufRoof",
+        title_en: "WoufRoof",
+        description_fr: "Plateforme de location de logements adaptés aux chiens. Trouvez facilement un hébergement dog-friendly pour voyager avec votre compagnon.",
+        description_en: "Rental platform for dog-friendly accommodations. Easily find dog-adapted housing to travel with your furry companion.",
+        type_fr: "SaaS",
+        type_en: "SaaS",
+        status: "upcoming",
+        link: "https://woufroof.com"
     }
 ];
 
