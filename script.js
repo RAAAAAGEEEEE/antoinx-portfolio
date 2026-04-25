@@ -22,91 +22,25 @@ const contactState = {
 const projects = [
     {
         id: 1,
-        title_fr: "Mobile Fit Tracker",
-        title_en: "Mobile Fit Tracker",
-        description_fr: "Application mobile de suivi fitness avec IA pour personnaliser les plans d'entraînement.",
-        description_en: "Mobile fitness tracking app with AI to personalize workout plans.",
-        type_fr: "App Mobile",
-        type_en: "Mobile App",
+        title_fr: "Téléverser",
+        title_en: "Téléverser",
+        description_fr: "Transcrivez vos vidéos et audios en texte avec résumé IA. Gratuit, rapide et en français. Vos fichiers ne sont jamais stockés.",
+        description_en: "Transcribe your videos and audio to text with AI summary. Free, fast, and in French. Your files are never stored.",
+        type_fr: "SaaS",
+        type_en: "SaaS",
         status: "in-progress",
-        link: "#"
+        link: "https://televerser.fr"
     },
     {
         id: 2,
-        title_fr: "AutoFlow SaaS",
-        title_en: "AutoFlow SaaS",
-        description_fr: "Plateforme SaaS d'automatisation de workflows avec intégration IA pour optimiser les processus.",
-        description_en: "SaaS platform for workflow automation with AI integration to optimize processes.",
+        title_fr: "SiteServi",
+        title_en: "SiteServi",
+        description_fr: "Créez un site professionnel grâce à l'IA, en ligne en moins d'une minute. Optimisé Google, bilingue, mobile-first. 1er mois offert.",
+        description_en: "Create a professional website with AI, live in less than a minute. Google-optimized, bilingual, mobile-first. First month free.",
         type_fr: "SaaS",
         type_en: "SaaS",
         status: "in-progress",
-        link: "#"
-    },
-    {
-        id: 3,
-        title_fr: "AI Content Generator",
-        title_en: "AI Content Generator",
-        description_fr: "Outil de génération de contenu alimenté par IA, optimisé pour vibecoding et productivité.",
-        description_en: "AI-powered content generation tool, optimized for vibecoding and productivity.",
-        type_fr: "SaaS",
-        type_en: "SaaS",
-        status: "in-progress",
-        link: "#"
-    },
-    {
-        id: 4,
-        title_fr: "Smart Home Automation",
-        title_en: "Smart Home Automation",
-        description_fr: "Système d'automatisation intelligente pour maison connectée avec contrôle par IA.",
-        description_en: "Smart home automation system with AI-powered control.",
-        type_fr: "Automatisation",
-        type_en: "Automation",
-        status: "upcoming",
-        link: "#"
-    },
-    {
-        id: 5,
-        title_fr: "Real-time Analytics Dashboard",
-        title_en: "Real-time Analytics Dashboard",
-        description_fr: "Dashboard analytique en temps réel pour visualiser et analyser les données avec IA.",
-        description_en: "Real-time analytics dashboard to visualize and analyze data with AI.",
-        type_fr: "SaaS",
-        type_en: "SaaS",
-        status: "upcoming",
-        link: "#"
-    },
-    {
-        id: 6,
-        title_fr: "Video Editor Mobile",
-        title_en: "Video Editor Mobile",
-        description_fr: "Éditeur vidéo mobile avec assistance IA pour montage automatique et effets intelligents.",
-        description_en: "Mobile video editor with AI assistance for automatic editing and smart effects.",
-        type_fr: "App Mobile",
-        type_en: "Mobile App",
-        status: "upcoming",
-        link: "#"
-    },
-    {
-        id: 7,
-        title_fr: "Email Marketing Automation",
-        title_en: "Email Marketing Automation",
-        description_fr: "Plateforme d'email marketing avec automatisation IA et personnalisation avancée.",
-        description_en: "Email marketing platform with AI automation and advanced personalization.",
-        type_fr: "Automatisation",
-        type_en: "Automation",
-        status: "in-progress",
-        link: "#"
-    },
-    {
-        id: 8,
-        title_fr: "Code Assistant App",
-        title_en: "Code Assistant App",
-        description_fr: "Assistant de codage mobile avec IA pour suggestions et optimisation de code en vibecoding.",
-        description_en: "Mobile coding assistant with AI for code suggestions and optimization in vibecoding.",
-        type_fr: "App Mobile",
-        type_en: "Mobile App",
-        status: "upcoming",
-        link: "#"
+        link: "https://siteservi.com"
     }
 ];
 
@@ -237,7 +171,9 @@ function createProjectCard(project) {
     descEl.textContent = description;
 
     const linkEl = document.createElement('a');
-    linkEl.href = `/projects/project-${project.id}.html`;
+    linkEl.href = project.link;
+    linkEl.target = '_blank';
+    linkEl.rel = 'noopener noreferrer';
     linkEl.className = 'project-link';
     const linkText = lang === 'en' ? 'Learn more →' : 'En savoir plus →';
     linkEl.textContent = linkText;
