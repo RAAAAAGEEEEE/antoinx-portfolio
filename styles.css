@@ -18,8 +18,8 @@
     /* Light mode */
     --primary: #0a0a0a;
     --secondary: #f8f9fa;
-    --accent: #1e7a9e;
-    --accent-glow: #5aa0b9;
+    --accent: #3d9db5;
+    --accent-glow: #7ec8dc;
     --accent-gold: #d4a574;
     --text: #1a1a1a;
     --text-light: #666;
@@ -34,14 +34,14 @@
 /* Dark mode */
 [data-theme="dark"] {
     --primary: #ffffff;
-    --secondary: #0f1e2e;
-    --accent: #1e7a9e;
-    --accent-glow: #5aa0b9;
+    --secondary: #0d1e30;
+    --accent: #3d9db5;
+    --accent-glow: #7ec8dc;
     --accent-gold: #e8c87c;
     --text: #f5f5f5;
     --text-light: #b0b0b0;
     --border: #333;
-    --bg: #0d1a24;
+    --bg: #0a1520;
 }
 
 html {
@@ -168,7 +168,7 @@ body {
 
 .language-btn:hover {
     border-color: var(--accent);
-    background: rgba(30, 122, 158, 0.08);
+    background: rgba(61, 157, 181, 0.08);
 }
 
 .language-btn.active {
@@ -244,7 +244,7 @@ body {
 }
 
 .lang-option.active {
-    background: rgba(30, 122, 158, 0.15);
+    background: rgba(61, 157, 181, 0.15);
     color: var(--accent);
     font-weight: 600;
 }
@@ -266,7 +266,7 @@ body {
 
 .theme-toggle:hover {
     border-color: var(--accent);
-    background: rgba(30, 122, 158, 0.1);
+    background: rgba(61, 157, 181, 0.1);
 }
 
 .theme-icon {
@@ -309,7 +309,7 @@ body {
 .social-link:hover {
     border-color: var(--accent);
     color: var(--accent);
-    background: rgba(30, 122, 158, 0.1);
+    background: rgba(61, 157, 181, 0.1);
 }
 
 .social-link svg {
@@ -331,12 +331,12 @@ body {
 .hero-background {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(30, 122, 158, 0.1) 0%, rgba(90, 160, 185, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(61, 157, 181, 0.1) 0%, rgba(126, 200, 220, 0.05) 100%);
     z-index: -1;
 }
 
 [data-theme="dark"] .hero-background {
-    background: linear-gradient(135deg, rgba(30, 122, 158, 0.15) 0%, rgba(90, 160, 185, 0.08) 100%);
+    background: linear-gradient(135deg, rgba(61, 157, 181, 0.15) 0%, rgba(126, 200, 220, 0.08) 100%);
 }
 
 .hero::before {
@@ -346,7 +346,7 @@ body {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(30, 122, 158, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(61, 157, 181, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(40px);
     z-index: -1;
@@ -360,7 +360,7 @@ body {
     left: -5%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(90, 160, 185, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(126, 200, 220, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(40px);
     z-index: -1;
@@ -412,24 +412,24 @@ body {
 .cta-button.primary {
     background: linear-gradient(135deg, var(--accent), var(--accent-glow));
     color: white;
-    box-shadow: 0 8px 24px rgba(30, 122, 158, 0.2);
+    box-shadow: 0 8px 24px rgba(61, 157, 181, 0.2);
 }
 
 .cta-button.primary:hover {
-    box-shadow: 0 16px 40px rgba(30, 122, 158, 0.35);
+    box-shadow: 0 16px 40px rgba(61, 157, 181, 0.35);
     transform: translateY(-3px);
 }
 
 .cta-button.secondary {
     border: 2px solid var(--accent);
     color: var(--accent);
-    background: rgba(30, 122, 158, 0.05);
+    background: rgba(61, 157, 181, 0.05);
 }
 
 .cta-button.secondary:hover {
     background: var(--accent);
     color: white;
-    box-shadow: 0 8px 20px rgba(30, 122, 158, 0.25);
+    box-shadow: 0 8px 20px rgba(61, 157, 181, 0.25);
     transform: translateY(-3px);
 }
 
@@ -495,7 +495,7 @@ body {
     background: var(--accent);
     color: white;
     border-color: var(--accent);
-    box-shadow: 0 8px 24px rgba(30, 122, 158, 0.2);
+    box-shadow: 0 8px 24px rgba(61, 157, 181, 0.2);
 }
 
 .projects-grid {
@@ -531,7 +531,7 @@ body {
 
 .project-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 16px 40px rgba(30, 122, 158, 0.15);
+    box-shadow: 0 16px 40px rgba(61, 157, 181, 0.15);
     transform: translateY(-8px);
 }
 
@@ -565,12 +565,12 @@ body {
 }
 
 .status-in-progress {
-    background: rgba(30, 122, 158, 0.2);
+    background: rgba(61, 157, 181, 0.2);
     color: var(--accent);
 }
 
 [data-theme="dark"] .status-in-progress {
-    background: rgba(30, 122, 158, 0.3);
+    background: rgba(61, 157, 181, 0.3);
 }
 
 .status-upcoming {
@@ -625,7 +625,7 @@ body {
 }
 
 [data-theme="dark"] .newsletter-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, #0f1e2e 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #0d1e30 100%);
 }
 
 .newsletter-content {
@@ -674,7 +674,7 @@ body {
     outline: none;
     border-color: var(--accent-glow);
     background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 0 20px rgba(90, 160, 185, 0.2);
+    box-shadow: 0 0 20px rgba(126, 200, 220, 0.2);
 }
 
 .submit-btn {
@@ -703,11 +703,11 @@ body {
 /* ===== CONTACT FORM ===== */
 .contact-section {
     padding: var(--spacing-lg) 0;
-    background: linear-gradient(135deg, rgba(30, 122, 158, 0.05), rgba(90, 160, 185, 0.05));
+    background: linear-gradient(135deg, rgba(61, 157, 181, 0.05), rgba(126, 200, 220, 0.05));
 }
 
 [data-theme="dark"] .contact-section {
-    background: linear-gradient(135deg, rgba(30, 122, 158, 0.08), rgba(90, 160, 185, 0.08));
+    background: linear-gradient(135deg, rgba(61, 157, 181, 0.08), rgba(126, 200, 220, 0.08));
 }
 
 .contact-form {
@@ -740,7 +740,7 @@ body {
 .form-textarea:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(30, 122, 158, 0.1);
+    box-shadow: 0 0 0 3px rgba(61, 157, 181, 0.1);
 }
 
 .form-textarea {
@@ -762,7 +762,7 @@ body {
 
 .contact-form .submit-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(30, 122, 158, 0.3);
+    box-shadow: 0 8px 20px rgba(61, 157, 181, 0.3);
 }
 
 .contact-form .submit-btn:disabled {
