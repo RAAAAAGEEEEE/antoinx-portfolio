@@ -55,13 +55,13 @@ const projects = [
     },
     {
         id: 4,
-        title_fr: "WoufRoof",
-        title_en: "WoufRoof",
-        description_fr: "Plateforme de location de logements adaptés aux chiens. Trouvez facilement un hébergement dog-friendly pour voyager avec votre compagnon.",
-        description_en: "Rental platform for dog-friendly accommodations. Easily find dog-adapted housing to travel with your furry companion.",
+        title_fr: "WoofRoof",
+        title_en: "WoofRoof",
+        description_fr: "Trouvez l'hébergement parfait pour voyager avec votre chien. 60 000+ hôtels, gîtes et campings dog-friendly en France, filtrés par poids et région.",
+        description_en: "Find the perfect accommodation to travel with your dog. 60,000+ dog-friendly hotels, cottages and campsites in France, filtered by weight and region.",
         type_fr: "SaaS",
         type_en: "SaaS",
-        status: "upcoming",
+        status: "in-progress",
         link: "https://woufroof.com"
     }
 ];
