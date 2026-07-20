@@ -20,18 +20,18 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bons plans IA, tutos vibecoding traduits en français et outils gratuits pour créer vos apps sans savoir coder. Par Antoinx.">
-    <meta name="keywords" content="portfolio, développement, SaaS, IA, automatisation, vibecoding">
+    <meta name="description" content="Solopreneur français, je construis des SaaS avec l'IA en solo : SiteServi, Woufroof, Téleverser... Stack, fails, ce qui marche — en français.">
+    <meta name="keywords" content="solopreneur, SaaS, vibecoding, IA, indie hacker, SiteServi">
     <meta name="author" content="antoinx">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="antoinx - Projets vibecoding">
-    <meta property="og:description" content="Portfolio d'Antoine - Apps mobiles, SaaS, automatisations & IA">
+    <meta property="og:title" content="Antoine (@Anto1nx) - SaaS solo, propulsés à l'IA">
+    <meta property="og:description" content="Solopreneur français, je construis des SaaS avec l'IA en solo : SiteServi, Woufroof, Téleverser...">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://antoinx.com">
     <meta property="og:image" content="https://antoinx.com/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="antoinx - Projets vibecoding">
-    <meta name="twitter:description" content="Apps mobiles, SaaS, automatisations & IA">
+    <meta name="twitter:title" content="Antoine (@Anto1nx) - SaaS solo, propulsés à l'IA">
+    <meta name="twitter:description" content="Stack, fails, ce qui marche. Je construis des SaaS en solo avec l'IA.">
     <meta name="theme-color" content="#0066ff">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%230066ff'>A</text></svg>">
     <link rel="preload" href="styles.css" as="style">
@@ -46,11 +46,16 @@
         "@type": "Person",
         "name": "Antoine",
         "url": "https://antoinx.com",
-        "jobTitle": "SaaS & IA Developer",
-        "description": "Portfolio de projets vibecoding: apps mobiles, SaaS, automatisations avec IA"
+        "jobTitle": "Solopreneur SaaS",
+        "description": "Solopreneur français qui construit des SaaS en solo avec l'IA comme co-pilote : SiteServi, Woufroof, Téleverser.",
+        "sameAs": [
+            "https://x.com/Anto1nx",
+            "https://github.com/RAAAAAGEEEEE"
+        ]
     }
     </script>
     <link rel="canonical" href="https://antoinx.com/">
+    <title>Antoine (@Anto1nx) - SaaS solo, propulsés à l'IA</title>
 </head>
 <body>
     <!-- Navigation -->
@@ -58,10 +63,8 @@
         <div class="nav-container">
             <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
             <ul class="nav-links">
-                <li><a href="#news" data-i18n="nav.news">Actualités</a></li>
-                <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
                 <li><a href="#newsletter" data-i18n="nav.newsletter">Newsletter</a></li>
             </ul>
             <div class="nav-controls">
@@ -82,9 +85,9 @@
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- X (Twitter) Link -->
-                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
+                <a href="https://x.com/Anto1nx" class="social-link twitter-link" aria-label="X @Anto1nx" rel="me" target="_blank">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                     </svg>
@@ -115,95 +118,86 @@
     <section class="hero">
         <div class="hero-background"></div>
         <div class="hero-content">
-            <h1 class="hero-title" data-i18n="hero.title">Projets vibecoding</h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">Actualités IA, astuces vibecoding & innovations. Découvrez mes apps mobiles, SaaS, automatisations & IA en cours et à venir.</p>
+            <h1 class="hero-title" data-i18n="hero.title">Je lance des SaaS en solo, avec l'IA comme co-pilote.</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Stack, fails, ce qui marche : je documente tout pour les solopreneurs qui veulent shipper, pas juste discuter d'IA.</p>
             <div class="hero-ctas">
-                <a href="#portfolio" class="cta-button primary" data-i18n="btn.portfolio">Parcourir les projets</a>
-                <a href="#newsletter" class="cta-button secondary" data-i18n="btn.newsletter">S'inscrire gratuitement</a>
+                <a href="#newsletter" class="cta-button primary" data-i18n="btn.newsletter">S'inscrire à la newsletter</a>
+                <a href="https://siteservi.com" class="cta-button secondary" target="_blank" rel="noopener" data-i18n="btn.siteservi">Essayer SiteServi</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="featured-section">
+    <!-- Bio -->
+    <section class="bio-section">
         <div class="container">
-            <div class="section-header">
-                <h2 data-i18n="featured.title">Projets en vedette</h2>
-                <p class="section-subtitle" data-i18n="featured.subtitle">Mes réalisations: apps mobiles, SaaS et automatisations avec IA</p>
-            </div>
-            <div class="featured-grid" id="featured-projects">
-                <!-- Dynamically filled -->
+            <p data-i18n="bio.text">Je m'appelle Antoine (@Anto1nx). Seul, en France, je construis des SaaS avec l'IA comme copilote — pas d'équipe, pas de levée de fonds. Ici : mes projets avec leurs vrais statuts, comment je bosse au quotidien, et une newsletter où je partage ce qui marche (et ce qui plante).</p>
+        </div>
+    </section>
+
+    <!-- En cours : SiteServi -->
+    <section class="highlight-section" id="siteservi">
+        <div class="container">
+            <div class="highlight-card">
+                <span class="project-status status-in-progress" data-i18n="siteservi.badge">En lancement</span>
+                <h2 data-i18n="siteservi.title">En ce moment : SiteServi</h2>
+                <p data-i18n="siteservi.text1">Google a laissé tomber la création de site depuis les fiches d'établissement. Le besoin, lui, est resté : sans site, un commerçant perd des clients. SiteServi part de ta fiche Google et sort un vrai site en moins d'une minute.</p>
+                <p data-i18n="siteservi.text2">Honnêtement : les sites en ligne aujourd'hui servent surtout à la prospection, pas encore un vrai portefeuille de clients payants. Si ça bouge, tu le sauras dans la newsletter avant tout le monde.</p>
+                <a href="https://siteservi.com" class="cta-button primary" target="_blank" rel="noopener" data-i18n="siteservi.cta">Essayer SiteServi — 14 jours gratuits</a>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section" id="portfolio">
+    <!-- Projets -->
+    <section class="portfolio-section" id="projets">
         <div class="container">
             <div class="section-header">
-                <h2 data-i18n="portfolio.title">Portfolio complet</h2>
-                <p class="section-subtitle" data-i18n="portfolio.subtitle">Tous mes projets en cours et à venir</p>
+                <h2 data-i18n="projects.title">Projets</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Ce que j'ai shippé en solo, avec leurs vrais statuts.</p>
             </div>
-            
-            <!-- Filtres -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Tous</button>
-                <button class="filter-btn" data-filter="in-progress" data-i18n="filter.in-progress">En cours</button>
-                <button class="filter-btn" data-filter="upcoming" data-i18n="filter.upcoming">À venir</button>
-            </div>
-
-            <!-- Grid des projets -->
-            <div class="projects-grid" id="projects-grid">
-                <!-- Dynamically filled -->
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Woufroof</h3>
+                        <span class="project-status status-in-progress" data-i18n="status.live">Live</span>
+                    </div>
+                    <span class="project-type" data-i18n="type.saas">SaaS</span>
+                    <p class="project-description" data-i18n="project.woufroof.desc">Trouve un hébergement dog-friendly en 2 clics : 60 000+ hôtels, gîtes et campings filtrés par poids et région.</p>
+                    <a href="https://woufroof.com" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Téleverser</h3>
+                        <span class="project-status status-in-progress" data-i18n="status.live">Live</span>
+                    </div>
+                    <span class="project-type" data-i18n="type.saas">SaaS</span>
+                    <p class="project-description" data-i18n="project.televerser.desc">Transcris tes vidéos et audios en texte avec résumé IA, gratuit et en français. Rien n'est stocké.</p>
+                    <a href="https://televerser.fr" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site →</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">MysteryMoji</h3>
+                        <span class="project-status status-in-progress" data-i18n="status.live">Live</span>
+                    </div>
+                    <span class="project-type" data-i18n="type.mobile">App Mobile</span>
+                    <p class="project-description" data-i18n="project.mysterymoji.desc">App iOS pour ados : code tes messages en emojis, déchiffrables seulement dans l'app.</p>
+                    <a href="https://mysterymoji.com" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
+    <!-- Comment je bosse -->
+    <section class="method-section" id="methode">
         <div class="container">
             <div class="section-header">
-                <h2 data-i18n="contact.title">Parlons de vos projets</h2>
-                <p class="section-subtitle" data-i18n="contact.subtitle">Une question ? Une collaboration ? Contactez-moi directement.</p>
+                <h2 data-i18n="method.title">Comment je bosse</h2>
             </div>
-            
-            <form class="contact-form" id="contact-form" action="https://formspree.io/f/mgoazjag" method="POST">
-                <div class="form-group">
-                    <input 
-                        type="text" 
-                        name="name"
-                        placeholder="Votre nom"
-                        data-i18n-placeholder="contact.name"
-                        required
-                        class="form-input"
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <input 
-                        type="email" 
-                        name="email"
-                        placeholder="Votre email"
-                        data-i18n-placeholder="contact.email"
-                        required
-                        class="form-input"
-                    >
-                </div>
-                
-                <div class="form-group">
-                    <textarea 
-                        name="message"
-                        placeholder="Votre message"
-                        data-i18n-placeholder="contact.message"
-                        required
-                        class="form-textarea"
-                        rows="5"
-                    ></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn" data-i18n="contact.submit">Envoyer</button>
-                <p class="form-note form-status" id="form-status"></p>
-            </form>
+            <ul class="method-list">
+                <li data-i18n="method.item1">Workflows déterministes d'abord, l'IA seulement là où ça a du sens.</li>
+                <li data-i18n="method.item2">Claude Code au quotidien — je ne code plus une ligne à la main.</li>
+                <li data-i18n="method.item3">Stack minimaliste : pas de framework que je ne comprends pas.</li>
+                <li data-i18n="method.item4">Je documente tout sur X et dans la newsletter, fails inclus.</li>
+            </ul>
         </div>
     </section>
 
@@ -212,13 +206,13 @@
         <div class="container">
             <div class="newsletter-content">
                 <div class="newsletter-text">
-                    <h2 data-i18n="newsletter.title">Actualités IA & vibecoding</h2>
-                    <p data-i18n="newsletter.subtitle">Recevez des tutoriels, tips et news exclusives sur vibecoding et l'IA. En français.</p>
+                    <h2 data-i18n="newsletter.title">Reçois les prochains projets avant tout le monde</h2>
+                    <p data-i18n="newsletter.subtitle">Stack, fails, ce qui marche. Pas de spam, désinscription en 1 clic.</p>
                 </div>
 
                 <form class="newsletter-form" id="newsletter-form">
-                    <input 
-                        type="email" 
+                    <input
+                        type="email"
                         placeholder="Votre email"
                         data-i18n-placeholder="newsletter.email"
                         required
@@ -237,17 +231,25 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>antoinx</h3>
-                    <p data-i18n="footer.tagline">Vibecoding projects & IA innovations</p>
+                    <p data-i18n="footer.tagline">SaaS solo, propulsés à l'IA.</p>
                 </div>
                 <div class="footer-section">
                     <h4 data-i18n="footer.nav">Navigation</h4>
                     <ul>
-                        <li><a href="#portfolio" data-i18n="footer.portfolio">Portfolio</a></li>
+                        <li><a href="#projets" data-i18n="footer.projects">Projets</a></li>
                         <li><a href="#newsletter" data-i18n="footer.newsletter">Newsletter</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Légal</h4>
+                    <h4 data-i18n="footer.social">Réseaux</h4>
+                    <ul>
+                        <li><a href="https://x.com/Anto1nx" target="_blank" rel="noopener">X (@Anto1nx)</a></li>
+                        <li><a href="https://github.com/RAAAAAGEEEEE" target="_blank" rel="noopener">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.legal">Légal</h4>
                     <ul style="list-style: none; padding: 0;">
                         <li><a href="/privacy.html" style="text-decoration: none;">Confidentialité</a></li>
                         <li><a href="/terms.html" style="text-decoration: none;">Conditions</a></li>
@@ -257,7 +259,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2026 antoinx. Tous droits réservés.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 antoinx. Une question, une envie de collab ? DM-moi sur X.</p>
             </div>
         </div>
     </footer>

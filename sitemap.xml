@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://antoinx.com/</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog</loc>
+    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://antoinx.com/terms</loc>
+    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/privacy</loc>
     <lastmod>2026-03-06T22:44:34+00:00</lastmod>
     <priority>0.3</priority>
   </url>
@@ -11,99 +26,9 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/projects/project-1</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-4</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-6</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-5</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-2</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-3</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-template</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-8</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/projects/project-7</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://antoinx.com/legal</loc>
     <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-6</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-4</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-2</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-1</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-5</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-template</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/news/article-3</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/blog</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>1.0</priority>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://antoinx.com/blog/5-apis-ia-gratuites-2026</loc>
@@ -209,10 +134,5 @@
     <loc>https://antoinx.com/blog/mantra-la-machine-a-remonter-le-temps-pour-tes-sessions-d-ia</loc>
     <lastmod>2026-03-06T22:44:34+00:00</lastmod>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/privacy</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.3</priority>
   </url>
 </urlset>

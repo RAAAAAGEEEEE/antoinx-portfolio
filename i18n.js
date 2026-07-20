@@ -1,90 +1,90 @@
 // Traductions multilingues
 const translations = {
     fr: {
-        'nav.news': 'Actualités',
-        'nav.portfolio': 'Portfolio',
+        'nav.projects': 'Projets',
+        'nav.blog': 'Blog',
         'nav.newsletter': 'Newsletter',
-        'nav.contact': 'Contact',
-        'hero.title': 'Vibecoding Projects',
-        'hero.subtitle': 'IA & dev par flux. Projets mobiles, SaaS, automatisations & innovations IA en cours et à venir. Vibecoding: développer avec l\'IA comme co-pilote.',
-        'btn.news': 'Voir les actualités',
-        'btn.portfolio': 'Parcourir les projets',
-        'btn.newsletter': 'S\'inscrire gratuitement',
-        'featured.title': 'Projets en vedette',
-        'featured.subtitle': 'Mes réalisations: apps mobiles, SaaS et automatisations avec IA',
-        'portfolio.title': 'Portfolio complet',
-        'portfolio.subtitle': 'Tous mes projets en cours et à venir',
-        'filter.all': 'Tous',
-        'filter.in-progress': 'En cours',
-        'filter.upcoming': 'À venir',
-        'status.in-progress': 'En cours',
-        'status.upcoming': 'À venir',
-        'newsletter.title': 'Actualités IA & vibecoding',
-        'newsletter.subtitle': 'Recevez des tutoriels, tips et news exclusives sur vibecoding et l\'IA. En français.',
+        'hero.title': 'Je lance des SaaS en solo, avec l\'IA comme co-pilote.',
+        'hero.subtitle': 'Stack, fails, ce qui marche : je documente tout pour les solopreneurs qui veulent shipper, pas juste discuter d\'IA.',
+        'btn.newsletter': 'S\'inscrire à la newsletter',
+        'btn.siteservi': 'Essayer SiteServi',
+        'bio.text': 'Je m\'appelle Antoine (@Anto1nx). Seul, en France, je construis des SaaS avec l\'IA comme copilote — pas d\'équipe, pas de levée de fonds. Ici : mes projets avec leurs vrais statuts, comment je bosse au quotidien, et une newsletter où je partage ce qui marche (et ce qui plante).',
+        'siteservi.badge': 'En lancement',
+        'siteservi.title': 'En ce moment : SiteServi',
+        'siteservi.text1': 'Google a laissé tomber la création de site depuis les fiches d\'établissement. Le besoin, lui, est resté : sans site, un commerçant perd des clients. SiteServi part de ta fiche Google et sort un vrai site en moins d\'une minute.',
+        'siteservi.text2': 'Honnêtement : les sites en ligne aujourd\'hui servent surtout à la prospection, pas encore un vrai portefeuille de clients payants. Si ça bouge, tu le sauras dans la newsletter avant tout le monde.',
+        'siteservi.cta': 'Essayer SiteServi — 14 jours gratuits',
+        'projects.title': 'Projets',
+        'projects.subtitle': 'Ce que j\'ai shippé en solo, avec leurs vrais statuts.',
+        'status.live': 'Live',
+        'type.saas': 'SaaS',
+        'type.mobile': 'App Mobile',
+        'project.woufroof.desc': 'Trouve un hébergement dog-friendly en 2 clics : 60 000+ hôtels, gîtes et campings filtrés par poids et région.',
+        'project.televerser.desc': 'Transcris tes vidéos et audios en texte avec résumé IA, gratuit et en français. Rien n\'est stocké.',
+        'project.mysterymoji.desc': 'App iOS pour ados : code tes messages en emojis, déchiffrables seulement dans l\'app.',
+        'link.more': 'Voir le site →',
+        'method.title': 'Comment je bosse',
+        'method.item1': 'Workflows déterministes d\'abord, l\'IA seulement là où ça a du sens.',
+        'method.item2': 'Claude Code au quotidien — je ne code plus une ligne à la main.',
+        'method.item3': 'Stack minimaliste : pas de framework que je ne comprends pas.',
+        'method.item4': 'Je documente tout sur X et dans la newsletter, fails inclus.',
+        'newsletter.title': 'Reçois les prochains projets avant tout le monde',
+        'newsletter.subtitle': 'Stack, fails, ce qui marche. Pas de spam, désinscription en 1 clic.',
         'newsletter.email': 'Votre email',
         'newsletter.submit': 'S\'inscrire',
         'newsletter.success': '✓ Inscrit !',
+        'newsletter.error': '❌ Email invalide',
         'newsletter.note': 'Pas de spam, désinscription facile.',
-        'contact.title': 'Parlons de vos projets',
-        'contact.subtitle': 'Une question ? Une collaboration ? Contactez-moi directement.',
-        'contact.name': 'Votre nom',
-        'contact.email': 'Votre email',
-        'contact.message': 'Votre message',
-        'contact.submit': 'Envoyer',
-        'contact.success': '✓ Message envoyé !',
-        'contact.error': '❌ Erreur lors de l\'envoi',
-        'footer.tagline': 'Vibecoding projects & IA innovations',
+        'footer.tagline': 'SaaS solo, propulsés à l\'IA.',
         'footer.nav': 'Navigation',
-        'footer.portfolio': 'Portfolio',
+        'footer.projects': 'Projets',
         'footer.newsletter': 'Newsletter',
-        'footer.contact': 'Contact',
-        'footer.copyright': '© 2026 antoinx. Tous droits réservés.',
-        'type.mobile': 'App Mobile',
-        'type.saas': 'SaaS',
-        'type.automation': 'Automatisation',
+        'footer.social': 'Réseaux',
+        'footer.legal': 'Légal',
+        'footer.copyright': '© 2026 antoinx. Une question, une envie de collab ? DM-moi sur X.',
     },
     en: {
-        'nav.news': 'News',
-        'nav.portfolio': 'Portfolio',
+        'nav.projects': 'Projects',
+        'nav.blog': 'Blog',
         'nav.newsletter': 'Newsletter',
-        'nav.contact': 'Contact',
-        'hero.title': 'Vibecoding Projects',
-        'hero.subtitle': 'AI-driven development. Mobile apps, SaaS, automations & AI innovations in progress and upcoming. Vibecoding: coding with AI as your co-pilot.',
-        'btn.news': 'View news',
-        'btn.portfolio': 'Browse projects',
-        'btn.newsletter': 'Subscribe for free',
-        'featured.title': 'Featured Projects',
-        'featured.subtitle': 'My creations: mobile apps, SaaS and automations with AI',
-        'portfolio.title': 'Full Portfolio',
-        'portfolio.subtitle': 'All my in-progress and upcoming projects',
-        'filter.all': 'All',
-        'filter.in-progress': 'In Progress',
-        'filter.upcoming': 'Upcoming',
-        'status.in-progress': 'In Progress',
-        'status.upcoming': 'Upcoming',
-        'newsletter.title': 'AI & Vibecoding News',
-        'newsletter.subtitle': 'Get exclusive tutorials, tips and news on vibecoding and AI. In French.',
+        'hero.title': 'I launch SaaS products solo, with AI as my co-pilot.',
+        'hero.subtitle': 'Stack, fails, what works: I document everything for solopreneurs who want to ship, not just talk about AI.',
+        'btn.newsletter': 'Subscribe to the newsletter',
+        'btn.siteservi': 'Try SiteServi',
+        'bio.text': 'I\'m Antoine (@Anto1nx). Solo, based in France, I build SaaS products with AI as a copilot — no team, no funding. Here: my projects with their real status, how I work day to day, and a newsletter where I share what works (and what fails).',
+        'siteservi.badge': 'Launching',
+        'siteservi.title': 'Right now: SiteServi',
+        'siteservi.text1': 'Google dropped website creation from business listings. The need didn\'t go away: without a site, a local business loses customers. SiteServi takes your Google listing and turns it into a real website in under a minute.',
+        'siteservi.text2': 'Honestly: the sites live today are mostly outreach demos, not yet a real base of paying customers. If that changes, you\'ll hear it in the newsletter first.',
+        'siteservi.cta': 'Try SiteServi — 14 days free',
+        'projects.title': 'Projects',
+        'projects.subtitle': 'What I\'ve shipped solo, with their real status.',
+        'status.live': 'Live',
+        'type.saas': 'SaaS',
+        'type.mobile': 'Mobile App',
+        'project.woufroof.desc': 'Find dog-friendly accommodation in 2 clicks: 60,000+ hotels, cottages and campsites filtered by weight and region.',
+        'project.televerser.desc': 'Transcribe your videos and audio to text with an AI summary, free and in French. Nothing is stored.',
+        'project.mysterymoji.desc': 'iOS app for teens: encode your messages as emojis, decipherable only inside the app.',
+        'link.more': 'See site →',
+        'method.title': 'How I work',
+        'method.item1': 'Deterministic workflows first, AI only where it actually makes sense.',
+        'method.item2': 'Claude Code every day — I don\'t write code by hand anymore.',
+        'method.item3': 'Minimal stack: no framework I don\'t understand, no lingering debt.',
+        'method.item4': 'I document everything on X and in the newsletter, fails included.',
+        'newsletter.title': 'Get the next projects before anyone else',
+        'newsletter.subtitle': 'Stack, fails, what works. No spam, unsubscribe in one click.',
         'newsletter.email': 'Your email',
         'newsletter.submit': 'Subscribe',
         'newsletter.success': '✓ Subscribed!',
+        'newsletter.error': '❌ Invalid email',
         'newsletter.note': 'No spam, easy unsubscribe.',
-        'contact.title': 'Let\'s talk about your projects',
-        'contact.subtitle': 'Questions? Collaboration? Contact me directly.',
-        'contact.name': 'Your name',
-        'contact.email': 'Your email',
-        'contact.message': 'Your message',
-        'contact.submit': 'Send',
-        'contact.success': '✓ Message sent!',
-        'contact.error': '❌ Error sending message',
-        'footer.tagline': 'Vibecoding projects & IA innovations',
+        'footer.tagline': 'Solo SaaS, powered by AI.',
         'footer.nav': 'Navigation',
-        'footer.portfolio': 'Portfolio',
+        'footer.projects': 'Projects',
         'footer.newsletter': 'Newsletter',
-        'footer.contact': 'Contact',
-        'footer.copyright': '© 2026 antoinx. All rights reserved.',
-        'type.mobile': 'Mobile App',
-        'type.saas': 'SaaS',
-        'type.automation': 'Automation',
+        'footer.social': 'Social',
+        'footer.legal': 'Legal',
+        'footer.copyright': '© 2026 antoinx. Question, want to collab? DM me on X.',
     }
 };
 
@@ -104,7 +104,7 @@ class I18n {
     init() {
         document.documentElement.lang = this.currentLanguage;
         this.updateAllText();
-        this.updateLanguageFlag(); // Set correct flag on init
+        this.updateLanguageFlag();
         this.setupLanguageButtons();
     }
 
@@ -114,7 +114,7 @@ class I18n {
             localStorage.setItem('language', lang);
             document.documentElement.lang = lang;
             this.updateAllText();
-            this.updateLanguageFlag(); // Update the flag in the navbar button
+            this.updateLanguageFlag();
         }
     }
 
@@ -125,7 +125,6 @@ class I18n {
         const flagImg = toggleBtn.querySelector('.lang-flag-img');
         if (!flagImg) return;
 
-        // Get the flag SVG from the selected language option
         const selectedOption = document.querySelector(`.lang-option[data-lang="${this.currentLanguage}"]`);
         if (selectedOption) {
             const selectedFlag = selectedOption.querySelector('.lang-flag-img');
@@ -158,33 +157,6 @@ class I18n {
             const key = element.getAttribute('data-i18n-placeholder');
             element.placeholder = this.getTranslation(key);
         });
-
-        this.updateProjectStatuses();
-    }
-
-    updateProjectStatuses() {
-        document.querySelectorAll('.project-status').forEach(el => {
-            const parent = el.closest('.project-card');
-            if (parent) {
-                const status = parent.dataset.status;
-                if (status === 'in-progress') {
-                    el.textContent = this.getTranslation('status.in-progress');
-                } else if (status === 'upcoming') {
-                    el.textContent = this.getTranslation('status.upcoming');
-                }
-            }
-        });
-
-        document.querySelectorAll('.project-type').forEach(el => {
-            const text = el.textContent.trim();
-            if (text.includes('Mobile')) {
-                el.textContent = this.getTranslation('type.mobile');
-            } else if (text === 'SaaS') {
-                el.textContent = this.getTranslation('type.saas');
-            } else if (text.includes('Automatisation') || text.includes('Automation')) {
-                el.textContent = this.getTranslation('type.automation');
-            }
-        });
     }
 
     setupLanguageButtons() {
@@ -192,20 +164,17 @@ class I18n {
         const dropdown = document.getElementById('language-dropdown');
         const langOptions = document.querySelectorAll('.lang-option');
 
-        // Toggle dropdown
         toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             dropdown.classList.toggle('active');
             toggleBtn.classList.toggle('active');
         });
 
-        // Fermer dropdown au clic en dehors
         document.addEventListener('click', () => {
             dropdown.classList.remove('active');
             toggleBtn.classList.remove('active');
         });
 
-        // Sélectionner langue
         langOptions.forEach(btn => {
             if (btn.dataset.lang === this.currentLanguage) {
                 btn.classList.add('active');
