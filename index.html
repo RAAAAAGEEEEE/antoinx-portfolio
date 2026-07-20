@@ -20,18 +20,18 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solopreneur français, je construis des SaaS avec l'IA en solo : SiteServi, Woufroof, Téleverser... Stack, fails, ce qui marche — en français.">
-    <meta name="keywords" content="solopreneur, SaaS, vibecoding, IA, indie hacker, SiteServi">
+    <meta name="description" content="Antoine, solopreneur français : je construis des SaaS avec l'IA en copilote. SiteServi, Téleverser, MysteryMoji, mes skills Claude Code. Stack et fails, en français.">
+    <meta name="keywords" content="solopreneur, SaaS, IA, indie hacker, SiteServi, Claude Code">
     <meta name="author" content="antoinx">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Antoine (@Anto1nx) - SaaS solo, propulsés à l'IA">
-    <meta property="og:description" content="Solopreneur français, je construis des SaaS avec l'IA en solo : SiteServi, Woufroof, Téleverser...">
+    <meta property="og:description" content="Solopreneur français, je construis des SaaS avec l'IA en copilote : SiteServi, Téleverser, MysteryMoji, mes skills Claude Code.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://antoinx.com">
     <meta property="og:image" content="https://antoinx.com/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Antoine (@Anto1nx) - SaaS solo, propulsés à l'IA">
-    <meta name="twitter:description" content="Stack, fails, ce qui marche. Je construis des SaaS en solo avec l'IA.">
+    <meta name="twitter:description" content="Je construis des SaaS en solo avec l'IA en copilote. Stack et fails, sans filtre.">
     <meta name="theme-color" content="#0066ff">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%230066ff'>A</text></svg>">
     <link rel="preload" href="styles.css" as="style">
@@ -47,7 +47,7 @@
         "name": "Antoine",
         "url": "https://antoinx.com",
         "jobTitle": "Solopreneur SaaS",
-        "description": "Solopreneur français qui construit des SaaS en solo avec l'IA comme co-pilote : SiteServi, Woufroof, Téleverser.",
+        "description": "Solopreneur français qui construit des SaaS en solo avec l'IA en copilote : SiteServi, Téleverser, MysteryMoji.",
         "sameAs": [
             "https://x.com/Anto1nx",
             "https://github.com/RAAAAAGEEEEE"
@@ -63,6 +63,7 @@
         <div class="nav-container">
             <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
             <ul class="nav-links">
+                <li><a href="#siteservi" data-i18n="nav.siteservi">SiteServi</a></li>
                 <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
                 <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
                 <li><a href="#newsletter" data-i18n="nav.newsletter">Newsletter</a></li>
@@ -116,33 +117,33 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background"></div>
         <div class="hero-content">
-            <h1 class="hero-title" data-i18n="hero.title">Je lance des SaaS en solo, avec l'IA comme co-pilote.</h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">Stack, fails, ce qui marche : je documente tout pour les solopreneurs qui veulent shipper, pas juste discuter d'IA.</p>
+            <p class="hero-kicker" data-i18n="hero.kicker">Antoine, alias @Anto1nx</p>
+            <h1 class="hero-title" data-i18n="hero.title">Je construis des SaaS en solo, avec l'IA comme copilote.</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Seul, sans équipe ni levée de fonds. Ce que je fabrique, ses vrais statuts, et comment je bosse au quotidien : tout est sur cette page.</p>
             <div class="hero-ctas">
-                <a href="#newsletter" class="cta-button primary" data-i18n="btn.newsletter">S'inscrire à la newsletter</a>
-                <a href="https://siteservi.com" class="cta-button secondary" target="_blank" rel="noopener" data-i18n="btn.siteservi">Essayer SiteServi</a>
+                <a href="https://siteservi.com" class="cta-button primary" target="_blank" rel="noopener" data-i18n="btn.siteservi">Essayer SiteServi - 14 j gratuits</a>
+                <a href="#newsletter" class="cta-button secondary" data-i18n="btn.newsletter">Newsletter gratuite</a>
             </div>
         </div>
     </section>
 
-    <!-- Bio -->
-    <section class="bio-section">
-        <div class="container">
-            <p data-i18n="bio.text">Je m'appelle Antoine (@Anto1nx). Seul, en France, je construis des SaaS avec l'IA comme copilote — pas d'équipe, pas de levée de fonds. Ici : mes projets avec leurs vrais statuts, comment je bosse au quotidien, et une newsletter où je partage ce qui marche (et ce qui plante).</p>
-        </div>
-    </section>
-
-    <!-- En cours : SiteServi -->
+    <!-- SiteServi : produit phare -->
     <section class="highlight-section" id="siteservi">
         <div class="container">
             <div class="highlight-card">
-                <span class="project-status status-in-progress" data-i18n="siteservi.badge">En lancement</span>
-                <h2 data-i18n="siteservi.title">En ce moment : SiteServi</h2>
-                <p data-i18n="siteservi.text1">Google a laissé tomber la création de site depuis les fiches d'établissement. Le besoin, lui, est resté : sans site, un commerçant perd des clients. SiteServi part de ta fiche Google et sort un vrai site en moins d'une minute.</p>
-                <p data-i18n="siteservi.text2">Honnêtement : les sites en ligne aujourd'hui servent surtout à la prospection, pas encore un vrai portefeuille de clients payants. Si ça bouge, tu le sauras dans la newsletter avant tout le monde.</p>
-                <a href="https://siteservi.com" class="cta-button primary" target="_blank" rel="noopener" data-i18n="siteservi.cta">Essayer SiteServi — 14 jours gratuits</a>
+                <span class="project-status status-live" data-i18n="siteservi.badge">En lancement</span>
+                <div class="highlight-grid">
+                    <div class="highlight-text">
+                        <h2 data-i18n="siteservi.title">SiteServi</h2>
+                        <p data-i18n="siteservi.text1">Google a retiré la création de site depuis les fiches d'établissement. Le besoin est resté : sans site, un commerçant perd des clients. SiteServi part de ta fiche Google et sort un vrai site en moins d'une minute.</p>
+                        <p data-i18n="siteservi.text2">Statut réel : les sites en ligne aujourd'hui servent surtout à la prospection, pas encore une vraie base de clients payants. Ça peut changer vite, tu le sauras dans la newsletter en premier.</p>
+                        <a href="https://siteservi.com" class="cta-button primary" target="_blank" rel="noopener" data-i18n="siteservi.cta">Essayer SiteServi - 14 j gratuits</a>
+                    </div>
+                    <div class="highlight-visual">
+                        <div class="screenshot-placeholder" data-i18n="siteservi.placeholder">Capture d'écran SiteServi à venir</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -151,36 +152,45 @@
     <section class="portfolio-section" id="projets">
         <div class="container">
             <div class="section-header">
-                <h2 data-i18n="projects.title">Projets</h2>
-                <p class="section-subtitle" data-i18n="projects.subtitle">Ce que j'ai shippé en solo, avec leurs vrais statuts.</p>
+                <h2 data-i18n="projects.title">Autres projets</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Statuts réels, sans enjoliver.</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3 class="project-title">Woufroof</h3>
-                        <span class="project-status status-in-progress" data-i18n="status.live">Live</span>
+                        <h3 class="project-title">Skills Claude Code</h3>
+                        <span class="project-status status-live" data-i18n="status.live">Live</span>
                     </div>
-                    <span class="project-type" data-i18n="type.saas">SaaS</span>
-                    <p class="project-description" data-i18n="project.woufroof.desc">Trouve un hébergement dog-friendly en 2 clics : 60 000+ hôtels, gîtes et campings filtrés par poids et région.</p>
-                    <a href="https://woufroof.com" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site →</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">Téleverser</h3>
-                        <span class="project-status status-in-progress" data-i18n="status.live">Live</span>
-                    </div>
-                    <span class="project-type" data-i18n="type.saas">SaaS</span>
-                    <p class="project-description" data-i18n="project.televerser.desc">Transcris tes vidéos et audios en texte avec résumé IA, gratuit et en français. Rien n'est stocké.</p>
-                    <a href="https://televerser.fr" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site →</a>
+                    <span class="project-type" data-i18n="type.tool">Outils</span>
+                    <p class="project-description" data-i18n="project.skills.desc">Mes skills Claude Code perso, publiques sur GitHub : ce que j'utilise vraiment pour shipper au quotidien.</p>
+                    <a href="https://github.com/RAAAAAGEEEEE/claude-skills" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.repo">Voir le repo</a>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
                         <h3 class="project-title">MysteryMoji</h3>
-                        <span class="project-status status-in-progress" data-i18n="status.live">Live</span>
+                        <span class="project-status status-live" data-i18n="status.live">Live</span>
                     </div>
-                    <span class="project-type" data-i18n="type.mobile">App Mobile</span>
+                    <span class="project-type" data-i18n="type.mobile">App mobile</span>
                     <p class="project-description" data-i18n="project.mysterymoji.desc">App iOS pour ados : code tes messages en emojis, déchiffrables seulement dans l'app.</p>
-                    <a href="https://mysterymoji.com" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site →</a>
+                    <a href="https://mysterymoji.com" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Téleverser</h3>
+                        <span class="project-status status-paused" data-i18n="status.paused">En pause</span>
+                    </div>
+                    <span class="project-type" data-i18n="type.saas">SaaS</span>
+                    <p class="project-description" data-i18n="project.televerser.desc">Transcris tes vidéos et audios en texte avec résumé IA, gratuit et en français. Le plus avancé des projets en pause, je le reprendrai peut-être.</p>
+                    <a href="https://televerser.fr" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">WoufRoof</h3>
+                        <span class="project-status status-abandoned" data-i18n="status.abandoned">Abandonné</span>
+                    </div>
+                    <span class="project-type" data-i18n="type.saas">SaaS</span>
+                    <p class="project-description" data-i18n="project.woufroof.desc">Trouver un hébergement dog-friendly, hôtels et gîtes filtrés par poids et région. Testé, jamais vraiment lancé.</p>
+                    <a href="https://woufroof.com" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="link.more">Voir le site</a>
                 </div>
             </div>
         </div>
@@ -194,8 +204,8 @@
             </div>
             <ul class="method-list">
                 <li data-i18n="method.item1">Workflows déterministes d'abord, l'IA seulement là où ça a du sens.</li>
-                <li data-i18n="method.item2">Claude Code au quotidien — je ne code plus une ligne à la main.</li>
-                <li data-i18n="method.item3">Stack minimaliste : pas de framework que je ne comprends pas.</li>
+                <li data-i18n="method.item2">Claude Code tous les jours : je ne code plus une ligne à la main.</li>
+                <li data-i18n="method.item3">J'essaie de rester KISS, une stack simple plutôt qu'une stack qui en jette.</li>
                 <li data-i18n="method.item4">Je documente tout sur X et dans la newsletter, fails inclus.</li>
             </ul>
         </div>
@@ -207,7 +217,7 @@
             <div class="newsletter-content">
                 <div class="newsletter-text">
                     <h2 data-i18n="newsletter.title">Reçois les prochains projets avant tout le monde</h2>
-                    <p data-i18n="newsletter.subtitle">Stack, fails, ce qui marche. Pas de spam, désinscription en 1 clic.</p>
+                    <p data-i18n="newsletter.subtitle">Stack, fails, ce qui marche. Pas de spam, désinscription en un clic.</p>
                 </div>
 
                 <form class="newsletter-form" id="newsletter-form">
@@ -231,11 +241,12 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>antoinx</h3>
-                    <p data-i18n="footer.tagline">SaaS solo, propulsés à l'IA.</p>
+                    <p data-i18n="footer.tagline">SaaS solo, avec l'IA en copilote.</p>
                 </div>
                 <div class="footer-section">
                     <h4 data-i18n="footer.nav">Navigation</h4>
                     <ul>
+                        <li><a href="#siteservi" data-i18n="footer.siteservi">SiteServi</a></li>
                         <li><a href="#projets" data-i18n="footer.projects">Projets</a></li>
                         <li><a href="#newsletter" data-i18n="footer.newsletter">Newsletter</a></li>
                         <li><a href="blog.html">Blog</a></li>
@@ -259,7 +270,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2026 antoinx. Une question, une envie de collab ? DM-moi sur X.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 antoinx. Une question ou une envie de collab ? DM-moi sur X.</p>
             </div>
         </div>
     </footer>
