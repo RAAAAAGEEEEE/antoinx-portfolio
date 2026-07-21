@@ -15,7 +15,8 @@ const translations = {
         'siteservi.text1': 'Google a retiré la création de site depuis les fiches d\'établissement. Le besoin est resté : sans site, un commerçant perd des clients. SiteServi part de ta fiche Google et sort un vrai site en moins d\'une minute.',
         'siteservi.text2': 'Statut réel : les sites en ligne aujourd\'hui servent surtout à la prospection, pas encore une vraie base de clients payants. Ça peut changer vite, tu le sauras dans la newsletter en premier.',
         'siteservi.cta': 'Essayer SiteServi - 14 j gratuits',
-        'siteservi.placeholder': 'Capture d\'écran SiteServi à venir',
+        'siteservi.imgalt': 'SiteServi',
+        'siteservi.imgcaption': 'Visuel officiel SiteServi (siteservi.com)',
         'projects.title': 'Autres projets',
         'projects.subtitle': 'Statuts réels, sans enjoliver.',
         'status.live': 'Live',
@@ -49,7 +50,7 @@ const translations = {
         'footer.newsletter': 'Newsletter',
         'footer.social': 'Réseaux',
         'footer.legal': 'Légal',
-        'footer.copyright': '© 2026 antoinx. Une question ou une envie de collab ? DM-moi sur X.',
+        'footer.copyright': '© 2026 Antoinx. Une question ou une envie de collab ? DM-moi sur X.',
     },
     en: {
         'nav.siteservi': 'SiteServi',
@@ -66,7 +67,8 @@ const translations = {
         'siteservi.text1': 'Google removed website creation from business listings. The need didn\'t go away: without a site, a local business loses customers. SiteServi takes your Google listing and turns it into a real website in under a minute.',
         'siteservi.text2': 'Real status: the sites live today are mostly outreach demos, not yet a real base of paying customers. That can change fast, you\'ll hear it in the newsletter first.',
         'siteservi.cta': 'Try SiteServi - 14-day free trial',
-        'siteservi.placeholder': 'SiteServi screenshot coming soon',
+        'siteservi.imgalt': 'SiteServi',
+        'siteservi.imgcaption': 'Official SiteServi visual (siteservi.com)',
         'projects.title': 'Other projects',
         'projects.subtitle': 'Real status, no sugarcoating.',
         'status.live': 'Live',
@@ -100,7 +102,7 @@ const translations = {
         'footer.newsletter': 'Newsletter',
         'footer.social': 'Social',
         'footer.legal': 'Legal',
-        'footer.copyright': '© 2026 antoinx. Question or want to collab? DM me on X.',
+        'footer.copyright': '© 2026 Antoinx. Question or want to collab? DM me on X.',
     }
 };
 
@@ -172,6 +174,11 @@ class I18n {
         document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
             element.placeholder = this.getTranslation(key);
+        });
+
+        document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+            const key = element.getAttribute('data-i18n-alt');
+            element.alt = this.getTranslation(key);
         });
     }
 
