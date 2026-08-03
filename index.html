@@ -65,7 +65,7 @@
             <ul class="nav-links">
                 <li><a href="#siteservi" data-i18n="nav.siteservi">SiteServi</a></li>
                 <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
-                <li><a href="blog.html" data-i18n="nav.blog">Blog</a></li>
+                <li><a href="/blog" data-i18n="nav.blog">Blog</a></li>
                 <li><a href="#newsletter" data-i18n="nav.newsletter">Newsletter</a></li>
             </ul>
             <div class="nav-controls">
@@ -115,6 +115,7 @@
         </div>
     </nav>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -212,6 +213,36 @@
         </div>
     </section>
 
+    <!-- Blog : contenu regenere par tools/rebuild_blog.py -->
+    <section class="posts-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="posts.title">Ce que j'écris</h2>
+                <p class="section-subtitle" data-i18n="posts.subtitle">Ce que j'apprends en construisant, au fur et à mesure.</p>
+            </div>
+            <div class="posts-grid">
+          <!-- LATEST_POSTS:START -->
+          <a href="/blog/5-outils-ia-pour-exploser-ta-productivite-en-2026" class="post-card">
+            <time datetime="2026-04-12">12 avril 2026</time>
+            <h3>5 outils IA pour exploser ta productivité en 2026</h3>
+          </a>
+          <a href="/blog/arrete-de-te-battre-avec-ton-ia-tes-fichiers-cursorrules-sont-mal-ecrits" class="post-card">
+            <time datetime="2026-04-12">12 avril 2026</time>
+            <h3>Arrête de te battre avec ton IA : tes fichiers .cursorrules sont mal écrits</h3>
+          </a>
+          <a href="/blog/claude-code-ou-cursor-choisis-ton-camp-pour-coder-plus-vite" class="post-card">
+            <time datetime="2026-04-12">12 avril 2026</time>
+            <h3>Claude Code ou Cursor : Choisis ton camp pour coder plus vite</h3>
+          </a>
+          <a href="/blog" class="post-card post-card-all">
+            <span>Tous les articles</span>
+            <h3>54 articles publies</h3>
+          </a>
+          <!-- LATEST_POSTS:END -->
+            </div>
+        </div>
+    </section>
+
     <!-- Newsletter Section -->
     <section class="newsletter-section" id="newsletter">
         <div class="container">
@@ -235,6 +266,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -250,7 +282,7 @@
                         <li><a href="#siteservi" data-i18n="footer.siteservi">SiteServi</a></li>
                         <li><a href="#projets" data-i18n="footer.projects">Projets</a></li>
                         <li><a href="#newsletter" data-i18n="footer.newsletter">Newsletter</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -263,10 +295,10 @@
                 <div class="footer-section">
                     <h4 data-i18n="footer.legal">Légal</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li><a href="/privacy.html" style="text-decoration: none;">Confidentialité</a></li>
-                        <li><a href="/terms.html" style="text-decoration: none;">Conditions</a></li>
-                        <li><a href="/legal.html" style="text-decoration: none;">Mentions légales</a></li>
-                        <li><a href="/cookies.html" style="text-decoration: none;">Cookies</a></li>
+                        <li><a href="/privacy" style="text-decoration: none;">Confidentialité</a></li>
+                        <li><a href="/terms" style="text-decoration: none;">Conditions</a></li>
+                        <li><a href="/legal" style="text-decoration: none;">Mentions légales</a></li>
+                        <li><a href="/cookies" style="text-decoration: none;">Cookies</a></li>
                     </ul>
                 </div>
             </div>

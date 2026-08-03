@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+
+<html data-theme="light" lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx">
-    <meta name="keywords" content="open source, vibecoding, IA, développement">
-    <title>Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx</title>
-    <link rel="stylesheet" href="../styles.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx" name="description"/>
+<meta content="open source, vibecoding, IA, développement" name="keywords"/>
+<title>Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - Antoinx</title>
+<link href="../styles.css" rel="stylesheet"/>
+<style>
         .article-container {
             max-width: 800px;
             margin: 0 auto;
@@ -20,49 +21,49 @@
             font-size: 2.2rem;
             margin-bottom: 20px;
             line-height: 1.3;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-meta {
             display: flex;
             gap: 20px;
-            color: var(--text-secondary);
+            color: var(--text-light);
             font-size: 0.95rem;
             margin-bottom: 30px;
         }
         .article-content {
             line-height: 1.8;
             font-size: 1.05rem;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h2 {
             font-size: 1.8rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h3 {
             font-size: 1.4rem;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h4 {
             font-size: 1.1rem;
             margin-top: 20px;
             margin-bottom: 10px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content p {
             margin-bottom: 15px;
             text-align: justify;
         }
         .article-content pre {
-            background: var(--bg-secondary);
+            background: var(--secondary);
             padding: 20px;
             border-radius: 8px;
             overflow-x: auto;
             margin: 20px 0;
-            border-left: 4px solid var(--accent-color, #0066ff);
+            border-left: 4px solid var(--accent);
         }
         .article-content code {
             font-family: 'Courier New', monospace;
@@ -78,162 +79,164 @@
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            color: var(--accent-color, #0066ff);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
         }
         .back-link:hover {
             text-decoration: underline;
         }
-    </style>
-    <link rel="canonical" href="https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co">
-</head>
+    
+    .article-nl-cta {
+      margin: 56px 0 8px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--secondary);
+      text-align: center;
+    }
+    .article-nl-cta h2 { font-size: 1.35rem; margin: 0 0 10px; }
+    .article-nl-cta p { color: var(--text-light); margin: 0 0 18px; }
+    .article-nl-cta .nl-cta-note { font-size: .85rem; margin: 14px 0 0; }
+    .article-related { margin-top: 48px; }
+    .article-related h2 { font-size: 1.25rem; margin-bottom: 12px; }
+    .article-related ul { padding-left: 20px; }
+    .article-related li { margin-bottom: 8px; }
+</style>
+<link href="https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co" rel="canonical"/>
+<meta content="2026-02-23" property="article:published_time"/><meta content="Antoine" property="article:author"/><meta content="article" property="og:type"/><meta content="Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?" property="og:title"/><meta content="Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx" property="og:description"/><meta content="https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co" property="og:url"/><meta content="https://antoinx.com/og-image.png" property="og:image"/><meta content="Antoinx" property="og:site_name"/><meta content="fr_FR" property="og:locale"/><meta content="2026-02-23" property="article:published_time"/><meta content="Antoine" property="article:author"/><meta content="summary_large_image" name="twitter:card"/><meta content="Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?" name="twitter:title"/><meta content="Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx" name="twitter:description"/><meta content="https://antoinx.com/og-image.png" name="twitter:image"/><meta content="@Anto1nx" name="twitter:creator"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?",
+  "description": "Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx",
+  "datePublished": "2026-02-23",
+  "dateModified": "2026-02-23",
+  "author": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/",
+    "sameAs": [
+      "https://x.com/Anto1nx",
+      "https://github.com/RAAAAAGEEEEE"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/",
+    "sameAs": [
+      "https://x.com/Anto1nx",
+      "https://github.com/RAAAAAGEEEEE"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co"
+  },
+  "image": "https://antoinx.com/og-image.png",
+  "inLanguage": "fr-FR",
+  "url": "https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co"
+}</script></head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
-            <ul class="nav-links">
-                <li><a href="/#news">Actualités</a></li>
-                <li><a href="/#portfolio">Portfolio</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="/#contact">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation -->
 
-    <div class="article-container">
-        <a href="../blog.html" class="back-link">← Retour au blog</a>
-        
-        <div class="article-header">
-            <h1>Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?</h1>
-            <div class="article-meta">
-                <span>23 février 2026</span>
-                <span>•</span>
-                <span>10 min</span>
-                <span>•</span>
-                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">open source</span>
-            </div>
-        </div>
-        
-        <div class="article-content">
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="/" style="cursor:pointer;text-decoration:none;">Antoinx</a>
+<ul class="nav-links">
+<li><a href="/#siteservi">SiteServi</a></li>
+<li><a href="/#projets">Projets</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/#newsletter">Newsletter</a></li>
+</ul>
+<div class="nav-controls">
+<a aria-label="X @Anto1nx" class="social-link twitter-link" href="https://x.com/Anto1nx" rel="me" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+<button aria-label="Changer de theme" class="theme-toggle" id="theme-toggle">
+<svg class="theme-icon theme-icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+<svg class="theme-icon theme-icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+</button>
+</div>
+</div>
+</nav>
 
+<main><div class="article-container">
+<a class="back-link" href="../blog.html">← Retour au blog</a>
+<div class="article-header">
+<h1>Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?</h1>
+<div class="article-meta">
+<time datetime="2026-02-23">23 février 2026</time>
+<span>•</span>
+<span>10 min</span>
+<span>•</span>
+<span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">open source</span>
+</div>
+</div>
+<div class="article-content">
 <h2>Tu cherches l'outil parfait pour coder plus vite ? Tu fais fausse route</h2>
-
 <p>Je comprends ta frustration. Tu scrolles sur Hacker News, tu vois des devs qui jurent sur <strong>Cursor</strong>, d'autres qui ne jument que par <strong>Claude</strong>, et puis il y a ceux qui disent que <strong>Codex</strong> change leur vie. Du coup tu te demandes : « Mais lequel je dois vraiment utiliser ? »</p>
-
 <p>La vérité ? <strong>Il n'y a pas de meilleur outil — il y a l'outil qui correspond à ton workflow.</strong> Mais avant de choisir à l'aveugle, on va décortiquer ce que chaque assistant propose réellement, et surtout comment les autres devs les utilisent en vrai.</p>
-
 <h2>Cursor : l'IDE qui rend accro</h2>
-
 <p>Cursor n'est pas juste un plugin, c'est un <strong>VS Code réinventé</strong>. Quand tu ouvres Cursor, tu as un éditeur complet avec l'IA baked in directement dans ton workflow de codage.</p>
-
 <p>Ce qui tue avec Cursor :</p>
-
 <ul>
 <li><strong>Les raccourcis clavier natifs</strong> : Ctrl+K pour générer du code, Ctrl+L pour discuter avec l'IA, sans quitter l'éditeur</li>
 <li><strong>La compréhension du contexte</strong> : il lit ton projet entier et comprend tes conventions de code</li>
 <li><strong>Les modèles de raisonnement</strong> : les versions récentes supportent les modèles « reasoning » qui réfléchissent avant de coder</li>
 </ul>
-
 <p>Sur Hacker News, les devs rapportent qu'avec Cursor, ils gagnent 30 à 40% de temps sur les tâches répétitives. Un dev a partagé qu'il a refactorisé un projet legacy de 10k lignes en trois jours au lieu de deux semaines.</p>
-
 <p><strong>Le prix ?</strong> Version gratuite limitée, sinon 20$/mois pour le plan Pro. <a href="https://www.cursor.com" target="_blank">Accès direct → cursor.com</a></p>
-
 <h2>Claude Code : le copilote pour ceux qui aiment les explications</h2>
-
 <p><strong>Claude</strong>, c'est l'assistant d'Anthropic. Et honnêtement ? Il excelle dans un domaine : <strong>comprendre ce qu'il fait et te l'expliquer</strong>.</p>
-
 <p>Contrairement aux autres assistants qui te balance du code et c'est tout, Claude pose des questions, valide ses hypothèses, et te raconte son processus. C'est utile quand tu débogues quelque chose de complexe ou quand tu apprends une nouvelle techno.</p>
-
 <p>Les devs sur Hacker News qui switchent vers Claude remarquent :</p>
-
 <ul>
 <li>Moins de hallucinations sur les syntaxes obscures</li>
 <li>Des explications tellement claires que tu comprends pourquoi le code fonctionne</li>
 <li>Une meilleure gestion des contextes longs (parfait si tu travailles sur des fichiers de 5000 lignes)</li>
 </ul>
-
 <p>Tu peux utiliser Claude directement via <a href="https://claude.ai" target="_blank">claude.ai</a> (gratuit avec limites) ou l'intégrer dans ton IDE avec <a href="https://marketplace.visualstudio.com/items?itemName=anthropic.claude-vsx" target="_blank">l'extension VS Code officielle</a>.</p>
-
 <p><strong>Le tarif ?</strong> Version gratuite largement suffisante, ou Claude Pro à 20$/mois pour du usage illimité.</p>
-
 <h2>Codex : le grand-mère des modèles de code (et pourquoi tu ne devrais pas l'utiliser seul)</h2>
-
 <p>Codex, c'est le modèle qu'OpenAI a créé spécifiquement pour le code. C'était révolutionnaire en 2021. Mais en 2026 ? <strong>Il est dépassé par GPT-4o et ses successeurs.</strong></p>
-
 <p>Si tu utilises Codex, c'est probablement via :</p>
-
 <ul>
 <li><strong>GitHub Copilot</strong> (qui utilise GPT-4o maintenant, pas Codex)</li>
 <li>Une vieille intégration qu'on n'a pas mises à jour</li>
 </ul>
-
 <p>Les devs que j'ai vus utiliser « Codex » en 2026 confondaient en fait avec <strong>GitHub Copilot</strong>, qui est bien plus puissant. C'est la confusion classique.</p>
-
 <h2>Le vrai choix : comment on sélectionne en pratique ?</h2>
-
 <p>Sur Hacker News, un dev a partagé sa stratégie et elle fait du sens :</p>
-
 <p><strong>Utilise Cursor si...</strong></p>
 <ul>
 <li>Tu cherches la productivité maximale dans un IDE</li>
 <li>Tu codes 6+ heures par jour</li>
 <li>Tu veux un outil vraiment intégré (pas un plugin ajouté après coup)</li>
 </ul>
-
 <p><strong>Utilise Claude si...</strong></p>
 <ul>
 <li>Tu apprends une nouvelle techno et tu veux des explications approfondies</li>
 <li>Tu dois déboguer du code complexe ou hérité</li>
 <li>Tu veux un assistant que tu peux vraiment « dialoguer »</li>
 </ul>
-
 <p><strong>Utilise GitHub Copilot si...</strong></p>
 <ul>
 <li>Tu es déjà dans l'écosystème GitHub/VS Code</li>
 <li>Tu cherches l'option « plug and play »</li>
 <li>Tu as besoin de support officiel en entreprise</li>
 </ul>
-
 <h2>Les pièges à éviter</h2>
-
 <p><strong>Le piège #1 : Croire qu'un seul outil suffit</strong><br/>
 Les meilleurs devs utilisent 2-3 outils en combinaison. Cursor pour l'éditeur, Claude pour les questions compliquées, GitHub Copilot pour l'auto-complétion rapide. C'est un écosystème, pas une compétition.</p>
-
 <p><strong>Le piège #2 : Oublier les modèles de raisonnement</strong><br/>
 Depuis 2024, les « reasoning models » (o1, o1-mini d'OpenAI, Claude 3.7 Sonnet avec mode thinking) changent la donne. Si tu utilises Cursor ou Claude, assure-toi que tu peux accéder à ces versions. Ça coûte plus cher, mais pour les algos compliqués ou l'architecture système, c'est game-changing.</p>
-
 <p><strong>Le piège #3 : Oublier ton équipe</strong><br/>
 Un dev sur Hacker News a posé une excellente question : « Comment synchroniser ça en équipe ? » Réponse : tu dois standardiser l'outil avec tes collègues. Un mélange Cursor/Codex/Claude crée des inconsistances.</p>
-
 <h2>Un exemple concret : refactoriser du code legacy</h2>
-
 <p>Disons que tu dois refactoriser 2000 lignes de JavaScript mal écrit. Voici le workflow optimal :</p>
-
 <pre><code>1. Ouvre le fichier dans Cursor
 2. Utilise Ctrl+K : "Refactor this function to modern async/await"
 3. Cursor te propose une version
@@ -241,48 +244,44 @@ Un dev sur Hacker News a posé une excellente question : « Comment synchroniser
 5. Claude te raconte son reasoning
 6. Tu ajustes le code
 7. Tu commites via Cursor avec historique intact</code></pre>
-
 <p>Temps total : 20 minutes au lieu de 2 heures.</p>
-
 <h2>Ce qu'on retient</h2>
-
 <p><strong>En 2026, il n'y a pas de mauvais choix, juste des mauvaises raisons de choisir.</strong> Cursor pour la vitesse brute, Claude pour la profondeur, GitHub Copilot pour l'intégration facile. Essaye-les pendant une semaine chacun avec un vrai projet, pas un truc banal.</p>
-
 <p>Et surtout, mets à jour ton outil régulièrement. Les modèles évoluent chaque mois. Ce qui était top en janvier peut être obsolète en juin.</p>
-
 <p><strong>Inscris-toi sur <a href="https://antoinx.com" target="_blank">antoinx.com</a> pour recevoir les meilleurs bons plans chaque semaine — on te prévient quand les nouveaux modèles sortent et comment les utiliser.</strong></p>
-
 <p><strong>Suis @Antoinx_x sur <a href="https://x.com/antoinx_x" target="_blank">X</a> pour des snippets de code et des vibes tech en temps réel.</strong></p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>antoinx</h3>
-                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Liens</h3>
-                <ul>
-                    <li><a href="/#portfolio">Portfolio</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 antoinx. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
-
-<h2>À lire aussi</h2>
+</div>
+<section class="article-related"></section>
+<aside class="article-nl-cta" data-generated="nl-cta">
+<h2>Ce genre de trucs, une fois par semaine</h2>
+<p>Stack, fails, ce qui marche. Ce que je teste vraiment en construisant mes SaaS en solo.</p>
+<a class="cta-button primary" href="/#newsletter">Recevoir la newsletter</a>
+<p class="nl-cta-note">Gratuit. Pas de spam, desinscription en un clic.</p>
+</aside>
+<section class="article-related"><h2>À lire aussi</h2><ul>
+<li><a href="/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et">Les APIs LLM gratuites qui fonctionnent vraiment en 2026</a></li>
+<li><a href="/blog/2026-annee-vibecoding">2026, l'année où tout le monde peut coder (même toi)</a></li>
+</ul></section></div></main>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-section">
+<h3>antoinx</h3>
+<p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+</div>
+<div class="footer-section">
+<h3>Liens</h3>
 <ul>
-  <li><a href="/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et.html">Les APIs LLM gratuites qui fonctionnent vraiment en 2026</a></li>
-  <li><a href="/blog/2026-annee-vibecoding.html">2026, l'année où tout le monde peut coder (même toi)</a></li>
+<li><a href="/#portfolio">Portfolio</a></li>
+<li><a href="../blog.html">Blog</a></li>
+<li><a href="/#contact">Contact</a></li>
 </ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 antoinx. All rights reserved.</p>
+</div>
+</footer>
+<script src="../script.js"></script>
 </body>
 </html>

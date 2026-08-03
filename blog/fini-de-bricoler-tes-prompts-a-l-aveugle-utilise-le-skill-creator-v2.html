@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+
+<html data-theme="light" lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2">
-    <meta name="keywords" content="vibecoding, IA, programmation">
-    <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgbupxeulsk3qp4mi6mga.png">
-    <title>Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2 - antoinx</title>
-    <link rel="canonical" href="https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2.html">
-    <link rel="stylesheet" href="../styles.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2" name="description"/>
+<meta content="vibecoding, IA, programmation" name="keywords"/>
+<title>Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2 - Antoinx</title>
+<link href="https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2" rel="canonical"/>
+<link href="../styles.css" rel="stylesheet"/>
+<style>
         .article-container {
             max-width: 800px;
             margin: 0 auto;
@@ -22,37 +22,37 @@
             font-size: 2.2rem;
             margin-bottom: 20px;
             line-height: 1.3;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-meta {
             display: flex;
             gap: 20px;
-            color: var(--text-secondary);
+            color: var(--text-light);
             font-size: 0.95rem;
             margin-bottom: 30px;
         }
         .article-content {
             line-height: 1.8;
             font-size: 1.05rem;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h2 {
             font-size: 1.8rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h3 {
             font-size: 1.4rem;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h4 {
             font-size: 1.1rem;
             margin-top: 20px;
             margin-bottom: 10px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content p {
             margin-bottom: 15px;
@@ -68,103 +68,141 @@
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            color: var(--accent-color, #0066ff);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
         }
         .back-link:hover {
             text-decoration: underline;
         }
-    </style>
-</head>
+    
+    .article-nl-cta {
+      margin: 56px 0 8px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--secondary);
+      text-align: center;
+    }
+    .article-nl-cta h2 { font-size: 1.35rem; margin: 0 0 10px; }
+    .article-nl-cta p { color: var(--text-light); margin: 0 0 18px; }
+    .article-nl-cta .nl-cta-note { font-size: .85rem; margin: 14px 0 0; }
+    .article-related { margin-top: 48px; }
+    .article-related h2 { font-size: 1.25rem; margin-bottom: 12px; }
+    .article-related ul { padding-left: 20px; }
+    .article-related li { margin-bottom: 8px; }
+</style>
+<meta content="2026-03-21" property="article:published_time"/><meta content="Antoine" property="article:author"/><meta content="article" property="og:type"/><meta content="Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2" property="og:title"/><meta content="Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2" property="og:description"/><meta content="https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2" property="og:url"/><meta content="https://antoinx.com/og-image.png" property="og:image"/><meta content="Antoinx" property="og:site_name"/><meta content="fr_FR" property="og:locale"/><meta content="2026-03-21" property="article:published_time"/><meta content="Antoine" property="article:author"/><meta content="summary_large_image" name="twitter:card"/><meta content="Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2" name="twitter:title"/><meta content="Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2" name="twitter:description"/><meta content="https://antoinx.com/og-image.png" name="twitter:image"/><meta content="@Anto1nx" name="twitter:creator"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2",
+  "description": "Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2",
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-21",
+  "author": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/",
+    "sameAs": [
+      "https://x.com/Anto1nx",
+      "https://github.com/RAAAAAGEEEEE"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/",
+    "sameAs": [
+      "https://x.com/Anto1nx",
+      "https://github.com/RAAAAAGEEEEE"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2"
+  },
+  "image": "https://antoinx.com/og-image.png",
+  "inLanguage": "fr-FR",
+  "url": "https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2"
+}</script></head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
-            <ul class="nav-links">
-                <li><a href="/#news">Actualités</a></li>
-                <li><a href="/#portfolio">Portfolio</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="/#contact">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation -->
 
-    <div class="article-container">
-        <a href="../blog.html" class="back-link">← Retour au blog</a>
-        
-        <div class="article-header">
-            <h1>Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2</h1>
-            <div class="article-meta">
-                <span>21 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
-            </div>
-        </div>
-        
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="/" style="cursor:pointer;text-decoration:none;">Antoinx</a>
+<ul class="nav-links">
+<li><a href="/#siteservi">SiteServi</a></li>
+<li><a href="/#projets">Projets</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/#newsletter">Newsletter</a></li>
+</ul>
+<div class="nav-controls">
+<a aria-label="X @Anto1nx" class="social-link twitter-link" href="https://x.com/Anto1nx" rel="me" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+<button aria-label="Changer de theme" class="theme-toggle" id="theme-toggle">
+<svg class="theme-icon theme-icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+<svg class="theme-icon theme-icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+</button>
+</div>
+</div>
+</nav>
 
-        <div class="article-content">
-            <p>Tu as sûrement déjà créé des agents ou des compétences spécifiques dans VS Code avec GitHub Copilot. Le souci, c'est qu'on finit souvent par ajuster les instructions au feeling, en croisant les doigts pour que le résultat soit meilleur. Bonne nouvelle : le Skill Creator v2 vient de débarquer pour arrêter ce carnage.</p>
+<main><div class="article-container">
+<a class="back-link" href="../blog.html">← Retour au blog</a>
+<div class="article-header">
+<h1>Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2</h1>
+<div class="article-meta">
+<time datetime="2026-03-21">21 mars 2026</time>
+<span>•</span>
+<span>5 min</span>
+<span>•</span>
+<span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">news</span>
+</div>
+</div>
+<div class="article-content">
+<p>Tu as sûrement déjà créé des agents ou des compétences spécifiques dans VS Code avec GitHub Copilot. Le souci, c'est qu'on finit souvent par ajuster les instructions au feeling, en croisant les doigts pour que le résultat soit meilleur. Bonne nouvelle : le Skill Creator v2 vient de débarquer pour arrêter ce carnage.</p>
 <p><h2>Pourquoi c'est le game changer que tu attendais</h2></p>
 <p>Le Skill Creator v2, c'est pas juste un petit outil qui reformule tes phrases pour faire joli. C'est une véritable boîte à outils pour valider ton travail. Imagine que tu as déjà un agent, comme le "README Wizard" de Debbie O’Brien, qui pond des documentations de projet. Au lieu de tester manuellement pendant une heure, l'outil analyse ton skill, te propose des améliorations concrètes et surtout, il lance des évaluations pour comparer le "avant" et le "après". </p>
 <p>Il te génère des résumés de benchmarks, te permet de comparer les sorties côte à côte et t'aide à optimiser les déclencheurs pour que ton IA comprenne enfin quand elle doit bosser. C'est du concret : tu passes d'un prompt écrit "au pif" à une compétence testée, mesurée et optimisée.</p>
 <p><h2>Le vibecoding, c'est bien, mais avec de la data c'est mieux</h2></p>
 <p>Si tu te considères comme un vibecoder, tu aimes l'intuition et la rapidité. Mais avoue, ça te saoule quand ton agent part en vrille ou répond à côté de la plaque. Utiliser cet outil, c'est passer au niveau supérieur sans sacrifier ton rythme. Tu ne perds plus de temps à deviner pourquoi ton agent a merdé : tu as les feedbacks, les comparaisons de sorties et les recommandations d'optimisation. C'est ce genre d'outils qui transforme un gadget sympa en un véritable assistant de production qui bosse aussi bien que toi. On arrête de jouer, on commence à construire des agents qui ont vraiment du répondant.</p>
 <p><h2>À retenir</h2></p>
-<p><ul><li>  <strong>L'optimisation par la donnée :</strong> Fini le feeling, tu compares tes résultats via des benchmarks automatiques.</li>
-<li>  <strong>Comparaison side-by-side :</strong> Tu visualises instantanément si ta nouvelle version écrase l'ancienne ou si tu as cassé quelque chose.</li>
-<li>  <strong>Trigger intelligent :</strong> L'outil t'aide à mieux définir quand ton IA doit intervenir, évitant ainsi les déclenchements inutiles.</li>
-<li>  <strong>Gain de temps massif :</strong> Plus besoin de tester manuellement chaque modification, laisse l'outil gérer la validation.</li></ul></p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>antoinx</h3>
-                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Liens</h3>
-                <ul>
-                    <li><a href="/#portfolio">Portfolio</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 antoinx. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
+<p><ul><li> <strong>L'optimisation par la donnée :</strong> Fini le feeling, tu compares tes résultats via des benchmarks automatiques.</li>
+<li> <strong>Comparaison side-by-side :</strong> Tu visualises instantanément si ta nouvelle version écrase l'ancienne ou si tu as cassé quelque chose.</li>
+<li> <strong>Trigger intelligent :</strong> L'outil t'aide à mieux définir quand ton IA doit intervenir, évitant ainsi les déclenchements inutiles.</li>
+<li> <strong>Gain de temps massif :</strong> Plus besoin de tester manuellement chaque modification, laisse l'outil gérer la validation.</li></ul></p>
+</div>
+<aside class="article-nl-cta" data-generated="nl-cta">
+<h2>Ce genre de trucs, une fois par semaine</h2>
+<p>Stack, fails, ce qui marche. Ce que je teste vraiment en construisant mes SaaS en solo.</p>
+<a class="cta-button primary" href="/#newsletter">Recevoir la newsletter</a>
+<p class="nl-cta-note">Gratuit. Pas de spam, desinscription en un clic.</p>
+</aside>
+</div></main>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-section">
+<h3>antoinx</h3>
+<p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+</div>
+<div class="footer-section">
+<h3>Liens</h3>
+<ul>
+<li><a href="/#portfolio">Portfolio</a></li>
+<li><a href="../blog.html">Blog</a></li>
+<li><a href="/#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 antoinx. All rights reserved.</p>
+</div>
+</footer>
+<script src="../script.js"></script>
 </body>
 </html>

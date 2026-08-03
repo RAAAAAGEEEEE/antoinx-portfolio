@@ -2,137 +2,302 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://antoinx.com/</loc>
-    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://antoinx.com/blog</loc>
-    <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/terms</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/legal</loc>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://antoinx.com/privacy</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/terms</loc>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://antoinx.com/cookies</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/legal</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/blog/5-apis-ia-gratuites-2026</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/5-outils-ia-pour-exploser-ta-productivite-en-2026</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/arrete-de-dessiner-des-diagrammes-qui-mentent</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/arrete-de-te-battre-avec-ton-ia-tes-fichiers-cursorrules-sont-mal-ecrits</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/pourquoi-ton-fichier-cursorrules-est-probablement-une-catastrophe</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/claude-code-ou-cursor-choisis-ton-camp-pour-coder-plus-vite</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/gemini-3-1-flash-lite-pourquoi-google-s-agite-encore</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/cursor-le-cheat-code-ultime-pour-arreter-de-ramer</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/comment-jai-automatise-mes-reseaux-sociaux</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/github-copilot-n-est-plus-un-simple-perroquet-a-code</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/2026-annee-vibecoding</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/kasetto-enfin-le-bordel-de-tes-agents-ia-sous-controle</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/cursor-part-en-vrille-voici-comment-reprendre-le-controle</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/le-test-d-abord-comment-arreter-de-subir-tes-propres-bugs-avec-l-ia</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/ton-ia-a-enfin-des-yeux-le-protocole-mcp-change-la-donne</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/libere-claude-code-le-hack-ultime-pour-tester-tous-les-modeles-via-openrouter</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/tes-regles-cursor-sont-probablement-pourries-et-voici-pourquoi</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/vibecoding-la-claque-a-200-balles</loc>
+    <lastmod>2026-04-12</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/le-vibe-coding-est-il-en-train-de-devenir-le-nouveau-maker-movement</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/arrete-de-copier-betement-tes-regles-cursor-ton-code-est-peut-etre-en-danger</loc>
+    <lastmod>2026-03-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/le-piege-des-limites-invisibles-ton-assistant-ia-t-a-lache-en-plein-code</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/arrete-de-traiter-le-dossier-claude-comme-une-boite-noire</loc>
+    <lastmod>2026-03-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/donne-des-yeux-a-tes-agents-ia-avec-le-protocole-mcp</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/copilot-te-piege-arrete-de-creer-du-state-inutile</loc>
+    <lastmod>2026-03-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/cursor-nous-a-bien-eus-quand-le-modele-maison-est-un-simple-rebranding</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/le-match-des-agents-claude-code-cursor-ou-aider-lequel-merite-ta-confiance</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/le-vibecoding-n-est-pas-un-jouet-c-est-la-fin-du-code-a-la-main</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/pourquoi-ton-agent-ia-va-ruiner-ton-business-et-comment-l-arreter</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/tes-apps-vibe-codees-sont-elles-de-vraies-passoires</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/ton-agent-ia-ne-doit-plus-attendre-que-tu-lui-parles</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/le-vibe-training-quand-ton-code-s-auto-corrige-tout-seul</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/minimax-2-7-le-nouveau-monstre-qui-casse-les-prix</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/arrete-de-jouer-les-monteurs-video-ton-ia-le-fait-mieux-que-toi</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/arrete-de-supplier-tes-llm-passe-au-pilotage-par-agents</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/composer-2-la-polemique-on-s-en-fiche-passons-au-code</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/le-code-genere-par-ia-c-est-comme-ta-chambre-d-ado-ca-devient-vite-le-bordel</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/lia-agentique-ne-s-apprend-plus-en-lisant-des-paves-soporifiques</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/pourquoi-ton-agent-ia-devient-aveugle-face-aux-images</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/tes-252-tests-au-vert-ne-te-protegent-pas-et-c-est-terrifiant</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/tes-jetons-cursor-dorment-fais-les-bosser-pour-l-open-source</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/ton-ide-n-est-pas-ton-qg-arrete-de-te-tromper</loc>
+    <lastmod>2026-03-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/cursor-bolt-le-duo-de-choc-pour-creer-ton-appli-sans-toucher</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/cursor-ou-boltnew-lequel-choisir-pour-sortir-ton-projet-du-g</loc>
+    <lastmod>2026-03-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://antoinx.com/blog/adieu-le-vibe-coding-sauvage-bonjour-la-methode</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/blog/comment-enfin-pister-ce-que-ton-ia-a-foutu-dans-ton-code</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/blog/vibe-coding-j-ai-code-un-generateur-de-polices-en-24h</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://antoinx.com/blog/tes-diagrammes-d-architecture-sont-des-mensonges-et-voici-comment-corriger-ca</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://antoinx.com/blog/arrete-d-installer-des-skills-inutiles-utilise-les-cursor-rules</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://antoinx.com/blog/vibe-coding-vs-specifications-le-duel-dont-on-a-tous-besoin</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <loc>https://antoinx.com/blog/arrete-de-dessiner-des-diagrammes-qui-mentent</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/comment-enfin-pister-ce-que-ton-ia-a-foutu-dans-ton-code</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/cursor-part-en-vrille-voici-comment-reprendre-le-controle</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/donne-des-yeux-a-tes-agents-ia-avec-le-protocole-mcp</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/gemini-3-1-flash-lite-pourquoi-google-s-agite-encore</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/le-piege-des-limites-invisibles-ton-assistant-ia-t-a-lache-en-plein-code</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/le-vibe-coding-est-il-en-train-de-devenir-le-nouveau-maker-movement</loc>
+    <lastmod>2026-03-04</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://antoinx.com/blog/mantra-la-machine-a-remonter-le-temps-pour-tes-sessions-d-ia</loc>
-    <lastmod>2026-03-06T22:44:34+00:00</lastmod>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/pourquoi-ton-fichier-cursorrules-est-probablement-une-catastrophe</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/tes-diagrammes-d-architecture-sont-des-mensonges-et-voici-comment-corriger-ca</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/tes-regles-cursor-sont-probablement-pourries-et-voici-pourquoi</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/ton-ia-a-enfin-des-yeux-le-protocole-mcp-change-la-donne</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/vibe-coding-j-ai-code-un-generateur-de-polices-en-24h</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/vibe-coding-vs-specifications-le-duel-dont-on-a-tous-besoin</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/construire-ton-app-en-3-jours-avec-lovable-mythe-ou-realite-</loc>
+    <lastmod>2026-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/2026-annee-vibecoding</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/5-apis-ia-gratuites-2026</loc>
+    <lastmod>2026-02-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://antoinx.com/blog/comment-jai-automatise-mes-reseaux-sociaux</loc>
+    <lastmod>2026-02-17</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

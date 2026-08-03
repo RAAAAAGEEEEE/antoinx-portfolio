@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VVNEP13FL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -9,328 +8,759 @@
   gtag('js', new Date());
   gtag('config', 'G-7VVNEP13FL');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog antoinx - Articles sur l'IA, l'automatisation et le vibecoding">
-    <meta name="keywords" content="blog, IA, automatisation, développement, vibecoding">
-    <title data-i18n="blog.title">Blog - antoinx</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .blog-header {
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .blog-header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-        .blog-header p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .blog-articles {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        .article-card {
-            margin-bottom: 40px;
-            padding: 30px;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .article-card:hover {
-            border-color: var(--accent-color, #0066ff);
-            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.1);
-        }
-        .article-title {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-        .article-meta {
-            display: flex;
-            gap: 15px;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        .category-tag {
-            background: var(--accent-color, #0066ff);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-weight: 500;
-        }
-        .article-excerpt {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-        .article-link {
-            color: var(--accent-color, #0066ff);
-            font-weight: 500;
-            text-decoration: none;
-        }
-        .article-link:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <link rel="canonical" href="https://antoinx.com/blog">
+<script>
+  try {
+    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+  } catch (e) {}
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Antoinx</title>
+  <meta name="description" content="Ce que j'apprends en construisant des SaaS en solo avec l'IA : stack, outils, fails et ce qui marche vraiment. 54 articles, en francais.">
+  <meta name="author" content="Antoinx">
+  <link rel="canonical" href="https://antoinx.com/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog - Antoinx">
+  <meta property="og:description" content="Ce que j'apprends en construisant des SaaS en solo avec l'IA : stack, outils, fails et ce qui marche.">
+  <meta property="og:url" content="https://antoinx.com/blog">
+  <meta property="og:image" content="https://antoinx.com/og-image.png">
+  <meta property="og:site_name" content="Antoinx">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog - Antoinx">
+  <meta name="twitter:description" content="Ce que j'apprends en construisant des SaaS en solo avec l'IA.">
+  <meta name="twitter:image" content="https://antoinx.com/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%230066ff'>A</text></svg>">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog - Antoinx",
+  "url": "https://antoinx.com/blog",
+  "inLanguage": "fr-FR",
+  "author": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/"
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "5 outils IA pour exploser ta productivité en 2026",
+      "url": "https://antoinx.com/blog/5-outils-ia-pour-exploser-ta-productivite-en-2026",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête de te battre avec ton IA : tes fichiers .cursorrules sont mal écrits",
+      "url": "https://antoinx.com/blog/arrete-de-te-battre-avec-ton-ia-tes-fichiers-cursorrules-sont-mal-ecrits",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Claude Code ou Cursor : Choisis ton camp pour coder plus vite",
+      "url": "https://antoinx.com/blog/claude-code-ou-cursor-choisis-ton-camp-pour-coder-plus-vite",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Cursor : Le cheat code ultime pour arrêter de ramer",
+      "url": "https://antoinx.com/blog/cursor-le-cheat-code-ultime-pour-arreter-de-ramer",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "GitHub Copilot n'est plus un simple perroquet à code",
+      "url": "https://antoinx.com/blog/github-copilot-n-est-plus-un-simple-perroquet-a-code",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Kasetto : Enfin le bordel de tes agents IA sous contrôle",
+      "url": "https://antoinx.com/blog/kasetto-enfin-le-bordel-de-tes-agents-ia-sous-controle",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le test d'abord : comment arrêter de subir tes propres bugs avec l'IA",
+      "url": "https://antoinx.com/blog/le-test-d-abord-comment-arreter-de-subir-tes-propres-bugs-avec-l-ia",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Libère Claude Code : le hack ultime pour tester tous les modèles via OpenRouter",
+      "url": "https://antoinx.com/blog/libere-claude-code-le-hack-ultime-pour-tester-tous-les-modeles-via-openrouter",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Vibecoding : la claque à 200 balles",
+      "url": "https://antoinx.com/blog/vibecoding-la-claque-a-200-balles",
+      "datePublished": "2026-04-12"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête de copier bêtement tes règles Cursor : ton code est peut-être en danger",
+      "url": "https://antoinx.com/blog/arrete-de-copier-betement-tes-regles-cursor-ton-code-est-peut-etre-en-danger",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête de traiter le dossier .claude comme une boîte noire",
+      "url": "https://antoinx.com/blog/arrete-de-traiter-le-dossier-claude-comme-une-boite-noire",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Copilot te piège : arrête de créer du \"state\" inutile !",
+      "url": "https://antoinx.com/blog/copilot-te-piege-arrete-de-creer-du-state-inutile",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Cursor nous a bien eus : quand le \"modèle maison\" est un simple rebranding",
+      "url": "https://antoinx.com/blog/cursor-nous-a-bien-eus-quand-le-modele-maison-est-un-simple-rebranding",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le match des agents : Claude Code, Cursor ou Aider, lequel mérite ta confiance ?",
+      "url": "https://antoinx.com/blog/le-match-des-agents-claude-code-cursor-ou-aider-lequel-merite-ta-confiance",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le vibecoding n'est pas un jouet, c'est la fin du code à la main",
+      "url": "https://antoinx.com/blog/le-vibecoding-n-est-pas-un-jouet-c-est-la-fin-du-code-a-la-main",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Pourquoi ton agent IA va ruiner ton business (et comment l'arrêter)",
+      "url": "https://antoinx.com/blog/pourquoi-ton-agent-ia-va-ruiner-ton-business-et-comment-l-arreter",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Tes apps \"vibe-codées\" sont-elles de vraies passoires ?",
+      "url": "https://antoinx.com/blog/tes-apps-vibe-codees-sont-elles-de-vraies-passoires",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Ton agent IA ne doit plus attendre que tu lui parles",
+      "url": "https://antoinx.com/blog/ton-agent-ia-ne-doit-plus-attendre-que-tu-lui-parles",
+      "datePublished": "2026-03-29"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le \"Vibe Training\" : quand ton code s'auto-corrige tout seul",
+      "url": "https://antoinx.com/blog/le-vibe-training-quand-ton-code-s-auto-corrige-tout-seul",
+      "datePublished": "2026-03-22"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "MiniMax 2.7 : le nouveau monstre qui casse les prix",
+      "url": "https://antoinx.com/blog/minimax-2-7-le-nouveau-monstre-qui-casse-les-prix",
+      "datePublished": "2026-03-22"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête de jouer les monteurs vidéo, ton IA le fait mieux que toi",
+      "url": "https://antoinx.com/blog/arrete-de-jouer-les-monteurs-video-ton-ia-le-fait-mieux-que-toi",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête de supplier tes LLM : passe au pilotage par agents",
+      "url": "https://antoinx.com/blog/arrete-de-supplier-tes-llm-passe-au-pilotage-par-agents",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Composer 2 : La polémique, on s'en fiche, passons au code",
+      "url": "https://antoinx.com/blog/composer-2-la-polemique-on-s-en-fiche-passons-au-code",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2",
+      "url": "https://antoinx.com/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le code généré par IA, c'est comme ta chambre d'ado : ça devient vite le bordel",
+      "url": "https://antoinx.com/blog/le-code-genere-par-ia-c-est-comme-ta-chambre-d-ado-ca-devient-vite-le-bordel",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "L’IA agentique ne s'apprend plus en lisant des pavés soporifiques",
+      "url": "https://antoinx.com/blog/lia-agentique-ne-s-apprend-plus-en-lisant-des-paves-soporifiques",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Pourquoi ton agent IA devient aveugle face aux images",
+      "url": "https://antoinx.com/blog/pourquoi-ton-agent-ia-devient-aveugle-face-aux-images",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Tes 252 tests au vert ne te protègent pas (et c'est terrifiant)",
+      "url": "https://antoinx.com/blog/tes-252-tests-au-vert-ne-te-protegent-pas-et-c-est-terrifiant",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Tes jetons Cursor dorment ? Fais-les bosser pour l'open source",
+      "url": "https://antoinx.com/blog/tes-jetons-cursor-dorment-fais-les-bosser-pour-l-open-source",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Ton IDE n'est pas ton QG, arrête de te tromper",
+      "url": "https://antoinx.com/blog/ton-ide-n-est-pas-ton-qg-arrete-de-te-tromper",
+      "datePublished": "2026-03-21"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Cursor + Bolt : le duo de choc pour créer ton appli sans toucher à une ligne de code",
+      "url": "https://antoinx.com/blog/cursor-bolt-le-duo-de-choc-pour-creer-ton-appli-sans-toucher",
+      "datePublished": "2026-03-09"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Cursor ou Bolt.new : lequel choisir pour sortir ton projet du garage ?",
+      "url": "https://antoinx.com/blog/cursor-ou-boltnew-lequel-choisir-pour-sortir-ton-projet-du-g",
+      "datePublished": "2026-03-05"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Adieu le \"Vibe Coding\" sauvage, bonjour la méthode",
+      "url": "https://antoinx.com/blog/adieu-le-vibe-coding-sauvage-bonjour-la-methode",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête d'installer des \"Skills\" inutiles : utilise les Cursor Rules",
+      "url": "https://antoinx.com/blog/arrete-d-installer-des-skills-inutiles-utilise-les-cursor-rules",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Arrête de dessiner des diagrammes qui mentent",
+      "url": "https://antoinx.com/blog/arrete-de-dessiner-des-diagrammes-qui-mentent",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Comment enfin pister ce que ton IA a foutu dans ton code",
+      "url": "https://antoinx.com/blog/comment-enfin-pister-ce-que-ton-ia-a-foutu-dans-ton-code",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Cursor part en vrille ? Voici comment reprendre le contrôle",
+      "url": "https://antoinx.com/blog/cursor-part-en-vrille-voici-comment-reprendre-le-controle",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Donne des yeux à tes agents IA avec le protocole MCP",
+      "url": "https://antoinx.com/blog/donne-des-yeux-a-tes-agents-ia-avec-le-protocole-mcp",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Gemini 3.1 Flash-Lite : Pourquoi Google s'agite encore ?",
+      "url": "https://antoinx.com/blog/gemini-3-1-flash-lite-pourquoi-google-s-agite-encore",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le piège des limites invisibles : ton assistant IA t'a lâché en plein code ?",
+      "url": "https://antoinx.com/blog/le-piege-des-limites-invisibles-ton-assistant-ia-t-a-lache-en-plein-code",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Le Vibe Coding est-il en train de devenir le nouveau \"Maker Movement\" ?",
+      "url": "https://antoinx.com/blog/le-vibe-coding-est-il-en-train-de-devenir-le-nouveau-maker-movement",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Mantra : la machine à remonter le temps pour tes sessions d'IA",
+      "url": "https://antoinx.com/blog/mantra-la-machine-a-remonter-le-temps-pour-tes-sessions-d-ia",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Pourquoi ton fichier .cursorrules est probablement une catastrophe",
+      "url": "https://antoinx.com/blog/pourquoi-ton-fichier-cursorrules-est-probablement-une-catastrophe",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Tes diagrammes d'architecture sont des mensonges (et voici comment corriger ça)",
+      "url": "https://antoinx.com/blog/tes-diagrammes-d-architecture-sont-des-mensonges-et-voici-comment-corriger-ca",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Tes règles Cursor sont probablement pourries (et voici pourquoi)",
+      "url": "https://antoinx.com/blog/tes-regles-cursor-sont-probablement-pourries-et-voici-pourquoi",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Ton IA a enfin des yeux : le protocole MCP change la donne",
+      "url": "https://antoinx.com/blog/ton-ia-a-enfin-des-yeux-le-protocole-mcp-change-la-donne",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Vibe Coding : J'ai codé un générateur de polices en 24h",
+      "url": "https://antoinx.com/blog/vibe-coding-j-ai-code-un-generateur-de-polices-en-24h",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Vibe Coding vs Spécifications : Le duel dont on a tous besoin",
+      "url": "https://antoinx.com/blog/vibe-coding-vs-specifications-le-duel-dont-on-a-tous-besoin",
+      "datePublished": "2026-03-04"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Construire ton app en 3 jours avec Lovable : mythe ou réalité vibecoding ?",
+      "url": "https://antoinx.com/blog/construire-ton-app-en-3-jours-avec-lovable-mythe-ou-realite-",
+      "datePublished": "2026-03-02"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "2026, l'année où tout le monde peut coder (même toi)",
+      "url": "https://antoinx.com/blog/2026-annee-vibecoding",
+      "datePublished": "2026-02-23"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?",
+      "url": "https://antoinx.com/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co",
+      "datePublished": "2026-02-23"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)",
+      "url": "https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et",
+      "datePublished": "2026-02-23"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "5 APIs IA gratuites en 2026 que personne ne connaît",
+      "url": "https://antoinx.com/blog/5-apis-ia-gratuites-2026",
+      "datePublished": "2026-02-17"
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite",
+      "url": "https://antoinx.com/blog/comment-jai-automatise-mes-reseaux-sociaux",
+      "datePublished": "2026-02-17"
+    }
+  ]
+}
+  </script>
+  <style>
+    .blog-header {
+      padding: 72px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .blog-header h1 {
+      font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+      font-size: clamp(2.2rem, 6vw, 3rem);
+      margin-bottom: 12px;
+    }
+    .blog-header p {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .blog-articles {
+      max-width: 860px;
+      margin: 56px auto 72px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .article-card {
+      padding: 26px 28px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      background: var(--bg);
+    }
+    .article-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .05);
+      transform: translateY(-2px);
+    }
+    .article-title {
+      font-size: 1.25rem;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .article-meta {
+      font-size: .85rem;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .article-excerpt {
+      color: var(--text-light);
+      font-size: .95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .blog-nl-cta {
+      max-width: 860px;
+      margin: 0 auto 72px;
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--secondary);
+      text-align: center;
+    }
+    .blog-nl-cta h2 { font-size: 1.35rem; margin: 0 0 10px; }
+    .blog-nl-cta p { color: var(--text-light); margin: 0 0 18px; }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
-            <ul class="nav-links">
-                <li><a href="/#news" data-i18n="nav.news">Actualités</a></li>
-                <li><a href="/#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
-                <li><a href="blog.html" style="color: #0066ff; font-weight: 500;">Blog</a></li>
-                <li><a href="/#contact" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Blog Header -->
-    <div class="blog-header">
-        <h1>Blog</h1>
-        <p>Tutos vibecoding, bons plans IA et astuces pour créer tes apps sans savoir coder.</p>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="logo" style="cursor:pointer;text-decoration:none;">Antoinx</a>
+    <ul class="nav-links">
+      <li><a href="/#siteservi">SiteServi</a></li>
+      <li><a href="/#projets">Projets</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/#newsletter">Newsletter</a></li>
+    </ul>
+    <div class="nav-controls">
+      <a href="https://x.com/Anto1nx" class="social-link twitter-link" aria-label="X @Anto1nx" rel="me" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Changer de theme">
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
     </div>
+  </div>
+</nav>
 
-    <!-- Blog Articles -->
+  <header class="blog-header">
+    <h1>Blog</h1>
+    <p>Ce que j'apprends en construisant des SaaS en solo avec l'IA. Stack, outils, fails et ce qui marche vraiment.</p>
+  </header>
+
+  <main>
     <section class="blog-articles">
-
-        <a href="blog/claude-code-a-flingue-mon-quota-de-la-semaine-en-4-heures-le-carnage.html" class="article-card">
-            <h2 class="article-title">Claude Code a flingué mon quota de la semaine en 4 heures : le carnage</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span class="category-tag">vibecoding</span>
-            </div>
-            <p class="article-excerpt">Le forfait "illimité" de Claude Code, c'est un mensonge marketing. Voici comment j'ai grillé tout mon quota en une matinée de TypeScript.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/j-ai-disseque-l-agent-ia-de-cursor-voici-ce-qu-il-cache-vraiment.html" class="article-card">
-            <h2 class="article-title">J'ai disséqué l'agent IA de Cursor : voici ce qu'il cache vraiment</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>6 min</span>
-                <span>•</span>
-                <span class="category-tag">outils</span>
-            </div>
-            <p class="article-excerpt">Plongée dans les bases SQLite et le runtime de Cursor pour comprendre ce qui se passe entre ton prompt et la modification du fichier.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/mcp-cest-quoi-ce-bazar-comprendre-les-transports-pour-tes-serveurs-ia.html" class="article-card">
-            <h2 class="article-title">MCP c'est quoi ce bazar : comprendre les transports pour tes serveurs IA</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>7 min</span>
-                <span>•</span>
-                <span class="category-tag">vibecoding</span>
-            </div>
-            <p class="article-excerpt">STDIO, SSE ou HTTP ? Le Model Context Protocol est la base pour connecter tes outils IA, encore faut-il choisir le bon transport.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/mantra-la-machine-a-remonter-le-temps-pour-tes-sessions-de-vibecoding.html" class="article-card">
-            <h2 class="article-title">Mantra : la machine à remonter le temps pour tes sessions de vibecoding</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span class="category-tag">outils</span>
-            </div>
-            <p class="article-excerpt">Après une grosse session de refactoring IA, impossible de savoir ce qui a changé ? Mantra garde une trace propre de chaque modification.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/stop-saigner-ton-compte-en-banque-pour-tes-abonnements-ia.html" class="article-card">
-            <h2 class="article-title">Stop saigner ton compte en banque pour tes abonnements IA</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span class="category-tag">vibecoding</span>
-            </div>
-            <p class="article-excerpt">Claude, Cursor, ChatGPT... tu empiles les abos sans stratégie ? Voici comment reprendre le contrôle de tes dépenses IA.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/le-webmcp-la-revolution-des-interactions-entre-les-agents-ia-et-les-sites-web.html" class="article-card">
-            <h2 class="article-title">WebMCP : la révolution des interactions entre agents IA et sites web</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span class="category-tag">vibecoding</span>
-            </div>
-            <p class="article-excerpt">Donner accès au web à tes agents sans faire exploser la RAM avec Chromium. Le MCP change la donne pour les interactions web.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/le-pouvoir-de-gemini-3-1-flash-lite-pour-les-vibecoders.html" class="article-card">
-            <h2 class="article-title">Le pouvoir de Gemini 3.1 Flash Lite pour les vibecoders</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span class="category-tag">outils</span>
-            </div>
-            <p class="article-excerpt">Gemini 3.1 Flash Lite est gratuit, rapide et suit les instructions mieux que Llama 3.3 70B. Le nouveau moteur idéal pour tes automatisations.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/revolutionne-ton-integration-de-clients-avec-l-ia.html" class="article-card">
-            <h2 class="article-title">Révolutionne ton intégration de clients avec l'IA</h2>
-            <div class="article-meta">
-                <span>3 mars 2026</span>
-                <span>•</span>
-                <span>5 min</span>
-                <span>•</span>
-                <span class="category-tag">vibecoding</span>
-            </div>
-            <p class="article-excerpt">Automatiser l'onboarding client avec des agents IA, du premier contact jusqu'à la livraison. Un workflow complet pour les solopreneurs.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co.html" class="article-card">
-            <h2 class="article-title">Cursor vs Claude vs Codex : quel assistant IA choisir pour coder</h2>
-            <div class="article-meta">
-                <span>23 février 2026</span>
-                <span>•</span>
-                <span>10 min</span>
-                <span>•</span>
-                <span class="category-tag">outils</span>
-            </div>
-            <p class="article-excerpt">Tu hésites entre Cursor, Claude et Codex ? On décortique chaque outil avec des cas d'usage concrets pour t'aider à choisir.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et.html" class="article-card">
-            <h2 class="article-title">Les APIs LLM gratuites qui fonctionnent vraiment en 2026</h2>
-            <div class="article-meta">
-                <span>23 février 2026</span>
-                <span>•</span>
-                <span>10 min</span>
-                <span>•</span>
-                <span class="category-tag">api</span>
-            </div>
-            <p class="article-excerpt">DeepInfra, Ollama, et les APIs Reddit — les vrais bons plans pour utiliser des LLM puissants sans payer.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/2026-annee-vibecoding.html" class="article-card">
-            <h2 class="article-title">2026, l'année où tout le monde peut coder (même toi)</h2>
-            <div class="article-meta">
-                <span>23 février 2026</span>
-                <span>•</span>
-                <span>8 min</span>
-                <span>•</span>
-                <span class="category-tag">vibecoding</span>
-            </div>
-            <p class="article-excerpt">Tu as une idée d'app qui te trotte dans la tête depuis des mois mais tu ne sais pas coder ? En 2026, cette excuse n'existe plus. Le vibecoding change tout.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-        <a href="blog/5-apis-ia-gratuites-2026.html" class="article-card">
-            <h2 class="article-title">5 APIs IA gratuites en 2026 que personne ne connaît</h2>
-            <div class="article-meta">
-                <span>17 février 2026</span>
-                <span>•</span>
-                <span>10 min</span>
-                <span>•</span>
-                <span class="category-tag">ia</span>
-            </div>
-            <p class="article-excerpt">Les meilleures APIs IA gratuites en 2026 : Z.ai, Groq, Cerebras, Together.ai, HuggingFace. Des pépites que tout le monde ignore.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
-
-        <a href="blog/comment-jai-automatise-mes-reseaux-sociaux.html" class="article-card">
-            <h2 class="article-title">Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite</h2>
-            <div class="article-meta">
-                <span>17 février 2026</span>
-                <span>•</span>
-                <span>8 min</span>
-                <span>•</span>
-                <span class="category-tag">automatisation</span>
-            </div>
-            <p class="article-excerpt">Un guide complet pour automatiser tes tweets avec une IA gratuite et un cron job. Zéro effort, résultats maximaux.</p>
-            <span class="article-link">Lire l'article →</span>
-        </a>
+      <a href="/blog/5-outils-ia-pour-exploser-ta-productivite-en-2026" class="article-card">
+        <h2 class="article-title">5 outils IA pour exploser ta productivité en 2026</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">5 outils IA pour exploser ta productivité en 2026</p>
+      </a>
+      <a href="/blog/arrete-de-te-battre-avec-ton-ia-tes-fichiers-cursorrules-sont-mal-ecrits" class="article-card">
+        <h2 class="article-title">Arrête de te battre avec ton IA : tes fichiers .cursorrules sont mal écrits</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Arrête de te battre avec ton IA : tes fichiers .cursorrules sont mal écrits</p>
+      </a>
+      <a href="/blog/claude-code-ou-cursor-choisis-ton-camp-pour-coder-plus-vite" class="article-card">
+        <h2 class="article-title">Claude Code ou Cursor : Choisis ton camp pour coder plus vite</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Claude Code ou Cursor : Choisis ton camp pour coder plus vite</p>
+      </a>
+      <a href="/blog/cursor-le-cheat-code-ultime-pour-arreter-de-ramer" class="article-card">
+        <h2 class="article-title">Cursor : Le cheat code ultime pour arrêter de ramer</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Cursor : Le cheat code ultime pour arrêter de ramer</p>
+      </a>
+      <a href="/blog/github-copilot-n-est-plus-un-simple-perroquet-a-code" class="article-card">
+        <h2 class="article-title">GitHub Copilot n'est plus un simple perroquet à code</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">GitHub Copilot n'est plus un simple perroquet à code</p>
+      </a>
+      <a href="/blog/kasetto-enfin-le-bordel-de-tes-agents-ia-sous-controle" class="article-card">
+        <h2 class="article-title">Kasetto : Enfin le bordel de tes agents IA sous contrôle</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Kasetto : Enfin le bordel de tes agents IA sous contrôle</p>
+      </a>
+      <a href="/blog/le-test-d-abord-comment-arreter-de-subir-tes-propres-bugs-avec-l-ia" class="article-card">
+        <h2 class="article-title">Le test d'abord : comment arrêter de subir tes propres bugs avec l'IA</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Le test d'abord : comment arrêter de subir tes propres bugs avec l'IA</p>
+      </a>
+      <a href="/blog/libere-claude-code-le-hack-ultime-pour-tester-tous-les-modeles-via-openrouter" class="article-card">
+        <h2 class="article-title">Libère Claude Code : le hack ultime pour tester tous les modèles via OpenRouter</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Libère Claude Code : le hack ultime pour tester tous les modèles via OpenRouter</p>
+      </a>
+      <a href="/blog/vibecoding-la-claque-a-200-balles" class="article-card">
+        <h2 class="article-title">Vibecoding : la claque à 200 balles</h2>
+        <div class="article-meta"><time datetime="2026-04-12">12 avril 2026</time></div>
+        <p class="article-excerpt">Vibecoding : la claque à 200 balles</p>
+      </a>
+      <a href="/blog/arrete-de-copier-betement-tes-regles-cursor-ton-code-est-peut-etre-en-danger" class="article-card">
+        <h2 class="article-title">Arrête de copier bêtement tes règles Cursor : ton code est peut-être en danger</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Arrête de copier bêtement tes règles Cursor : ton code est peut-être en danger</p>
+      </a>
+      <a href="/blog/arrete-de-traiter-le-dossier-claude-comme-une-boite-noire" class="article-card">
+        <h2 class="article-title">Arrête de traiter le dossier .claude comme une boîte noire</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Arrête de traiter le dossier .claude comme une boîte noire</p>
+      </a>
+      <a href="/blog/copilot-te-piege-arrete-de-creer-du-state-inutile" class="article-card">
+        <h2 class="article-title">Copilot te piège : arrête de créer du &quot;state&quot; inutile !</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Copilot te piège : arrête de créer du</p>
+      </a>
+      <a href="/blog/cursor-nous-a-bien-eus-quand-le-modele-maison-est-un-simple-rebranding" class="article-card">
+        <h2 class="article-title">Cursor nous a bien eus : quand le &quot;modèle maison&quot; est un simple rebranding</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Cursor nous a bien eus : quand le</p>
+      </a>
+      <a href="/blog/le-match-des-agents-claude-code-cursor-ou-aider-lequel-merite-ta-confiance" class="article-card">
+        <h2 class="article-title">Le match des agents : Claude Code, Cursor ou Aider, lequel mérite ta confiance ?</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Le match des agents : Claude Code, Cursor ou Aider, lequel mérite ta confiance ?</p>
+      </a>
+      <a href="/blog/le-vibecoding-n-est-pas-un-jouet-c-est-la-fin-du-code-a-la-main" class="article-card">
+        <h2 class="article-title">Le vibecoding n'est pas un jouet, c'est la fin du code à la main</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Le vibecoding n'est pas un jouet, c'est la fin du code à la main</p>
+      </a>
+      <a href="/blog/pourquoi-ton-agent-ia-va-ruiner-ton-business-et-comment-l-arreter" class="article-card">
+        <h2 class="article-title">Pourquoi ton agent IA va ruiner ton business (et comment l'arrêter)</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Pourquoi ton agent IA va ruiner ton business (et comment l'arrêter)</p>
+      </a>
+      <a href="/blog/tes-apps-vibe-codees-sont-elles-de-vraies-passoires" class="article-card">
+        <h2 class="article-title">Tes apps &quot;vibe-codées&quot; sont-elles de vraies passoires ?</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Tes apps</p>
+      </a>
+      <a href="/blog/ton-agent-ia-ne-doit-plus-attendre-que-tu-lui-parles" class="article-card">
+        <h2 class="article-title">Ton agent IA ne doit plus attendre que tu lui parles</h2>
+        <div class="article-meta"><time datetime="2026-03-29">29 mars 2026</time></div>
+        <p class="article-excerpt">Ton agent IA ne doit plus attendre que tu lui parles</p>
+      </a>
+      <a href="/blog/le-vibe-training-quand-ton-code-s-auto-corrige-tout-seul" class="article-card">
+        <h2 class="article-title">Le &quot;Vibe Training&quot; : quand ton code s'auto-corrige tout seul</h2>
+        <div class="article-meta"><time datetime="2026-03-22">22 mars 2026</time></div>
+        <p class="article-excerpt">Le</p>
+      </a>
+      <a href="/blog/minimax-2-7-le-nouveau-monstre-qui-casse-les-prix" class="article-card">
+        <h2 class="article-title">MiniMax 2.7 : le nouveau monstre qui casse les prix</h2>
+        <div class="article-meta"><time datetime="2026-03-22">22 mars 2026</time></div>
+        <p class="article-excerpt">MiniMax 2.7 : le nouveau monstre qui casse les prix</p>
+      </a>
+      <a href="/blog/arrete-de-jouer-les-monteurs-video-ton-ia-le-fait-mieux-que-toi" class="article-card">
+        <h2 class="article-title">Arrête de jouer les monteurs vidéo, ton IA le fait mieux que toi</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Arrête de jouer les monteurs vidéo, ton IA le fait mieux que toi</p>
+      </a>
+      <a href="/blog/arrete-de-supplier-tes-llm-passe-au-pilotage-par-agents" class="article-card">
+        <h2 class="article-title">Arrête de supplier tes LLM : passe au pilotage par agents</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Arrête de supplier tes LLM : passe au pilotage par agents</p>
+      </a>
+      <a href="/blog/composer-2-la-polemique-on-s-en-fiche-passons-au-code" class="article-card">
+        <h2 class="article-title">Composer 2 : La polémique, on s'en fiche, passons au code</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Composer 2 : La polémique, on s'en fiche, passons au code</p>
+      </a>
+      <a href="/blog/fini-de-bricoler-tes-prompts-a-l-aveugle-utilise-le-skill-creator-v2" class="article-card">
+        <h2 class="article-title">Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Fini de bricoler tes prompts à l'aveugle : utilise le Skill Creator v2</p>
+      </a>
+      <a href="/blog/le-code-genere-par-ia-c-est-comme-ta-chambre-d-ado-ca-devient-vite-le-bordel" class="article-card">
+        <h2 class="article-title">Le code généré par IA, c'est comme ta chambre d'ado : ça devient vite le bordel</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Le code généré par IA, c'est comme ta chambre d'ado : ça devient vite le bordel</p>
+      </a>
+      <a href="/blog/lia-agentique-ne-s-apprend-plus-en-lisant-des-paves-soporifiques" class="article-card">
+        <h2 class="article-title">L’IA agentique ne s'apprend plus en lisant des pavés soporifiques</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">L’IA agentique ne s'apprend plus en lisant des pavés soporifiques</p>
+      </a>
+      <a href="/blog/pourquoi-ton-agent-ia-devient-aveugle-face-aux-images" class="article-card">
+        <h2 class="article-title">Pourquoi ton agent IA devient aveugle face aux images</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Pourquoi ton agent IA devient aveugle face aux images</p>
+      </a>
+      <a href="/blog/tes-252-tests-au-vert-ne-te-protegent-pas-et-c-est-terrifiant" class="article-card">
+        <h2 class="article-title">Tes 252 tests au vert ne te protègent pas (et c'est terrifiant)</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Tes 252 tests au vert ne te protègent pas (et c'est terrifiant)</p>
+      </a>
+      <a href="/blog/tes-jetons-cursor-dorment-fais-les-bosser-pour-l-open-source" class="article-card">
+        <h2 class="article-title">Tes jetons Cursor dorment ? Fais-les bosser pour l'open source</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Tes jetons Cursor dorment ? Fais-les bosser pour l'open source</p>
+      </a>
+      <a href="/blog/ton-ide-n-est-pas-ton-qg-arrete-de-te-tromper" class="article-card">
+        <h2 class="article-title">Ton IDE n'est pas ton QG, arrête de te tromper</h2>
+        <div class="article-meta"><time datetime="2026-03-21">21 mars 2026</time></div>
+        <p class="article-excerpt">Ton IDE n'est pas ton QG, arrête de te tromper</p>
+      </a>
+      <a href="/blog/cursor-bolt-le-duo-de-choc-pour-creer-ton-appli-sans-toucher" class="article-card">
+        <h2 class="article-title">Cursor + Bolt : le duo de choc pour créer ton appli sans toucher à une ligne de code</h2>
+        <div class="article-meta"><time datetime="2026-03-09">9 mars 2026</time></div>
+        <p class="article-excerpt">Tu veux créer une app mais tu ne sais pas coder ? Découvre comment utiliser Cursor et Bolt, les deux outils qui font tout le travail pour toi. - antoinx</p>
+      </a>
+      <a href="/blog/cursor-ou-boltnew-lequel-choisir-pour-sortir-ton-projet-du-g" class="article-card">
+        <h2 class="article-title">Cursor ou Bolt.new : lequel choisir pour sortir ton projet du garage ?</h2>
+        <div class="article-meta"><time datetime="2026-03-05">5 mars 2026</time></div>
+        <p class="article-excerpt">Tu veux créer une app mais tu ne sais pas coder ? On compare Cursor et Bolt.new pour savoir lequel est fait pour ton projet. Guide simple, sans jargon. - antoinx</p>
+      </a>
+      <a href="/blog/adieu-le-vibe-coding-sauvage-bonjour-la-methode" class="article-card">
+        <h2 class="article-title">Adieu le &quot;Vibe Coding&quot; sauvage, bonjour la méthode</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Adieu le</p>
+      </a>
+      <a href="/blog/arrete-d-installer-des-skills-inutiles-utilise-les-cursor-rules" class="article-card">
+        <h2 class="article-title">Arrête d'installer des &quot;Skills&quot; inutiles : utilise les Cursor Rules</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Arrête d'installer des</p>
+      </a>
+      <a href="/blog/arrete-de-dessiner-des-diagrammes-qui-mentent" class="article-card">
+        <h2 class="article-title">Arrête de dessiner des diagrammes qui mentent</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Arrête de dessiner des diagrammes qui mentent</p>
+      </a>
+      <a href="/blog/comment-enfin-pister-ce-que-ton-ia-a-foutu-dans-ton-code" class="article-card">
+        <h2 class="article-title">Comment enfin pister ce que ton IA a foutu dans ton code</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Comment enfin pister ce que ton IA a foutu dans ton code</p>
+      </a>
+      <a href="/blog/cursor-part-en-vrille-voici-comment-reprendre-le-controle" class="article-card">
+        <h2 class="article-title">Cursor part en vrille ? Voici comment reprendre le contrôle</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Cursor part en vrille ? Voici comment reprendre le contrôle</p>
+      </a>
+      <a href="/blog/donne-des-yeux-a-tes-agents-ia-avec-le-protocole-mcp" class="article-card">
+        <h2 class="article-title">Donne des yeux à tes agents IA avec le protocole MCP</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Donne des yeux à tes agents IA avec le protocole MCP</p>
+      </a>
+      <a href="/blog/gemini-3-1-flash-lite-pourquoi-google-s-agite-encore" class="article-card">
+        <h2 class="article-title">Gemini 3.1 Flash-Lite : Pourquoi Google s'agite encore ?</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Gemini 3.1 Flash-Lite : Pourquoi Google s'agite encore ?</p>
+      </a>
+      <a href="/blog/le-piege-des-limites-invisibles-ton-assistant-ia-t-a-lache-en-plein-code" class="article-card">
+        <h2 class="article-title">Le piège des limites invisibles : ton assistant IA t'a lâché en plein code ?</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Le piège des limites invisibles : ton assistant IA t'a lâché en plein code ?</p>
+      </a>
+      <a href="/blog/le-vibe-coding-est-il-en-train-de-devenir-le-nouveau-maker-movement" class="article-card">
+        <h2 class="article-title">Le Vibe Coding est-il en train de devenir le nouveau &quot;Maker Movement&quot; ?</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Le Vibe Coding est-il en train de devenir le nouveau</p>
+      </a>
+      <a href="/blog/mantra-la-machine-a-remonter-le-temps-pour-tes-sessions-d-ia" class="article-card">
+        <h2 class="article-title">Mantra : la machine à remonter le temps pour tes sessions d'IA</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Mantra : la machine à remonter le temps pour tes sessions d'IA</p>
+      </a>
+      <a href="/blog/pourquoi-ton-fichier-cursorrules-est-probablement-une-catastrophe" class="article-card">
+        <h2 class="article-title">Pourquoi ton fichier .cursorrules est probablement une catastrophe</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Pourquoi ton fichier .cursorrules est probablement une catastrophe</p>
+      </a>
+      <a href="/blog/tes-diagrammes-d-architecture-sont-des-mensonges-et-voici-comment-corriger-ca" class="article-card">
+        <h2 class="article-title">Tes diagrammes d'architecture sont des mensonges (et voici comment corriger ça)</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Tes diagrammes d'architecture sont des mensonges (et voici comment corriger ça)</p>
+      </a>
+      <a href="/blog/tes-regles-cursor-sont-probablement-pourries-et-voici-pourquoi" class="article-card">
+        <h2 class="article-title">Tes règles Cursor sont probablement pourries (et voici pourquoi)</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Tes règles Cursor sont probablement pourries (et voici pourquoi)</p>
+      </a>
+      <a href="/blog/ton-ia-a-enfin-des-yeux-le-protocole-mcp-change-la-donne" class="article-card">
+        <h2 class="article-title">Ton IA a enfin des yeux : le protocole MCP change la donne</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Ton IA a enfin des yeux : le protocole MCP change la donne</p>
+      </a>
+      <a href="/blog/vibe-coding-j-ai-code-un-generateur-de-polices-en-24h" class="article-card">
+        <h2 class="article-title">Vibe Coding : J'ai codé un générateur de polices en 24h</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Vibe Coding : J'ai codé un générateur de polices en 24h</p>
+      </a>
+      <a href="/blog/vibe-coding-vs-specifications-le-duel-dont-on-a-tous-besoin" class="article-card">
+        <h2 class="article-title">Vibe Coding vs Spécifications : Le duel dont on a tous besoin</h2>
+        <div class="article-meta"><time datetime="2026-03-04">4 mars 2026</time></div>
+        <p class="article-excerpt">Vibe Coding vs Spécifications : Le duel dont on a tous besoin</p>
+      </a>
+      <a href="/blog/construire-ton-app-en-3-jours-avec-lovable-mythe-ou-realite-" class="article-card">
+        <h2 class="article-title">Construire ton app en 3 jours avec Lovable : mythe ou réalité vibecoding ?</h2>
+        <div class="article-meta"><time datetime="2026-03-02">2 mars 2026</time></div>
+        <p class="article-excerpt">Antoinx décrypte Lovable, l'outil IA no-code qui permet de créer des apps et des SaaS en quelques jours, même si tu ne sais pas coder. On analyse un cas réel ! - antoinx</p>
+      </a>
+      <a href="/blog/2026-annee-vibecoding" class="article-card">
+        <h2 class="article-title">2026, l'année où tout le monde peut coder (même toi)</h2>
+        <div class="article-meta"><time datetime="2026-02-23">23 février 2026</time></div>
+        <p class="article-excerpt">2026, l'année où tout le monde peut coder sans expérience - Vibecoding et IA - Antoinx</p>
+      </a>
+      <a href="/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co" class="article-card">
+        <h2 class="article-title">Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ?</h2>
+        <div class="article-meta"><time datetime="2026-02-23">23 février 2026</time></div>
+        <p class="article-excerpt">Cursor vs Claude vs Codex : quel assistant IA choisir pour coder en 2026 ? - antoinx</p>
+      </a>
+      <a href="/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et" class="article-card">
+        <h2 class="article-title">Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)</h2>
+        <div class="article-meta"><time datetime="2026-02-23">23 février 2026</time></div>
+        <p class="article-excerpt">Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx</p>
+      </a>
+      <a href="/blog/5-apis-ia-gratuites-2026" class="article-card">
+        <h2 class="article-title">5 APIs IA gratuites en 2026 que personne ne connaît</h2>
+        <div class="article-meta"><time datetime="2026-02-17">17 février 2026</time></div>
+        <p class="article-excerpt">5 APIs IA gratuites en 2026 que personne ne connaît - Antoinx</p>
+      </a>
+      <a href="/blog/comment-jai-automatise-mes-reseaux-sociaux" class="article-card">
+        <h2 class="article-title">Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite</h2>
+        <div class="article-meta"><time datetime="2026-02-17">17 février 2026</time></div>
+        <p class="article-excerpt">Comment j'ai automatisé mes réseaux sociaux avec une IA gratuite - Antoinx</p>
+      </a>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>antoinx</h3>
-                <p data-i18n="footer.description">Projets vibecoding. IA, SaaS, Automatisation.</p>
-            </div>
-            <div class="footer-section">
-                <h3 data-i18n="footer.links">Liens</h3>
-                <ul>
-                    <li><a href="/" data-i18n="nav.portfolio">Portfolio</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 data-i18n="footer.legal">Légal</h3>
-                <ul>
-                    <li><a href="privacy.html" data-i18n="footer.privacy">Confidentialité</a></li>
-                    <li><a href="terms.html" data-i18n="footer.terms">Conditions</a></li>
-                    <li><a href="legal.html" data-i18n="footer.legal">Mentions légales</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 antoinx. All rights reserved.</p>
-        </div>
-    </footer>
+    <aside class="blog-nl-cta">
+      <h2>Recois les prochains articles</h2>
+      <p>Stack, fails, ce qui marche. En francais, directement par mail.</p>
+      <a href="/#newsletter" class="cta-button primary">Recevoir la newsletter</a>
+    </aside>
+  </main>
 
-    <script src="script.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Antoinx. <a href="/">Retour a l'accueil</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="/script.js"></script>
+  <script defer src="/cookie-banner.js"></script>
 </body>
 </html>

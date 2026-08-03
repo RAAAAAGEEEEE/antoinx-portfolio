@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+
+<html data-theme="light" lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx">
-    <meta name="keywords" content="open source, vibecoding, IA, développement">
-    <title>Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx</title>
-    <link rel="stylesheet" href="../styles.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx" name="description"/>
+<meta content="open source, vibecoding, IA, développement" name="keywords"/>
+<title>Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - Antoinx</title>
+<link href="../styles.css" rel="stylesheet"/>
+<style>
         .article-container {
             max-width: 800px;
             margin: 0 auto;
@@ -20,49 +21,49 @@
             font-size: 2.2rem;
             margin-bottom: 20px;
             line-height: 1.3;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-meta {
             display: flex;
             gap: 20px;
-            color: var(--text-secondary);
+            color: var(--text-light);
             font-size: 0.95rem;
             margin-bottom: 30px;
         }
         .article-content {
             line-height: 1.8;
             font-size: 1.05rem;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h2 {
             font-size: 1.8rem;
             margin-top: 40px;
             margin-bottom: 20px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h3 {
             font-size: 1.4rem;
             margin-top: 30px;
             margin-bottom: 15px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content h4 {
             font-size: 1.1rem;
             margin-top: 20px;
             margin-bottom: 10px;
-            color: var(--text-primary);
+            color: var(--text);
         }
         .article-content p {
             margin-bottom: 15px;
             text-align: justify;
         }
         .article-content pre {
-            background: var(--bg-secondary);
+            background: var(--secondary);
             padding: 20px;
             border-radius: 8px;
             overflow-x: auto;
             margin: 20px 0;
-            border-left: 4px solid var(--accent-color, #0066ff);
+            border-left: 4px solid var(--accent);
         }
         .article-content code {
             font-family: 'Courier New', monospace;
@@ -78,96 +79,119 @@
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            color: var(--accent-color, #0066ff);
+            color: var(--accent);
             text-decoration: none;
             font-weight: 500;
         }
         .back-link:hover {
             text-decoration: underline;
         }
-    </style>
-    <link rel="canonical" href="https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et">
-</head>
+    
+    .article-nl-cta {
+      margin: 56px 0 8px;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--secondary);
+      text-align: center;
+    }
+    .article-nl-cta h2 { font-size: 1.35rem; margin: 0 0 10px; }
+    .article-nl-cta p { color: var(--text-light); margin: 0 0 18px; }
+    .article-nl-cta .nl-cta-note { font-size: .85rem; margin: 14px 0 0; }
+    .article-related { margin-top: 48px; }
+    .article-related h2 { font-size: 1.25rem; margin-bottom: 12px; }
+    .article-related ul { padding-left: 20px; }
+    .article-related li { margin-bottom: 8px; }
+</style>
+<link href="https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et" rel="canonical"/>
+<meta content="2026-02-23" property="article:published_time"/><meta content="Antoine" property="article:author"/><meta content="article" property="og:type"/><meta content="Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)" property="og:title"/><meta content="Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx" property="og:description"/><meta content="https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et" property="og:url"/><meta content="https://antoinx.com/og-image.png" property="og:image"/><meta content="Antoinx" property="og:site_name"/><meta content="fr_FR" property="og:locale"/><meta content="2026-02-23" property="article:published_time"/><meta content="Antoine" property="article:author"/><meta content="summary_large_image" name="twitter:card"/><meta content="Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)" name="twitter:title"/><meta content="Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx" name="twitter:description"/><meta content="https://antoinx.com/og-image.png" name="twitter:image"/><meta content="@Anto1nx" name="twitter:creator"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)",
+  "description": "Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner) - antoinx",
+  "datePublished": "2026-02-23",
+  "dateModified": "2026-02-23",
+  "author": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/",
+    "sameAs": [
+      "https://x.com/Anto1nx",
+      "https://github.com/RAAAAAGEEEEE"
+    ]
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Antoine",
+    "url": "https://antoinx.com/",
+    "sameAs": [
+      "https://x.com/Anto1nx",
+      "https://github.com/RAAAAAGEEEEE"
+    ]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et"
+  },
+  "image": "https://antoinx.com/og-image.png",
+  "inLanguage": "fr-FR",
+  "url": "https://antoinx.com/blog/les-apis-llm-gratuites-qui-fonctionnent-vraiment-en-2026-et"
+}</script></head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo" style="cursor: pointer; text-decoration: none;">antoinx</a>
-            <ul class="nav-links">
-                <li><a href="/#news">Actualités</a></li>
-                <li><a href="/#portfolio">Portfolio</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="/#contact">Contact</a></li>
-            </ul>
-            <div class="nav-controls">
-                <a href="https://x.com/Antoinx_x" class="social-link twitter-link" aria-label="X @Antoinx_x" rel="me" target="_blank">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+<!-- Navigation -->
 
-    <div class="article-container">
-        <a href="../blog.html" class="back-link">← Retour au blog</a>
-        
-        <div class="article-header">
-            <h1>Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)</h1>
-            <div class="article-meta">
-                <span>23 février 2026</span>
-                <span>•</span>
-                <span>10 min</span>
-                <span>•</span>
-                <span style="background: var(--accent-color, #0066ff); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">open source</span>
-            </div>
-        </div>
-        
-        <div class="article-content">
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="/" style="cursor:pointer;text-decoration:none;">Antoinx</a>
+<ul class="nav-links">
+<li><a href="/#siteservi">SiteServi</a></li>
+<li><a href="/#projets">Projets</a></li>
+<li><a href="/blog">Blog</a></li>
+<li><a href="/#newsletter">Newsletter</a></li>
+</ul>
+<div class="nav-controls">
+<a aria-label="X @Anto1nx" class="social-link twitter-link" href="https://x.com/Anto1nx" rel="me" target="_blank">
+<svg fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.75-8.863-8.16-10.764h6.523l4.828 6.383 5.306-6.383zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+<button aria-label="Changer de theme" class="theme-toggle" id="theme-toggle">
+<svg class="theme-icon theme-icon-moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+<svg class="theme-icon theme-icon-sun" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" x2="12" y1="1" y2="3"></line><line x1="12" x2="12" y1="21" y2="23"></line><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line><line x1="1" x2="3" y1="12" y2="12"></line><line x1="21" x2="23" y1="12" y2="12"></line><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line></svg>
+</button>
+</div>
+</div>
+</nav>
 
+<main><div class="article-container">
+<a class="back-link" href="../blog.html">← Retour au blog</a>
+<div class="article-header">
+<h1>Les APIs LLM gratuites qui fonctionnent vraiment en 2026 (et comment les utiliser sans te ruiner)</h1>
+<div class="article-meta">
+<time datetime="2026-02-23">23 février 2026</time>
+<span>•</span>
+<span>10 min</span>
+<span>•</span>
+<span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 20px; font-weight: 500;">open source</span>
+</div>
+</div>
+<div class="article-content">
 <h2>Tu veux utiliser une IA puissante sans payer ? Le problème, c'est que tu ne sais pas par où commencer</h2>
-
 <p>C'est vendredi soir, tu as une idée géniale pour une app avec une IA intégrée. Tu ouvres ton ordi, tu cherches une API gratuite... et là, c'est le chaos. Des dizaines de services qui disent être gratuits mais qui demandent ta carte bleue. D'autres qui offrent 100 requêtes par mois. Trop limité pour vraiment tester ta vision.</p>
-
 <p>Voici le truc : <strong>tu ne dois pas choisir entre gratuit et efficace</strong>. Des APIs LLM (Large Language Models) vraiment gratuites existent. Elles font tourner des modèles puissants sans te coûter un centime. Mais personne ne parle de celles qui sont <em>vraiment</em> utilisables.</p>
-
 <p>Je viens de scrap les discussions Reddit les plus actives sur le sujet. Voici ce que les devs utilisent vraiment.</p>
-
 <h2>Option 1 : DeepInfra, quand le gratuit n'est pas ton truc (mais ça reste hyper abordable)</h2>
-
 <p>Commençons par une clarification : DeepInfra n'est pas gratuit, mais c'est tellement bon marché que ça change la donne.</p>
-
 <p><strong>Le prix :</strong> 1 dollar pour 1 million de tokens avec Llama 2 70B. Pour te mettre en perspective, c'est comme payer 1€ pour avoir une conversation avec une IA super puissante... pendant des heures.</p>
-
 <p>Si tu fais du prototypage, tu peux bruler 1 million de tokens en testant 50-100 requêtes complexes. Ça te coûte 1€. C'est quoi, le prix d'un café ?</p>
-
 <p><strong>Comment utiliser DeepInfra :</strong></p>
-
 <ul>
 <li>Va sur <a href="https://deepinfra.com" target="_blank">https://deepinfra.com</a></li>
 <li>Crée un compte (pas de carte bleue tout de suite)</li>
 <li>Tu reçois du crédit de démarrage gratuit</li>
 <li>Leur API est compatible OpenAI : tu peux utiliser le même code que ChatGPT API</li>
 </ul>
-
 <p>Voici un exemple de code pour faire une requête :</p>
-
 <pre><code>import requests
 
 API_KEY = "ta_clé_deepinfra"
@@ -188,90 +212,70 @@ response = requests.post(
 
 print(response.json()["choices"][0]["message"]["content"])
 </code></pre>
-
 <p>Voilà. T'as accès à Llama 70B pour rien (ou presque). Parfait pour un projet perso qui doit marcher sans budget.</p>
-
 <h2>Option 2 : Les APIs vraiment gratuites (mais avec une limite de vitesse)</h2>
-
 <p>Maintenant, parlons des services qui offrent du <em>truly free</em>. Oui, ça existe. Des devs dans les communautés comme r/LocalLLaMA proposent des APIs gratuites illimitées, mais avec un détail :</p>
-
 <p><strong>Les utilisateurs gratuits sont ralentis quand le serveur est chargé.</strong></p>
-
 <p>C'est logique : si tu as 10 000 utilisateurs gratuits et 100 utilisateurs payants, les payants ne doivent pas attendre. Mais en heures creuses ? Tu as de la bande passante dispos.</p>
-
 <p>Le problème : comment trouver ces services ? Les devs les partagent sur Reddit, mais ils disparaissent vite ou changent d'URL. C'est un vrai marché gris.</p>
-
 <p><strong>Ce que je recommande :</strong> suis la communauté <a href="https://www.reddit.com/r/LocalLLaMA/" target="_blank">r/LocalLLaMA sur Reddit</a>. Chaque semaine, des devs annoncent des APIs gratuites. C'est là qu'on trouve les vrais bons plans.</p>
-
 <h2>Option 3 : Héberger une LLM toi-même (le hack ultime gratuit)</h2>
-
 <p>Pourquoi dépendre d'une API quand tu peux faire tourner le modèle sur ta machine ?</p>
-
 <p><strong>Cas d'usage idéal :</strong> tu testes une idée, ou tu veux zéro latence pour une app perso.</p>
-
 <p>Avec <a href="https://ollama.ai" target="_blank">Ollama</a>, tu peux télécharger des modèles LLM et les faire tourner localement en quelques minutes :</p>
-
 <pre><code># Installation sur Mac/Linux/Windows
 # Puis dans ton terminal :
 
 ollama pull llama2
 ollama serve
 </code></pre>
-
 <p>Boum. Tu as une API locale qui tourne sur <code>http://localhost:11434</code>. Zéro coût, zéro limite. C'est open source, c'est gratuit, c'est tien.</p>
-
 <p>Le trade-off ? Tu besoin d'un ordi avec une bonne GPU (ou tu prépares ton processeur à transpirer). Et les temps de réponse sont plus lents qu'une API cloud.</p>
-
 <p>Mais pour du développement local, c'est imbattable.</p>
-
 <h2>Tableau récapitulatif : quel outil pour quel besoin ?</h2>
-
 <ul>
 <li><strong>Tu prototypes et tu as un petit budget</strong> → DeepInfra (1€ pour 1M tokens)</li>
 <li><strong>Tu cherches du 100% gratuit et tu tolères les ralentissements</strong> → Les APIs reddit (r/LocalLLaMA)</li>
 <li><strong>Tu testes en local et tu veux zéro dépendance</strong> → Ollama</li>
 <li><strong>Tu builds une app et tu as besoin de scaling</strong> → Un mix DeepInfra + cache local</li>
 </ul>
-
 <h2>Le vrai secret des devs en 2026</h2>
-
 <p>Voici ce que personne n'ose dire : <strong>le coût des APIs n'est plus un blocage</strong>. Avec 10 euros par mois, tu peux faire tourner un projet complet. Le vrai avantage maintenant ? C'est la vélocité. Les devs qui gagnent, c'est ceux qui testent vite et itèrent vite.</p>
-
 <p>Donc non, tu ne dois pas choisir entre gratuit limité et puissant cher. Il existe un espace gris hyper rentable : dépense 5-10€ pour valider ton idée avec une vraie API, puis upgrade si ça marche.</p>
-
 <p>Les meilleurs bons plans sur les APIs gratuites et les outils pour coder sans budget ? <strong>Inscris-toi sur <a href="https://antoinx.com" target="_blank">antoinx.com</a> pour recevoir les meilleurs bons plans chaque semaine.</strong> Je partage uniquement ce que j'utilise vraiment.</p>
-
 <p>Et suis <strong><a href="https://x.com/Antoinx_x" target="_blank">@Antoinx_x sur X</a></strong> pour les updates en temps réel sur les nouveaux services gratuits et les bugs qu'on découvre ensemble.</p>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>antoinx</h3>
-                <p>Projets vibecoding. IA, SaaS, Automatisation.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Liens</h3>
-                <ul>
-                    <li><a href="/#portfolio">Portfolio</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 antoinx. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
-
-<h2>À lire aussi</h2>
+</div>
+<section class="article-related"></section>
+<aside class="article-nl-cta" data-generated="nl-cta">
+<h2>Ce genre de trucs, une fois par semaine</h2>
+<p>Stack, fails, ce qui marche. Ce que je teste vraiment en construisant mes SaaS en solo.</p>
+<a class="cta-button primary" href="/#newsletter">Recevoir la newsletter</a>
+<p class="nl-cta-note">Gratuit. Pas de spam, desinscription en un clic.</p>
+</aside>
+<section class="article-related"><h2>À lire aussi</h2><ul>
+<li><a href="/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co">Cursor vs Claude vs Codex : quel assistant IA choisir pour coder</a></li>
+<li><a href="/blog/2026-annee-vibecoding">2026, l'année où tout le monde peut coder (même toi)</a></li>
+</ul></section></div></main>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-content">
+<div class="footer-section">
+<h3>antoinx</h3>
+<p>Projets vibecoding. IA, SaaS, Automatisation.</p>
+</div>
+<div class="footer-section">
+<h3>Liens</h3>
 <ul>
-  <li><a href="/blog/cursor-vs-claude-vs-codex--quel-assistant-ia-choisir-pour-co.html">Cursor vs Claude vs Codex : quel assistant IA choisir pour coder</a></li>
-  <li><a href="/blog/2026-annee-vibecoding.html">2026, l'année où tout le monde peut coder (même toi)</a></li>
+<li><a href="/#portfolio">Portfolio</a></li>
+<li><a href="../blog.html">Blog</a></li>
+<li><a href="/#contact">Contact</a></li>
 </ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 antoinx. All rights reserved.</p>
+</div>
+</footer>
+<script src="../script.js"></script>
 </body>
 </html>

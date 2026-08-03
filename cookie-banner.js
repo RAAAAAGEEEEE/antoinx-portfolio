@@ -1,119 +1,119 @@
-// Cookie Banner Manager - RGPD Compliant
+// Cookie Banner Manager - RGPD
+// Bande compacte en bas d'ecran. L'ancienne version etait une carte de 182px
+// ancree en bas a droite : elle recouvrait les deux CTA du hero tant que le
+// visiteur n'avait pas repondu.
 const CookieConsent = (() => {
     const CONSENT_KEY = 'cookie-consent';
-    const CONSENT_EXPIRY = 365 * 24 * 60 * 60 * 1000; // 1 year
+    const CONSENT_EXPIRY = 365 * 24 * 60 * 60 * 1000; // 1 an
+    const BODY_CLASS = 'cookie-banner-open';
 
     function createBanner() {
         const banner = document.createElement('div');
         banner.id = 'cookie-banner';
         banner.setAttribute('role', 'complementary');
-        banner.setAttribute('aria-label', 'Cookie consent banner');
+        banner.setAttribute('aria-label', 'Consentement cookies');
         banner.innerHTML = `
             <style>
                 #cookie-banner {
                     position: fixed;
-                    bottom: 0;
+                    left: 0;
                     right: 0;
-                    max-width: 400px;
+                    bottom: 0;
                     background: var(--bg);
-                    border: 1px solid var(--border);
-                    border-radius: 12px;
-                    padding: 1.5rem;
-                    margin: 1rem;
-                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+                    border-top: 1px solid var(--border);
+                    padding: 0.8rem 1.25rem;
                     z-index: 999;
-                    animation: slideUp 0.3s ease;
-                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.75rem 1.25rem;
+                    flex-wrap: wrap;
+                    font-size: 0.85rem;
                     line-height: 1.5;
-                    backdrop-filter: blur(10px);
+                    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.05);
                 }
 
                 [data-theme="dark"] #cookie-banner {
-                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.3);
                 }
 
-                #cookie-banner h3 {
-                    margin: 0 0 0.75rem 0;
-                    font-size: 1rem;
-                    color: var(--text);
+                /* Le bandeau est fixe : sans cette reserve, il masquerait
+                   le bas de page tant qu'il est affiche. */
+                body.cookie-banner-open {
+                    padding-bottom: 84px;
                 }
 
                 #cookie-banner p {
-                    margin: 0 0 1rem 0;
+                    margin: 0;
                     color: var(--text-light);
+                    max-width: 62ch;
                 }
 
                 #cookie-banner a {
                     color: var(--accent);
-                    text-decoration: none;
                     font-weight: 600;
-                }
-
-                #cookie-banner a:hover {
-                    text-decoration: underline;
                 }
 
                 .cookie-buttons {
                     display: flex;
-                    gap: 0.75rem;
-                    flex-wrap: wrap;
+                    gap: 0.6rem;
+                    flex-shrink: 0;
                 }
 
                 .cookie-btn {
-                    flex: 1;
-                    min-width: 100px;
-                    padding: 0.6rem 1rem;
-                    border: none;
+                    padding: 0.5rem 1.1rem;
+                    border: 1px solid var(--border);
                     border-radius: 6px;
                     cursor: pointer;
                     font-weight: 600;
                     font-size: 0.85rem;
-                    transition: all 0.3s ease;
+                    font-family: inherit;
+                    transition: all 0.2s ease;
                 }
 
                 #cookie-accept {
                     background: var(--accent);
-                    color: white;
+                    border-color: var(--accent);
+                    color: #fff;
                 }
 
                 #cookie-accept:hover {
-                    box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
-                    transform: translateY(-2px);
+                    filter: brightness(0.94);
                 }
 
                 #cookie-reject {
-                    background: var(--secondary);
+                    background: transparent;
                     color: var(--text);
-                    border: 1px solid var(--border);
                 }
 
                 #cookie-reject:hover {
-                    background: var(--border);
+                    border-color: var(--accent);
+                    color: var(--accent);
                 }
 
-                @media (max-width: 480px) {
+                @media (max-width: 620px) {
                     #cookie-banner {
-                        max-width: 100%;
-                        left: 0;
-                        right: 0;
-                        margin: 0;
-                        border-radius: 12px 12px 0 0;
+                        justify-content: stretch;
+                        text-align: left;
                     }
 
                     .cookie-buttons {
-                        flex-direction: column;
+                        width: 100%;
                     }
 
                     .cookie-btn {
-                        width: 100%;
+                        flex: 1;
+                    }
+
+                    body.cookie-banner-open {
+                        padding-bottom: 132px;
                     }
                 }
             </style>
-            <h3>🍪 Cookies & Vie Privée</h3>
-            <p>Nous utilisons des cookies essentiels pour votre expérience. Consultez notre <a href="/cookies.html" target="_blank">politique des cookies</a>.</p>
+            <p>Cookies essentiels et mesure d'audience. Voir la <a href="/cookies">politique des cookies</a>.</p>
             <div class="cookie-buttons">
-                <button id="cookie-accept" class="cookie-btn">Accepter</button>
-                <button id="cookie-reject" class="cookie-btn">Refuser</button>
+                <button id="cookie-reject" class="cookie-btn" type="button">Refuser</button>
+                <button id="cookie-accept" class="cookie-btn" type="button">Accepter</button>
             </div>
         `;
         return banner;
@@ -125,14 +125,10 @@ const CookieConsent = (() => {
             if (!consent) return null;
 
             const { timestamp, accepted } = JSON.parse(consent);
-            const now = Date.now();
-
-            // Check if consent has expired
-            if (now - timestamp > CONSENT_EXPIRY) {
+            if (Date.now() - timestamp > CONSENT_EXPIRY) {
                 localStorage.removeItem(CONSENT_KEY);
                 return null;
             }
-
             return accepted;
         } catch (error) {
             console.error('Cookie consent retrieval error:', error);
@@ -153,29 +149,14 @@ const CookieConsent = (() => {
 
     function removeBanner() {
         const banner = document.getElementById('cookie-banner');
-        if (banner) {
-            banner.style.animation = 'slideDown 0.3s ease reverse';
-            setTimeout(() => banner.remove(), 300);
-        }
-    }
-
-    function init() {
-        // Don't show banner if consent already given
-        if (getConsent() !== null) return;
-
-        // Wait for DOM to be ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', showBanner);
-        } else {
-            showBanner();
-        }
+        document.body.classList.remove(BODY_CLASS);
+        if (banner) banner.remove();
     }
 
     function showBanner() {
-        const banner = createBanner();
-        document.body.appendChild(banner);
+        document.body.appendChild(createBanner());
+        document.body.classList.add(BODY_CLASS);
 
-        // Add event listeners
         const acceptBtn = document.getElementById('cookie-accept');
         const rejectBtn = document.getElementById('cookie-reject');
 
@@ -183,8 +164,6 @@ const CookieConsent = (() => {
             acceptBtn.addEventListener('click', () => {
                 setConsent(true);
                 removeBanner();
-                // Optional: trigger analytics if enabled
-                console.log('Cookies accepted');
             });
         }
 
@@ -192,15 +171,23 @@ const CookieConsent = (() => {
             rejectBtn.addEventListener('click', () => {
                 setConsent(false);
                 removeBanner();
-                console.log('Cookies rejected');
             });
+        }
+    }
+
+    function init() {
+        if (getConsent() !== null) return;
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showBanner);
+        } else {
+            showBanner();
         }
     }
 
     return { init, getConsent, setConsent };
 })();
 
-// Initialize on page load
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => CookieConsent.init());
 } else {

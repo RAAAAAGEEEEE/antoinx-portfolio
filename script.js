@@ -102,6 +102,12 @@ function setupNewsletterForm() {
             }).toString()
         })
         .then(response => {
+            // Sans ce test, un 400 (deja inscrit, email refuse, rate limit) ou un
+            // 500 affichait quand meme "Inscription reussie" : l'abonne etait
+            // perdu sans que personne ne le sache.
+            if (!response.ok) {
+                throw new Error('Buttondown a repondu ' + response.status);
+            }
             if (noteEl) {
                 noteEl.textContent = window.i18n ? window.i18n.getTranslation('newsletter.success') : '✓ Inscription réussie !';
                 noteEl.style.color = '#00cc00';

@@ -18,10 +18,14 @@
     /* Light mode */
     --primary: #0a0a0a;
     --secondary: #f7f6f3;
-    --accent: #3d9db5;
+    /* Contraste WCAG AA : l'ancien #3d9db5 donnait 3.06 en texte et 3.13 en
+       bouton (seuil 4.5). #2b7d94 monte a 4.59 et 4.70. */
+    --accent: #2b7d94;
+    --accent-btn: #2b7d94;
+    --accent-deep: #1f5c6e;
     --accent-glow: #7ec8dc;
-    --status-paused: #b8860b;
-    --status-abandoned: #8a8a8a;
+    --status-paused: #8a6410;
+    --status-abandoned: #6e6e6e;
     --text: #1a1a1a;
     --text-light: #666;
     --border: #e5e3de;
@@ -36,8 +40,12 @@
 [data-theme="dark"] {
     --primary: #ffffff;
     --secondary: #0d1e30;
-    --accent: #3d9db5;
-    --accent-glow: #7ec8dc;
+    /* En sombre, le texte accent doit s'eclaircir pour rester lisible ;
+       le fond de bouton reste sombre puisqu'il porte du texte blanc. */
+    --accent: #7ec8dc;
+    --accent-btn: #2b7d94;
+    --accent-deep: #a8dcea;
+    --accent-glow: #a8dcea;
     --status-paused: #d4a04a;
     --status-abandoned: #999999;
     --text: #f5f5f5;
@@ -99,10 +107,9 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    background: linear-gradient(135deg, var(--accent), var(--accent-glow));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    /* Le degrade finissait sur un teal tres clair : la fin du mot passait
+       sous le seuil de contraste. Couleur pleine, coherente avec le reste. */
+    color: var(--accent);
 }
 
 .nav-links {
@@ -363,12 +370,13 @@ body {
 }
 
 .cta-button.primary {
-    background: var(--accent);
+    background: var(--accent-btn);
     color: white;
 }
 
 .cta-button.primary:hover {
-    background: var(--accent-glow);
+    /* le hover doit rester sombre : il porte du texte blanc */
+    filter: brightness(0.92);
     transform: translateY(-2px);
 }
 
@@ -554,7 +562,7 @@ body {
 
 .status-live {
     background: rgba(61, 157, 181, 0.2);
-    color: var(--accent);
+    color: var(--accent-deep);
 }
 
 [data-theme="dark"] .status-live {
@@ -612,6 +620,57 @@ body {
 
 .project-link:hover {
     transform: translateX(6px);
+}
+
+/* ===== POSTS (derniers articles) ===== */
+.posts-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    background: var(--bg);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.post-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.post-card time,
+.post-card span {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.post-card h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.post-card-all {
+    background: var(--secondary);
+    justify-content: center;
 }
 
 /* ===== NEWSLETTER SECTION ===== */
@@ -676,7 +735,7 @@ body {
 
 .submit-btn {
     padding: 0.875rem 2rem;
-    background: var(--accent);
+    background: var(--accent-btn);
     color: white;
     border: none;
     border-radius: 8px;
@@ -687,7 +746,7 @@ body {
 }
 
 .submit-btn:hover {
-    background: var(--accent-glow);
+    filter: brightness(0.92);
     transform: translateY(-2px);
 }
 
@@ -724,7 +783,8 @@ body {
 }
 
 .footer-section a:hover {
-    color: var(--accent-glow);
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 .footer-section ul {
@@ -820,14 +880,16 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    .nav-container {
-        gap: 0.5rem;
-    }
-
+/* Sous ~700px les liens n'ont plus la place : a 502px le logo et le premier
+   lien se touchaient (gap 0px). Le masquage etait declenche trop tard (480px). */
+@media (max-width: 700px) {
     .nav-links {
         display: none;
-        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
         gap: 0.5rem;
     }
 
