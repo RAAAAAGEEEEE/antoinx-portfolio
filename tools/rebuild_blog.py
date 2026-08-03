@@ -151,6 +151,18 @@ def fr_date_str(d: date) -> str:
     return f"{d.day} {MOIS_FR_INV[d.month]} {d.year}"
 
 
+def fix_dead_handles(html: str) -> str:
+    """Le compte @Antoinx_x n'existe pas ; le vrai est @Anto1nx.
+
+    Il apparaissait dans la nav mais aussi dans le corps redactionnel de
+    plusieurs articles ("suis @Antoinx_x sur X").
+    """
+    html = html.replace("x.com/Antoinx_x", f"x.com/{X_HANDLE}")
+    html = html.replace("twitter.com/Antoinx_x", f"x.com/{X_HANDLE}")
+    html = html.replace("@Antoinx_x", f"@{X_HANDLE}")
+    return html
+
+
 def fix_css_vars(html: str) -> str:
     for dead, alive in CSS_VAR_FIXES.items():
         html = html.replace(f"var({dead})", f"var({alive})")
@@ -164,7 +176,8 @@ def fix_css_vars(html: str) -> str:
 def clean_head_injections(soup: BeautifulSoup) -> None:
     """Retire ce que ce script injecte, pour rester idempotent."""
     for tag in soup.head.find_all("meta", attrs={"property": True}):
-        if tag.get("property", "").startswith("og:"):
+        prop = tag.get("property", "")
+        if prop.startswith("og:") or prop.startswith("article:"):
             tag.decompose()
     for tag in soup.head.find_all("meta", attrs={"name": True}):
         if tag.get("name", "").startswith("twitter:"):
@@ -226,7 +239,7 @@ def add_head_meta(soup: BeautifulSoup, *, title: str, desc: str, url: str,
 
 def process_article(path: Path, dry_run: bool) -> dict | None:
     raw = path.read_text(encoding="utf-8")
-    raw = fix_css_vars(raw)
+    raw = fix_css_vars(fix_dead_handles(raw))
     soup = BeautifulSoup(raw, "html.parser")
 
     if not soup.head or not soup.body:
@@ -312,11 +325,18 @@ def process_article(path: Path, dry_run: bool) -> dict | None:
                 container.append(wrapper)
 
     # CTA newsletter : le trafic blog n'avait aucun point de conversion.
-    # On remplace systematiquement pour que les retouches de texte se propagent.
-    for old_cta in soup.find_all(attrs={"data-generated": "nl-cta"}):
-        old_cta.decompose()
-    if container:
-        container.append(BeautifulSoup(NL_CTA_HTML, "html.parser"))
+    # Remplace seulement si le texte a change, sinon chaque execution
+    # deplacerait le bloc et produirait un diff sans fin.
+    target_cta = BeautifulSoup(NL_CTA_HTML, "html.parser")
+    target_text = target_cta.get_text(" ", strip=True)
+    existing = soup.find_all(attrs={"data-generated": "nl-cta"})
+    up_to_date = (
+        len(existing) == 1 and existing[0].get_text(" ", strip=True) == target_text
+    )
+    if container and not up_to_date:
+        for old_cta in existing:
+            old_cta.decompose()
+        container.append(target_cta)
 
     # <main> : landmark absent (echec Lighthouse landmark-one-main)
     if container and not soup.find("main"):
