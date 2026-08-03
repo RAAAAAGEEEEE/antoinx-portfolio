@@ -284,27 +284,38 @@ def process_article(path: Path, dry_run: bool) -> dict | None:
 
     container = soup.find(class_="article-container")
 
-    # bloc "A lire aussi" : il trainait apres </footer>, hors de toute structure
-    related = None
-    for h2 in soup.find_all("h2"):
-        if "lire aussi" in h2.get_text(strip=True).lower():
-            related = h2
-            break
-    if related and container:
-        wrapper = soup.new_tag("section")
-        wrapper["class"] = "article-related"
-        ul = related.find_next_sibling("ul")
-        related.extract()
-        wrapper.append(related)
-        if ul:
-            ul.extract()
-            for a in ul.find_all("a", href=True):
-                a["href"] = re.sub(r"^/blog/(.+)\.html$", r"/blog/\1", a["href"])
-            wrapper.append(ul)
-        container.append(wrapper)
+    # Nettoie les wrappers vides laisses par une execution precedente.
+    for stale in soup.find_all(class_="article-related"):
+        if not stale.find("a"):
+            stale.decompose()
 
-    # CTA newsletter : le trafic blog n'avait aucun point de conversion
-    if container and not soup.find(attrs={"data-generated": "nl-cta"}):
+    # bloc "A lire aussi" : il trainait apres </footer>, hors de toute structure.
+    # Ne le deplace qu'une fois : s'il est deja range, on n'y touche plus.
+    if container and not soup.find(class_="article-related"):
+        related = None
+        for h2 in soup.find_all("h2"):
+            if "lire aussi" in h2.get_text(strip=True).lower():
+                related = h2
+                break
+        if related:
+            ul = related.find_next_sibling("ul")
+            wrapper = soup.new_tag("section")
+            wrapper["class"] = "article-related"
+            related.extract()
+            wrapper.append(related)
+            if ul:
+                ul.extract()
+                for a in ul.find_all("a", href=True):
+                    a["href"] = re.sub(r"^/blog/(.+)\.html$", r"/blog/\1", a["href"])
+                wrapper.append(ul)
+            if wrapper.find("a"):
+                container.append(wrapper)
+
+    # CTA newsletter : le trafic blog n'avait aucun point de conversion.
+    # On remplace systematiquement pour que les retouches de texte se propagent.
+    for old_cta in soup.find_all(attrs={"data-generated": "nl-cta"}):
+        old_cta.decompose()
+    if container:
         container.append(BeautifulSoup(NL_CTA_HTML, "html.parser"))
 
     # <main> : landmark absent (echec Lighthouse landmark-one-main)
